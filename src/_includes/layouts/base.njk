@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title | default(site.name + " — " + site.tagline) }}</title>
+    <title>{{ title | default(site.name + " - " + site.tagline) }}</title>
     <meta name="description" content="{{ description | default(site.description) }}">
 
     {# Open Graph #}
@@ -11,9 +11,8 @@
     <meta property="og:description" content="{{ description | default(site.description) }}">
     <meta property="og:type" content="{% if layout == 'layouts/artikel.njk' %}article{% else %}website{% endif %}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    {% if image %}
-    <meta property="og:image" content="{% if image | startsWith('http') %}{{ image }}{% else %}{{ site.url }}{{ image }}{% endif %}">
-    {% endif %}
+    {% set ogImage = image or avatar or (meta and meta.image) or '/climateon_logo.png' %}
+    <meta property="og:image" content="{% if ogImage | startsWith('http') %}{{ ogImage }}{% else %}{{ site.url }}{{ ogImage }}{% endif %}">
     <meta property="og:locale" content="id_ID">
 
     {# Twitter Card #}
@@ -129,7 +128,7 @@
         <div class="container footer-1-row">
             <div class="footer-brand">
                 <img src="/climateon_logo.png" alt="ClimateOn" class="footer-logo-img">
-                <p>&copy; {% tahun %} ClimateOn — {{ site.tagline }}.</p>
+                <p>&copy; {% tahun %} ClimateOn - {{ site.tagline }}.</p>
             </div>
             <div class="footer-links-inline">
                 <a href="/tentang/">Tentang</a>
@@ -185,3 +184,4 @@
     </script>
 </body>
 </html>
+

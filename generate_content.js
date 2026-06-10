@@ -19,7 +19,7 @@ const articles = [
     tags: ['enso', 'el-nino', 'la-nina', 'iklim-indonesia'],
     date: '2026-06-08',
     image: 'https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?auto=format&fit=crop&w=800&q=80',
-    body: `El Niño-Southern Oscillation (ENSO) bukan sekadar istilah meteorologi — ia adalah pendorong utama variabilitas iklim yang mempengaruhi kehidupan ratusan juta orang di Indonesia.
+    body: `El Niño-Southern Oscillation (ENSO) bukan sekadar istilah meteorologi - ia adalah pendorong utama variabilitas iklim yang mempengaruhi kehidupan ratusan juta orang di Indonesia.
 
 ## Bagaimana ENSO Bekerja
 
@@ -29,7 +29,7 @@ Ketika El Niño terjadi, angin pasat melemah atau bahkan berbalik arah. Air hang
 
 ## Dampak di Indonesia
 
-Indonesia berada di sisi barat Samudera Pasifik — tepat di "zona aksi" ENSO. Selama El Niño kuat seperti 1997/98 dan 2015/16, Indonesia mengalami:
+Indonesia berada di sisi barat Samudera Pasifik - tepat di "zona aksi" ENSO. Selama El Niño kuat seperti 1997/98 dan 2015/16, Indonesia mengalami:
 
 - **Kekeringan parah** di Kalimantan, Sulawesi, dan Papua
 - **Kebakaran hutan** yang menghasilkan kabut asap lintas negara
@@ -76,7 +76,7 @@ IOD dan ENSO terkadang bekerja bersama, terkadang berlawanan. Interaksi keduanya
     tags: ['marine-heatwave', 'lautan', 'pemanasan-global'],
     date: '2026-06-04',
     image: 'https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=800&q=80',
-    body: `Perairan Indonesia — rumah bagi Segitiga Terumbu Karang yang merupakan pusat keanekaragaman hayati laut dunia — kini menghadapi ancaman yang semakin nyata: gelombang panas laut atau marine heatwave (MHW).
+    body: `Perairan Indonesia - rumah bagi Segitiga Terumbu Karang yang merupakan pusat keanekaragaman hayati laut dunia - kini menghadapi ancaman yang semakin nyata: gelombang panas laut atau marine heatwave (MHW).
 
 ## Apa Itu Marine Heatwave?
 
@@ -99,7 +99,7 @@ Pemantauan MHW secara real-time menjadi kritis untuk mitigasi dampak. Sistem per
   {
     category: 'iklim', slug: 'perubahan-iklim-indonesia',
     title: 'Perubahan Iklim di Indonesia: Apa yang Sudah Terjadi dan Apa yang Akan Datang',
-    description: 'Dari kenaikan suhu rata-rata hingga pergeseran pola hujan — bukti perubahan iklim di Indonesia sudah tak terbantahkan.',
+    description: 'Dari kenaikan suhu rata-rata hingga pergeseran pola hujan - bukti perubahan iklim di Indonesia sudah tak terbantahkan.',
     tags: ['perubahan-iklim', 'pemanasan-global', 'adaptasi'],
     date: '2026-05-28',
     image: 'https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?auto=format&fit=crop&w=800&q=80',
@@ -125,7 +125,7 @@ Pertanian, perikanan, sumber daya air, dan kesehatan masyarakat menjadi sektor y
   {
     category: 'iklim', slug: 'siklus-karbon-dan-iklim',
     title: 'Siklus Karbon dalam Sistem Iklim: Dari Hutan Hujan hingga Lautan Dalam',
-    description: 'Bagaimana karbon berpindah di antara atmosfer, lautan, dan daratan — dan mengapa keseimbangan ini kini terganggu.',
+    description: 'Bagaimana karbon berpindah di antara atmosfer, lautan, dan daratan - dan mengapa keseimbangan ini kini terganggu.',
     tags: ['karbon', 'siklus-karbon', 'pemanasan-global'],
     date: '2026-05-22',
     image: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80',
@@ -133,7 +133,7 @@ Pertanian, perikanan, sumber daya air, dan kesehatan masyarakat menjadi sektor y
 
 ## Karbon di Atmosfer
 
-CO₂ di atmosfer bertindak sebagai selimut yang menahan panas. Konsentrasi CO₂ kini melebihi 420 ppm — tertinggi dalam 800.000 tahun terakhir berdasarkan data es inti Antartika.
+CO₂ di atmosfer bertindak sebagai selimut yang menahan panas. Konsentrasi CO₂ kini melebihi 420 ppm - tertinggi dalam 800.000 tahun terakhir berdasarkan data es inti Antartika.
 
 ## Peran Hutan Indonesia
 
@@ -141,7 +141,7 @@ Hutan tropis Indonesia menyimpan sekitar 3.5 gigaton karbon di atas permukaan ta
 
 ## Lautan sebagai Penyerap Karbon
 
-Lautan menyerap sekitar 25% emisi CO₂ manusia. Namun, penyerapan berlebihan menyebabkan pengasaman laut — ancaman serius bagi organisme berkapur seperti terumbu karang dan moluska.`
+Lautan menyerap sekitar 25% emisi CO₂ manusia. Namun, penyerapan berlebihan menyebabkan pengasaman laut - ancaman serius bagi organisme berkapur seperti terumbu karang dan moluska.`
   },
 
   // ═══ CUACA ═══
@@ -160,7 +160,7 @@ Siklon tropis membutuhkan beberapa kondisi: suhu muka laut di atas 26.5°C, kele
 
 ## Mengapa Indonesia "Aman"?
 
-Indonesia terletak dekat dengan ekuator, di mana Gaya Coriolis sangat lemah. Tanpa Coriolis yang memadai, gangguan tropis sulit berkembang menjadi siklon matang. Namun, "aman" adalah kata relatif — dampak tidak langsung tetap nyata.
+Indonesia terletak dekat dengan ekuator, di mana Gaya Coriolis sangat lemah. Tanpa Coriolis yang memadai, gangguan tropis sulit berkembang menjadi siklon matang. Namun, "aman" adalah kata relatif - dampak tidak langsung tetap nyata.
 
 ## Dampak Tidak Langsung
 
@@ -177,7 +177,7 @@ Interaksi antara siklon tropis dan sistem monsun menciptakan pola cuaca kompleks
     tags: ['monsun', 'musim', 'iklim-indonesia'],
     date: '2026-06-02',
     image: 'https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?auto=format&fit=crop&w=800&q=80',
-    body: `Angin monsun — yang secara harfiah berarti "musim" dalam bahasa Arab — adalah sistem sirkulasi atmosfer yang menentukan pola musim di Indonesia.
+    body: `Angin monsun - yang secara harfiah berarti "musim" dalam bahasa Arab - adalah sistem sirkulasi atmosfer yang menentukan pola musim di Indonesia.
 
 ## Monsun Barat (Oktober–Maret)
 
@@ -242,15 +242,15 @@ Hujan es sering disertai angin kencang dan hujan deras, menjadikannya indikator 
     tags: ['kenaikan-muka-laut', 'pesisir', 'perubahan-iklim'],
     date: '2026-06-05',
     image: 'https://images.unsplash.com/photo-1559827291-bac2de37bea8?auto=format&fit=crop&w=800&q=80',
-    body: `Indonesia memiliki garis pantai sepanjang lebih dari 81.000 km — terpanjang kedua di dunia. Sekitar 42 juta penduduk hidup di wilayah pesisir yang rentan terhadap kenaikan muka air laut.
+    body: `Indonesia memiliki garis pantai sepanjang lebih dari 81.000 km - terpanjang kedua di dunia. Sekitar 42 juta penduduk hidup di wilayah pesisir yang rentan terhadap kenaikan muka air laut.
 
 ## Data Terkini
 
-Pengukuran satelit altimetri menunjukkan kenaikan muka laut rata-rata 3.4 mm/tahun secara global. Di beberapa wilayah Indonesia, angkanya bahkan lebih tinggi — mencapai 5-7 mm/tahun di pantai utara Jawa akibat kombinasi kenaikan muka laut dan penurunan muka tanah.
+Pengukuran satelit altimetri menunjukkan kenaikan muka laut rata-rata 3.4 mm/tahun secara global. Di beberapa wilayah Indonesia, angkanya bahkan lebih tinggi - mencapai 5-7 mm/tahun di pantai utara Jawa akibat kombinasi kenaikan muka laut dan penurunan muka tanah.
 
 ## Wilayah Paling Rentan
 
-Jakarta, Semarang, dan Pekalongan menghadapi "double jeopardy" — kenaikan muka laut dari atas dan penurunan muka tanah akibat ekstraksi air tanah dari bawah.
+Jakarta, Semarang, dan Pekalongan menghadapi "double jeopardy" - kenaikan muka laut dari atas dan penurunan muka tanah akibat ekstraksi air tanah dari bawah.
 
 ## Dampak pada Kehidupan
 
@@ -259,15 +259,15 @@ Intrusi air asin ke sumur penduduk, genangan rob yang semakin sering, dan erosi 
   {
     category: 'lingkungan', slug: 'gelombang-panas-laut-ekosistem',
     title: 'Ketika Laut Demam: Dampak Gelombang Panas pada Ekosistem Laut Indonesia',
-    description: 'Pemutihan karang, migrasi ikan, dan gangguan rantai makanan — dampak gelombang panas laut yang sering tak terlihat.',
+    description: 'Pemutihan karang, migrasi ikan, dan gangguan rantai makanan - dampak gelombang panas laut yang sering tak terlihat.',
     tags: ['marine-heatwave', 'terumbu-karang', 'ekosistem-laut'],
     date: '2026-05-29',
     image: 'https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=800&q=80',
-    body: `Segitiga Terumbu Karang — yang pusatnya berada di perairan Indonesia — menyimpan 76% spesies karang dunia. Namun, ekosistem yang luar biasa kaya ini kini terancam oleh gelombang panas laut.
+    body: `Segitiga Terumbu Karang - yang pusatnya berada di perairan Indonesia - menyimpan 76% spesies karang dunia. Namun, ekosistem yang luar biasa kaya ini kini terancam oleh gelombang panas laut.
 
 ## Pemutihan Karang Massal
 
-Ketika suhu laut meningkat 1-2°C di atas rata-rata selama beberapa minggu, karang "mengeluarkan" zooxanthellae — alga simbiotik yang memberikan warna dan energi. Karang menjadi putih pucat dan berisiko mati jika kondisi tidak membaik.
+Ketika suhu laut meningkat 1-2°C di atas rata-rata selama beberapa minggu, karang "mengeluarkan" zooxanthellae - alga simbiotik yang memberikan warna dan energi. Karang menjadi putih pucat dan berisiko mati jika kondisi tidak membaik.
 
 ## Kasus di Indonesia
 
@@ -292,7 +292,7 @@ Emisi transportasi, pembakaran batu bara untuk pembangkit listrik, dan aktivitas
 
 ## Dampak Kesehatan
 
-PM2.5 — partikel halus yang dapat menembus paru-paru hingga aliran darah — menjadi perhatian utama. Paparan jangka panjang meningkatkan risiko penyakit jantung, stroke, dan kanker paru-paru.
+PM2.5 - partikel halus yang dapat menembus paru-paru hingga aliran darah - menjadi perhatian utama. Paparan jangka panjang meningkatkan risiko penyakit jantung, stroke, dan kanker paru-paru.
 
 ## Hubungan dengan Iklim
 
@@ -352,11 +352,11 @@ Indonesia berkomitmen mencapai net-zero emission pada 2060. Untuk mencapainya, p
     tags: ['mangrove', 'karbon-biru', 'restorasi'],
     date: '2026-05-27',
     image: 'https://images.unsplash.com/photo-1562679299-9f72014e9a0a?auto=format&fit=crop&w=800&q=80',
-    body: `Indonesia memiliki 3.3 juta hektar mangrove — terluas di dunia. Ekosistem ini berfungsi ganda sebagai pelindung pesisir dari abrasi dan gelombang badai, sekaligus sebagai penyerap karbon yang luar biasa efisien.
+    body: `Indonesia memiliki 3.3 juta hektar mangrove - terluas di dunia. Ekosistem ini berfungsi ganda sebagai pelindung pesisir dari abrasi dan gelombang badai, sekaligus sebagai penyerap karbon yang luar biasa efisien.
 
 ## Karbon Biru
 
-Istilah "karbon biru" merujuk pada karbon yang disimpan oleh ekosistem pesisir dan laut — mangrove, padang lamun, dan rawa asin. Mangrove menyimpan hingga 1.000 ton karbon per hektar, jauh melebihi hutan tropis daratan.
+Istilah "karbon biru" merujuk pada karbon yang disimpan oleh ekosistem pesisir dan laut - mangrove, padang lamun, dan rawa asin. Mangrove menyimpan hingga 1.000 ton karbon per hektar, jauh melebihi hutan tropis daratan.
 
 ## Program Restorasi Nasional
 
@@ -377,7 +377,7 @@ Konversi mangrove untuk tambak udang dan pembangunan pesisir masih menjadi ancam
 
 ## Konsep Kota Spons
 
-Semarang, Surabaya, dan Makassar mulai mengadopsi konsep "sponge city" — kota yang dirancang untuk menyerap, menyimpan, dan memanfaatkan air hujan secara alami, mengurangi risiko banjir sekaligus mengatasi kekurangan air.
+Semarang, Surabaya, dan Makassar mulai mengadopsi konsep "sponge city" - kota yang dirancang untuk menyerap, menyimpan, dan memanfaatkan air hujan secara alami, mengurangi risiko banjir sekaligus mengatasi kekurangan air.
 
 ## Infrastruktur Hijau
 
@@ -394,7 +394,7 @@ Sistem peringatan dini yang melibatkan komunitas lokal terbukti lebih efektif di
     tags: ['pertanian', 'adaptasi', 'ketahanan-pangan'],
     date: '2026-05-10',
     image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=800&q=80',
-    body: `Sektor pertanian Indonesia — yang menyerap 30% angkatan kerja — sangat rentan terhadap perubahan iklim. Pergeseran musim tanam, curah hujan yang tidak menentu, dan peningkatan hama menjadi tantangan utama.
+    body: `Sektor pertanian Indonesia - yang menyerap 30% angkatan kerja - sangat rentan terhadap perubahan iklim. Pergeseran musim tanam, curah hujan yang tidak menentu, dan peningkatan hama menjadi tantangan utama.
 
 ## Climate-Smart Agriculture
 
@@ -427,20 +427,20 @@ Radar memancarkan gelombang elektromagnetik yang memantul ketika mengenai tetesa
 
 ## Radar Doppler
 
-Radar Doppler modern dapat mendeteksi tidak hanya intensitas hujan, tetapi juga kecepatan dan arah gerakan partikel — memungkinkan identifikasi dini rotasi dalam awan yang berpotensi menghasilkan angin kencang atau puting beliung.
+Radar Doppler modern dapat mendeteksi tidak hanya intensitas hujan, tetapi juga kecepatan dan arah gerakan partikel - memungkinkan identifikasi dini rotasi dalam awan yang berpotensi menghasilkan angin kencang atau puting beliung.
 
 ## Radar Polarimetrik
 
-Generasi terbaru radar cuaca Indonesia dilengkapi kemampuan dual-polarisasi, yang dapat membedakan antara hujan, es, salju, dan puing-puing — meningkatkan akurasi estimasi curah hujan hingga 30%.
+Generasi terbaru radar cuaca Indonesia dilengkapi kemampuan dual-polarisasi, yang dapat membedakan antara hujan, es, salju, dan puing-puing - meningkatkan akurasi estimasi curah hujan hingga 30%.
 
 ## Tantangan Operasional
 
-Cakupan radar belum merata — wilayah Indonesia timur masih memiliki "blank spots" yang besar. Pemeliharaan rutin dan kalibrasi juga menjadi tantangan di lokasi-lokasi terpencil.`
+Cakupan radar belum merata - wilayah Indonesia timur masih memiliki "blank spots" yang besar. Pemeliharaan rutin dan kalibrasi juga menjadi tantangan di lokasi-lokasi terpencil.`
   },
   {
     category: 'teknologi', slug: 'satelit-pemantauan-iklim',
     title: 'Satelit Penginderaan Jauh: Mengamati Iklim dari Luar Angkasa',
-    description: 'Dari Himawari-9 hingga Sentinel-6 — bagaimana satelit membantu Indonesia memantau cuaca dan iklim.',
+    description: 'Dari Himawari-9 hingga Sentinel-6 - bagaimana satelit membantu Indonesia memantau cuaca dan iklim.',
     tags: ['satelit', 'penginderaan-jauh', 'pemantauan'],
     date: '2026-05-31',
     image: 'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80',
@@ -469,7 +469,7 @@ Indonesia tengah mengembangkan kapabilitas satelit sendiri melalui program LAPAN
     tags: ['iot', 'sensor', 'pemantauan-lingkungan'],
     date: '2026-05-24',
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=800&q=80',
-    body: `Automatic Weather Station (AWS) konvensional berharga ratusan juta rupiah. Sensor IoT menawarkan alternatif dengan biaya sepersepuluh — memungkinkan pemasangan di ratusan titik sekaligus.
+    body: `Automatic Weather Station (AWS) konvensional berharga ratusan juta rupiah. Sensor IoT menawarkan alternatif dengan biaya sepersepuluh - memungkinkan pemasangan di ratusan titik sekaligus.
 
 ## AWS Berbasis IoT
 
@@ -502,11 +502,11 @@ GraphCast, Pangu-Weather (Huawei), dan FourCastNet (NVIDIA) menggunakan arsitekt
 
 - **Kecepatan**: 1.000-10.000x lebih cepat dari model NWP tradisional
 - **Akurasi**: Sebanding atau lebih baik untuk prakiraan medium-range (3-10 hari)
-- **Efisiensi**: Tidak membutuhkan superkomputer — cukup GPU standar
+- **Efisiensi**: Tidak membutuhkan superkomputer - cukup GPU standar
 
 ## Keterbatasan
 
-Model AI masih kesulitan dengan kejadian ekstrem yang jarang terjadi, karena keterbatasan data training. Interpretasi fisik juga menjadi tantangan — model AI adalah "black box" yang sulit dijelaskan.
+Model AI masih kesulitan dengan kejadian ekstrem yang jarang terjadi, karena keterbatasan data training. Interpretasi fisik juga menjadi tantangan - model AI adalah "black box" yang sulit dijelaskan.
 
 ## Relevansi untuk Indonesia
 
@@ -534,7 +534,7 @@ Analisis tren linier menunjukkan beberapa pola:
 
 ## Implikasi
 
-Perubahan ini berdampak langsung pada sektor pertanian — kalender tanam yang selama ini mengikuti pola "pakem" musiman kini semakin tidak bisa diandalkan.
+Perubahan ini berdampak langsung pada sektor pertanian - kalender tanam yang selama ini mengikuti pola "pakem" musiman kini semakin tidak bisa diandalkan.
 
 ## Keterbatasan Data
 
@@ -547,7 +547,7 @@ Distribusi stasiun pengamatan yang tidak merata dan ada yang terputus (missing d
     tags: ['enso', 'variabilitas-iklim', 'riset'],
     date: '2026-05-26',
     image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80',
-    body: `ENSO bukanlah fenomena yang statis — pola, frekuensi, dan intensitasnya berubah dari dekade ke dekade. Memahami evolusi ini kritis untuk meningkatkan prakiraan musiman.
+    body: `ENSO bukanlah fenomena yang statis - pola, frekuensi, dan intensitasnya berubah dari dekade ke dekade. Memahami evolusi ini kritis untuk meningkatkan prakiraan musiman.
 
 ## Pergeseran Pola
 
@@ -559,7 +559,7 @@ La Niña cenderung bertahan lebih lama (sering multi-tahun) dibanding El Niño. 
 
 ## Hubungan dengan Pemanasan Global
 
-Model iklim memproyeksikan bahwa pemanasan global dapat mengubah karakter ENSO — kemungkinan meningkatkan frekuensi El Niño ekstrem. Namun, ketidakpastian masih besar.`
+Model iklim memproyeksikan bahwa pemanasan global dapat mengubah karakter ENSO - kemungkinan meningkatkan frekuensi El Niño ekstrem. Namun, ketidakpastian masih besar.`
   },
   {
     category: 'riset', slug: 'perubahan-sst-indonesia',
@@ -572,7 +572,7 @@ Model iklim memproyeksikan bahwa pemanasan global dapat mengubah karakter ENSO �
 
 ## Tren Pemanasan
 
-Rata-rata SST di perairan Indonesia meningkat 0.12°C per dekade — lebih lambat dari rata-rata global (0.15°C/dekade), namun dengan variabilitas spasial yang besar.
+Rata-rata SST di perairan Indonesia meningkat 0.12°C per dekade - lebih lambat dari rata-rata global (0.15°C/dekade), namun dengan variabilitas spasial yang besar.
 
 ## Variabilitas Regional
 
@@ -611,7 +611,7 @@ Media iklim seperti ClimateOn hadir untuk mengisi kekosongan ini. Bukan dengan j
 
 ## Ajakan Bertindak
 
-Literasi iklim bukan kemewahan — ini kebutuhan dasar untuk bangsa kepulauan yang berdiri di garis depan perubahan iklim global.`
+Literasi iklim bukan kemewahan - ini kebutuhan dasar untuk bangsa kepulauan yang berdiri di garis depan perubahan iklim global.`
   },
   {
     category: 'opini', slug: 'transisi-energi-indonesia',
@@ -622,7 +622,7 @@ Literasi iklim bukan kemewahan — ini kebutuhan dasar untuk bangsa kepulauan ya
     image: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80',
     body: `*Oleh Tim Redaksi ClimateOn*
 
-Indonesia berkomitmen mencapai net-zero emission pada 2060 — atau "lebih cepat dengan bantuan internasional." Komitmen ini disambut baik, tetapi jalur menuju sana masih penuh kontradiksi.
+Indonesia berkomitmen mencapai net-zero emission pada 2060 - atau "lebih cepat dengan bantuan internasional." Komitmen ini disambut baik, tetapi jalur menuju sana masih penuh kontradiksi.
 
 ## Kontradiksi Energi
 
@@ -637,7 +637,7 @@ Di satu sisi, Indonesia mendorong pengembangan energi terbarukan. Di sisi lain, 
 
 ## Peluang Ekonomi
 
-Transisi energi bukan hanya beban — ia adalah peluang ekonomi. Indonesia bisa menjadi eksportir nikel untuk baterai EV, pemimpin biofuel berbasis kelapa sawit berkelanjutan, dan pusat manufaktur panel surya.`
+Transisi energi bukan hanya beban - ia adalah peluang ekonomi. Indonesia bisa menjadi eksportir nikel untuk baterai EV, pemimpin biofuel berbasis kelapa sawit berkelanjutan, dan pusat manufaktur panel surya.`
   },
   {
     category: 'opini', slug: 'data-iklim-terbuka',
@@ -652,7 +652,7 @@ Sebagai praktisi yang bekerja dengan data iklim setiap hari, saya kerap frustras
 
 ## Masalah Saat Ini
 
-Data curah hujan harian dari stasiun BMKG — yang seharusnya menjadi barang publik — seringkali memerlukan prosedur birokrasi yang panjang untuk diakses. Data yang tersedia secara online sering terbatas dan tidak up-to-date.
+Data curah hujan harian dari stasiun BMKG - yang seharusnya menjadi barang publik - seringkali memerlukan prosedur birokrasi yang panjang untuk diakses. Data yang tersedia secara online sering terbatas dan tidak up-to-date.
 
 ## Perbandingan Internasional
 
@@ -666,7 +666,7 @@ Di negara-negara maju seperti AS, Inggris, dan Jepang, data meteorologi tersedia
 
 ## Visi ke Depan
 
-Indonesia membutuhkan platform data iklim terbuka yang modern, terintegrasi, dan mudah diakses — mirip dengan Copernicus Climate Data Store milik Uni Eropa. Ini bukan kemewahan, melainkan infrastruktur dasar untuk bangsa yang sangat bergantung pada informasi iklim.`
+Indonesia membutuhkan platform data iklim terbuka yang modern, terintegrasi, dan mudah diakses - mirip dengan Copernicus Climate Data Store milik Uni Eropa. Ini bukan kemewahan, melainkan infrastruktur dasar untuk bangsa yang sangat bergantung pada informasi iklim.`
   },
 
   // ═══ BEDAH PAPER ═══
@@ -695,7 +695,7 @@ Bagaimana frekuensi, durasi, dan intensitas MHW berubah di perairan Indonesia se
 
 ## Metodologi
 
-Para peneliti menggunakan data NOAA OISST v2.1 dengan resolusi 0.25° dan menerapkan definisi MHW dari Hobday et al. (2016) — kejadian ketika SST melebihi persentil ke-90 selama minimal 5 hari berturut-turut.
+Para peneliti menggunakan data NOAA OISST v2.1 dengan resolusi 0.25° dan menerapkan definisi MHW dari Hobday et al. (2016) - kejadian ketika SST melebihi persentil ke-90 selama minimal 5 hari berturut-turut.
 
 ## Temuan Utama
 
@@ -737,7 +737,7 @@ Analisis korelasi antara indeks Niño 3.4 dan curah hujan stasiun, dilengkapi de
 
 ## Temuan Utama
 
-1. Indonesia timur (Maluku, Papua, NTT) paling sensitif terhadap ENSO — defisit hujan bisa mencapai **60%** saat El Niño kuat
+1. Indonesia timur (Maluku, Papua, NTT) paling sensitif terhadap ENSO - defisit hujan bisa mencapai **60%** saat El Niño kuat
 2. Sumatera utara menunjukkan respons yang relatif lemah terhadap ENSO
 3. Hubungan ENSO-curah hujan melemah pada periode 2000–2020 dibanding 1960–1980, kemungkinan terkait perubahan karakteristik ENSO
 
@@ -796,7 +796,7 @@ Studi ini menggabungkan data dari 148 stasiun pasang surut dan 30 tahun data alt
 
 ## Temuan Utama
 
-1. Rata-rata kenaikan muka laut di Asia Tenggara: **4.2 mm/tahun** — lebih tinggi dari rata-rata global (3.4 mm/tahun)
+1. Rata-rata kenaikan muka laut di Asia Tenggara: **4.2 mm/tahun** - lebih tinggi dari rata-rata global (3.4 mm/tahun)
 2. Pantai utara Jawa menunjukkan kenaikan relatif **6-8 mm/tahun** akibat kombinasi kenaikan muka laut dan penurunan tanah
 3. Percepatan signifikan terdeteksi sejak 2010
 4. Variabilitas dekadal sangat besar, terutama terkait ENSO
@@ -862,12 +862,12 @@ Bagaimana pola curah hujan musiman dan tahunan di Benua Maritim berubah di bawah
 
 1. Curah hujan tahunan rata-rata meningkat **5-15%** pada skenario 2°C
 2. Peningkatan terbesar terjadi pada DJF (musim hujan), sementara JJA (musim kemarau) menunjukkan penurunan di Indonesia timur
-3. Intensitas hujan harian meningkat **lebih cepat** dari volume total — artinya hujan lebih jarang tetapi lebih deras
+3. Intensitas hujan harian meningkat **lebih cepat** dari volume total - artinya hujan lebih jarang tetapi lebih deras
 4. "Dry spell" (periode kering) antara kejadian hujan menjadi lebih panjang
 
 ## Implikasi Praktis
 
-Paradoks "lebih basah tapi lebih kering" — total hujan meningkat tetapi distribusinya semakin timpang — menuntut redesign infrastruktur penampungan air dan sistem irigasi di Indonesia.`
+Paradoks "lebih basah tapi lebih kering" - total hujan meningkat tetapi distribusinya semakin timpang - menuntut redesign infrastruktur penampungan air dan sistem irigasi di Indonesia.`
   }
 ];
 

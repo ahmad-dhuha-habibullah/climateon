@@ -1,13 +1,17 @@
 ---
 layout: layouts/artikel.njk
-title: "Mengenal Indian Ocean Dipole: Saudara ENSO yang Sering Terlupakan"
-description: "IOD mempengaruhi curah hujan Indonesia secara signifikan, namun jarang mendapat perhatian publik dibanding ENSO."
-category: "iklim"
-tags: ["iod", "samudera-hindia", "iklim-indonesia"]
+title: 'Mengenal Indian Ocean Dipole: Saudara ENSO yang Sering Terlupakan'
+description: IOD mempengaruhi curah hujan Indonesia secara signifikan, namun jarang mendapat perhatian publik dibanding ENSO.
+category: iklim
+tags:
+  - iod
+  - samudera-hindia
+  - iklim-indonesia
 date: 2026-06-06
-image: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?auto=format&fit=crop&w=800&q=80"
-penulis: "ahmad-dhuha-habibullah"
+image: https://images.unsplash.com/photo-1505142468610-359e7d316be0?auto=format&fit=crop&w=800&q=80
+penulis: NAZ
 ---
+
 Indian Ocean Dipole (IOD) adalah pola variabilitas suhu permukaan laut di Samudera Hindia yang secara independen mempengaruhi iklim Indonesia.
 
 ## Apa Itu IOD?

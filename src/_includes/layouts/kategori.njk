@@ -2,18 +2,46 @@
 layout: layouts/base.njk
 ---
 
+{% set meta = null %}
+{% for item in collections.halaman_kategori %}
+  {% if item.fileSlug == collectionName %}
+    {% set meta = item.data %}
+  {% endif %}
+{% endfor %}
+
 {# ═══ Category Header ═══ #}
-<section class="kategori-header">
-    <div class="container">
+<section class="kategori-header {% if meta.image or meta.video %}has-bg{% endif %}">
+    {% if meta.video %}
+    <video class="beranda-bg-media" autoplay loop muted playsinline>
+        <source src="{{ meta.video }}" type="video/webm">
+        {% if meta.image %}
+        <source src="{{ meta.image }}" type="image/jpeg">
+        {% endif %}
+    </video>
+    {% elif meta.image %}
+    <div class="beranda-bg-media" style="background-image: url('{{ meta.image }}');"></div>
+    {% endif %}
+
+    {% if meta.image or meta.video %}
+    <div class="beranda-gradient-overlay" style="opacity: 0.85;"></div>
+    {% endif %}
+
+    <div class="container" style="position: relative; z-index: 2;">
         {% include "components/breadcrumb.njk" %}
         <br>
-        <h1>{{ title }}</h1>
-        {% if description %}
-        <p class="kategori-desc">{{ description }}</p>
+        <h1>{{ meta.title | default(title) }}</h1>
+        {% if meta.description or description %}
+        <p class="kategori-desc">{{ meta.description | default(description) }}</p>
         {% endif %}
 
         {# Subtopik tags #}
-        {% if subtopik and subtopik.length %}
+        {% if meta.subtopik and meta.subtopik.length %}
+        <div class="subtopik-pills">
+            {% for sub in meta.subtopik %}
+            <span class="subtopik-pill">{{ sub }}</span>
+            {% endfor %}
+        </div>
+        {% elif subtopik and subtopik.length %}
         <div class="subtopik-pills">
             {% for sub in subtopik %}
             <span class="subtopik-pill">{{ sub }}</span>
@@ -78,3 +106,4 @@ layout: layouts/base.njk
         {% endif %}
     </div>
 </section>
+

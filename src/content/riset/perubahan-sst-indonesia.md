@@ -12,7 +12,7 @@ Sejak peluncuran misi satelit TOPEX/Poseidon pada 1993, kita memiliki rekaman ko
 
 ## Tren Pemanasan
 
-Rata-rata SST di perairan Indonesia meningkat 0.12°C per dekade — lebih lambat dari rata-rata global (0.15°C/dekade), namun dengan variabilitas spasial yang besar.
+Rata-rata SST di perairan Indonesia meningkat 0.12°C per dekade - lebih lambat dari rata-rata global (0.15°C/dekade), namun dengan variabilitas spasial yang besar.
 
 ## Variabilitas Regional
 
@@ -23,3 +23,4 @@ Rata-rata SST di perairan Indonesia meningkat 0.12°C per dekade — lebih lamba
 ## Implikasi untuk Ekosistem
 
 Pemanasan SST yang terus berlanjut meningkatkan risiko marine heatwave dan berdampak pada distribusi spesies perikanan komersial.
+

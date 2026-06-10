@@ -27,7 +27,7 @@ Bagaimana frekuensi, durasi, dan intensitas MHW berubah di perairan Indonesia se
 
 ## Metodologi
 
-Para peneliti menggunakan data NOAA OISST v2.1 dengan resolusi 0.25° dan menerapkan definisi MHW dari Hobday et al. (2016) — kejadian ketika SST melebihi persentil ke-90 selama minimal 5 hari berturut-turut.
+Para peneliti menggunakan data NOAA OISST v2.1 dengan resolusi 0.25° dan menerapkan definisi MHW dari Hobday et al. (2016) - kejadian ketika SST melebihi persentil ke-90 selama minimal 5 hari berturut-turut.
 
 ## Temuan Utama
 
@@ -43,3 +43,4 @@ Peningkatan MHW mengancam ekosistem terumbu karang, industri perikanan tangkap, 
 ## Kelebihan dan Keterbatasan
 
 **Kelebihan**: Analisis temporal yang panjang (41 tahun), metodologi yang well-established. **Keterbatasan**: Resolusi 0.25° mungkin terlalu kasar untuk menangkap variabilitas MHW di selat-selat sempit Indonesia.
+

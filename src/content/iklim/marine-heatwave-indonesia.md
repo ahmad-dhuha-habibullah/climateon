@@ -8,7 +8,7 @@ date: 2026-06-04
 image: "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?auto=format&fit=crop&w=800&q=80"
 penulis: "ahmad-dhuha-habibullah"
 ---
-Perairan Indonesia — rumah bagi Segitiga Terumbu Karang yang merupakan pusat keanekaragaman hayati laut dunia — kini menghadapi ancaman yang semakin nyata: gelombang panas laut atau marine heatwave (MHW).
+Perairan Indonesia - rumah bagi Segitiga Terumbu Karang yang merupakan pusat keanekaragaman hayati laut dunia - kini menghadapi ancaman yang semakin nyata: gelombang panas laut atau marine heatwave (MHW).
 
 ## Apa Itu Marine Heatwave?
 
@@ -27,3 +27,4 @@ Data satelit menunjukkan peningkatan frekuensi MHW di perairan Indonesia sebesar
 ## Apa yang Bisa Dilakukan?
 
 Pemantauan MHW secara real-time menjadi kritis untuk mitigasi dampak. Sistem peringatan dini dapat membantu pengelola taman laut dan komunitas nelayan mengambil langkah antisipasi.
+

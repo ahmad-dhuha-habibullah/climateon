@@ -158,7 +158,7 @@ class ProblemsPlugin extends Plugin
     }
 
     /**
-     * API reports integration — provides structured problem data + web component.
+     * API reports integration - provides structured problem data + web component.
      *
      * @param Event $e
      * @return void

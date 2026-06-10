@@ -1,86 +1,201 @@
 ---
 layout: layouts/base.njk
 permalink: /404.html
-title: "404 - Halaman Tenggelam"
+title: "404 - Halaman Tidak Ditemukan"
 ---
 
 <style>
-.not-found-section {
-    min-height: 70vh;
+/* Font import for elegant serif */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+.page-404 {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: var(--space-3xl) var(--space-md);
-    background: linear-gradient(to bottom, var(--color-bg), #e0f2fe);
+    background-color: #f6f5f0;
+    overflow: hidden;
 }
 
-[data-theme="dark"] .not-found-section {
-    background: linear-gradient(to bottom, var(--color-bg), #082f49);
+/* Background image */
+.bg-404 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/images/404-bg.png');
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+    z-index: 1;
 }
 
-.not-found-content {
-    max-width: 600px;
+/* Gradient overlay to make text readable on the left */
+.bg-404-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(246, 245, 240, 1) 0%, rgba(246, 245, 240, 0.9) 30%, rgba(246, 245, 240, 0) 70%);
+    z-index: 2;
 }
 
-.not-found-illustration {
-    font-size: 6rem;
-    margin-bottom: var(--space-lg);
-    animation: floating 3s ease-in-out infinite;
-    display: inline-block;
+.content-404 {
+    position: relative;
+    z-index: 3;
+    max-width: 500px;
+    padding: var(--space-2xl);
+    color: #243526; /* Dark green */
 }
 
-@keyframes floating {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
-    100% { transform: translateY(0px); }
-}
-
-.not-found-title {
-    font-size: 3rem;
-    color: var(--color-primary);
+.title-404 {
+    font-family: 'Playfair Display', serif;
+    font-size: 10rem;
+    line-height: 0.9;
+    font-weight: 600;
     margin-bottom: var(--space-md);
+    letter-spacing: -2px;
+    color: #243526;
 }
 
-.not-found-desc {
-    font-size: 1.1rem;
-    color: var(--color-text-light);
-    margin-bottom: var(--space-2xl);
-    line-height: 1.6;
+.subtitle-404 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: var(--space-lg);
+    color: #243526;
 }
 
-.not-found-actions {
+.separator-404 {
     display: flex;
-    gap: var(--space-md);
-    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--space-lg);
+    opacity: 0.6;
 }
 
-@media (max-width: 640px) {
-    .not-found-title {
-        font-size: 2rem;
+.separator-404::before,
+.separator-404::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #243526;
+    max-width: 80px;
+}
+
+.separator-404 .leaf-icon {
+    margin: 0 var(--space-sm);
+    color: #4a6d4e;
+}
+
+.desc-404 {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4a5d4c;
+    margin-bottom: var(--space-xl);
+    max-width: 350px;
+}
+
+.btn-404 {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    background-color: #243526;
+    color: #f6f5f0;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: background-color var(--transition-base), transform var(--transition-base);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-404:hover {
+    background-color: #314a34;
+    transform: translateY(-2px);
+    color: white;
+}
+
+/* Dark mode overrides */
+[data-theme="dark"] .page-404 {
+    background-color: #0f1712;
+}
+
+[data-theme="dark"] .bg-404-overlay {
+    background: linear-gradient(to right, rgba(15, 23, 18, 1) 0%, rgba(15, 23, 18, 0.9) 30%, rgba(15, 23, 18, 0) 70%);
+}
+
+[data-theme="dark"] .title-404,
+[data-theme="dark"] .subtitle-404 {
+    color: #e5ede6;
+}
+
+[data-theme="dark"] .separator-404::before,
+[data-theme="dark"] .separator-404::after {
+    border-color: #e5ede6;
+}
+
+[data-theme="dark"] .desc-404 {
+    color: #a8bba9;
+}
+
+[data-theme="dark"] .btn-404 {
+    background-color: #e5ede6;
+    color: #0f1712;
+}
+
+[data-theme="dark"] .btn-404:hover {
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    .bg-404-overlay {
+        background: linear-gradient(to bottom, rgba(246, 245, 240, 1) 0%, rgba(246, 245, 240, 0.9) 40%, rgba(246, 245, 240, 0.4) 100%);
     }
-    .not-found-actions {
-        flex-direction: column;
+    
+    [data-theme="dark"] .bg-404-overlay {
+        background: linear-gradient(to bottom, rgba(15, 23, 18, 1) 0%, rgba(15, 23, 18, 0.9) 40%, rgba(15, 23, 18, 0.4) 100%);
+    }
+
+    .title-404 {
+        font-size: 7rem;
+    }
+
+    .subtitle-404 {
+        font-size: 2.2rem;
+    }
+    
+    .content-404 {
+        padding: var(--space-xl);
     }
 }
 </style>
 
-<section class="not-found-section">
-    <div class="container">
-        <div class="not-found-content mx-auto">
-            <div class="not-found-illustration">🌊🏔️</div>
-            <h1 class="not-found-title">Halaman Telah Tenggelam</h1>
-            <p class="not-found-desc">
-                Waduh! Sepertinya halaman yang Anda cari telah tenggelam oleh kenaikan muka air laut, atau tautannya sudah mencair seperti es di Kutub Utara.
-            </p>
-            <div class="not-found-actions">
-                <a href="/" class="btn btn-primary">
-                    <i data-lucide="home" class="icon-sm"></i> Kembali ke Daratan (Beranda)
-                </a>
-                <a href="/pusat-data/" class="btn btn-outline">
-                    <i data-lucide="bar-chart-2" class="icon-sm"></i> Pantau Pusat Data
-                </a>
+<div class="page-404">
+    <div class="bg-404"></div>
+    <div class="bg-404-overlay"></div>
+    
+    <div class="container" style="position: relative; z-index: 3; width: 100%; height: 100%;">
+        <div class="content-404">
+            <h1 class="title-404">404</h1>
+            <h2 class="subtitle-404">This page is<br>out of our world.</h2>
+            
+            <div class="separator-404">
+                <i data-lucide="leaf" class="icon-sm leaf-icon"></i>
             </div>
+            
+            <p class="desc-404">
+                The page you're looking for can't be found. But there's still so much worth exploring.
+            </p>
+            
+            <a href="/" class="btn-404">
+                <i data-lucide="leaf" class="icon-xs"></i> EXPLORE HOME
+            </a>
         </div>
     </div>
-</section>
+</div>

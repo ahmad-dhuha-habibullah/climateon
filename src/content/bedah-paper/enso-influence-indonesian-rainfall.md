@@ -26,10 +26,11 @@ Analisis korelasi antara indeks Niño 3.4 dan curah hujan stasiun, dilengkapi de
 
 ## Temuan Utama
 
-1. Indonesia timur (Maluku, Papua, NTT) paling sensitif terhadap ENSO — defisit hujan bisa mencapai **60%** saat El Niño kuat
+1. Indonesia timur (Maluku, Papua, NTT) paling sensitif terhadap ENSO - defisit hujan bisa mencapai **60%** saat El Niño kuat
 2. Sumatera utara menunjukkan respons yang relatif lemah terhadap ENSO
 3. Hubungan ENSO-curah hujan melemah pada periode 2000–2020 dibanding 1960–1980, kemungkinan terkait perubahan karakteristik ENSO
 
 ## Kesimpulan
 
 Prakiraan musiman di Indonesia harus mempertimbangkan perubahan karakter ENSO dan tidak mengandalkan hubungan historis secara mentah.
+

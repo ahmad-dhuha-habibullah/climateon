@@ -4,7 +4,7 @@
 1. [](#new)
     * GPM client now sends the running PHP version with index requests so the server can substitute PHP-aware compat fallbacks when a plugin's latest release requires a newer PHP than the client can run.
 1. [](#bugfix)
-    * [security] Extended default `uploads_dangerous_extensions` to include `md`, `yaml`, `yml`, `json`, `twig`, `ini` — page-content extensions that can be weaponised via permissive form-upload `accept` policies (GHSA-w4rc-p66m-x6qq, defense-in-depth alongside the Form 9.1.0 plugin fix).
+    * [security] Extended default `uploads_dangerous_extensions` to include `md`, `yaml`, `yml`, `json`, `twig`, `ini` - page-content extensions that can be weaponised via permissive form-upload `accept` policies (GHSA-w4rc-p66m-x6qq, defense-in-depth alongside the Form 9.1.0 plugin fix).
 
 # v1.7.51
 ## 04/28/2026

@@ -21,3 +21,4 @@ Kejadian hujan es di Indonesia biasanya terjadi di daerah dataran tinggi seperti
 ## Kaitannya dengan Cuaca Ekstrem
 
 Hujan es sering disertai angin kencang dan hujan deras, menjadikannya indikator aktivitas konveksi yang sangat intens.
+

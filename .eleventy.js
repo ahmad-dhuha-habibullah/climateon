@@ -82,11 +82,11 @@ module.exports = function(eleventyConfig) {
   });
 
   // Cari penulis dari slug
-  eleventyConfig.addFilter("cariPenulis", (slug, penulisData) => {
-    if (!slug || !penulisData) return null;
-    // Handle both raw array and Sveltia CMS `{items: [...]}` structure
-    const dataList = Array.isArray(penulisData) ? penulisData : (penulisData.items || []);
-    return dataList.find(p => p.slug === slug) || null;
+  eleventyConfig.addFilter("cariPenulis", (slug, penulisCollection) => {
+    if (!slug || !penulisCollection) return null;
+    const penulisPage = penulisCollection.find(p => p.fileSlug === slug);
+    if (!penulisPage) return null;
+    return { ...penulisPage.data, slug: penulisPage.fileSlug };
   });
 
   // Shuffle array
@@ -150,7 +150,7 @@ module.exports = function(eleventyConfig) {
     let tagSet = new Set();
     collectionApi.getFilteredByGlob("src/content/**/*.md").forEach(item => {
       if (item.data.tags) {
-        item.data.tags.forEach(tag => tagSet.add(tag));
+        item.data.tags.forEach(tag => tagSet.add(tag.toLowerCase()));
       }
     });
     return [...tagSet].sort();

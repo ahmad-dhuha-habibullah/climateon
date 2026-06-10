@@ -24,9 +24,10 @@ Bagaimana pola curah hujan musiman dan tahunan di Benua Maritim berubah di bawah
 
 1. Curah hujan tahunan rata-rata meningkat **5-15%** pada skenario 2°C
 2. Peningkatan terbesar terjadi pada DJF (musim hujan), sementara JJA (musim kemarau) menunjukkan penurunan di Indonesia timur
-3. Intensitas hujan harian meningkat **lebih cepat** dari volume total — artinya hujan lebih jarang tetapi lebih deras
+3. Intensitas hujan harian meningkat **lebih cepat** dari volume total - artinya hujan lebih jarang tetapi lebih deras
 4. "Dry spell" (periode kering) antara kejadian hujan menjadi lebih panjang
 
 ## Implikasi Praktis
 
-Paradoks "lebih basah tapi lebih kering" — total hujan meningkat tetapi distribusinya semakin timpang — menuntut redesign infrastruktur penampungan air dan sistem irigasi di Indonesia.
+Paradoks "lebih basah tapi lebih kering" - total hujan meningkat tetapi distribusinya semakin timpang - menuntut redesign infrastruktur penampungan air dan sistem irigasi di Indonesia.
+

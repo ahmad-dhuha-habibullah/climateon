@@ -1,0 +1,110 @@
+{
+  "items": [
+    {
+      "id": "iklim",
+      "judul": "Iklim",
+      "deskripsi": "Pemantauan dan analisis jangka panjang mengenai perubahan iklim, proyeksi masa depan, dan dampaknya bagi Indonesia.",
+      "subtopik": [
+        "Fenomena",
+        "Perubahan Iklim",
+        "Dampak"
+      ],
+      "image": "",
+      "video": "",
+      "embedUrl": ""
+    },
+    {
+      "id": "cuaca",
+      "judul": "Cuaca",
+      "deskripsi": "Prakiraan, analisis monsun, siklon tropis, dan peristiwa cuaca ekstrem di Indonesia dan sekitarnya.",
+      "subtopik": [
+        "Prakiraan",
+        "Monsun",
+        "Siklon Tropis",
+        "Cuaca Ekstrem"
+      ],
+      "image": "",
+      "video": "",
+      "embedUrl": ""
+    },
+    {
+      "id": "lingkungan",
+      "judul": "Lingkungan",
+      "deskripsi": "Kabar terkini tentang pelestarian lingkungan, deforestasi, biodiversitas, dan ekologi.",
+      "subtopik": [
+        "Biodiversitas",
+        "Deforestasi",
+        "Ekosistem",
+        "Polusi"
+      ],
+      "image": "",
+      "video": "",
+      "embedUrl": ""
+    },
+    {
+      "id": "keberlanjutan",
+      "judul": "Keberlanjutan",
+      "deskripsi": "Langkah menuju masa depan: energi terbarukan, transisi hijau, dan praktik berkelanjutan.",
+      "subtopik": [
+        "Energi Bersih",
+        "Transisi Hijau",
+        "Ekonomi Sirkular",
+        "Kebijakan"
+      ],
+      "image": "",
+      "video": "",
+      "embedUrl": ""
+    },
+    {
+      "id": "teknologi",
+      "judul": "Teknologi",
+      "deskripsi": "Inovasi, teknologi satelit, permodelan data, dan solusi modern untuk adaptasi dan mitigasi iklim.",
+      "subtopik": [
+        "Satelit",
+        "Model Iklim",
+        "Inovasi",
+        "AI & Data"
+      ],
+      "image": "",
+      "video": "",
+      "embedUrl": ""
+    },
+    {
+      "id": "riset",
+      "judul": "Riset",
+      "deskripsi": "Temuan terbaru dari ilmuwan dan peneliti terkait ilmu bumi dan dinamika atmosfer.",
+      "subtopik": [
+        "Publikasi",
+        "Temuan Baru",
+        "Metodologi",
+        "Ilmu Bumi"
+      ],
+      "image": "",
+      "video": ""
+    },
+    {
+      "id": "opini",
+      "judul": "Opini",
+      "deskripsi": "Sudut pandang, kolom pakar, dan analisis mendalam dari berbagai narasumber.",
+      "subtopik": [
+        "Kolom Pakar",
+        "Analisis",
+        "Tajuk Rencana"
+      ],
+      "image": "",
+      "video": ""
+    },
+    {
+      "id": "bedah-paper",
+      "judul": "Bedah Paper",
+      "deskripsi": "Tinjauan mendalam jurnal dan makalah ilmiah terbaru di bidang meteorologi, klimatologi, dan geofisika.",
+      "subtopik": [
+        "Review Jurnal",
+        "Metodologi",
+        "Aplikasi"
+      ],
+      "image": "",
+      "video": ""
+    }
+  ]
+}

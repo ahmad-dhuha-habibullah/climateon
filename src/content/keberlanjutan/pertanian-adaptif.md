@@ -9,10 +9,10 @@ tags:
   - ketahanan-pangan
 date: 2026-05-10
 image: https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=800&q=80
-penulis: ADH
+penulis: ahmad-dhuha-habibullah
 ---
 
-Sektor pertanian Indonesia — yang menyerap 30% angkatan kerja — sangat rentan terhadap perubahan iklim. Pergeseran musim tanam, curah hujan yang tidak menentu, dan peningkatan hama menjadi tantangan utama.
+Sektor pertanian Indonesia - yang menyerap 30% angkatan kerja - sangat rentan terhadap perubahan iklim. Pergeseran musim tanam, curah hujan yang tidak menentu, dan peningkatan hama menjadi tantangan utama.
 
 ## Climate-Smart Agriculture
 
@@ -27,3 +27,4 @@ Konsep "pertanian cerdas iklim" mengintegrasikan tiga tujuan: meningkatkan produ
 ## Peran Informasi Iklim
 
 Akses terhadap informasi prakiraan musiman dan pemantauan kekeringan dapat membantu petani membuat keputusan yang lebih baik. Inilah salah satu misi ClimateOn.
+

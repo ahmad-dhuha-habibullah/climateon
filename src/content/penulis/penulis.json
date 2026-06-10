@@ -1,0 +1,5 @@
+{
+  "tags": "penulis",
+  "layout": "layouts/profil.njk",
+  "permalink": "/penulis/{{ title | slug }}/index.html"
+}

@@ -1,4 +1,4 @@
-{# Kartu Utama — Featured card sedang #}
+{# Kartu Utama - Featured card sedang #}
 {# Expects: item (article object) #}
 <article class="kartu-utama">
     <a href="{{ item.url }}" class="kartu-utama-img-wrap">
@@ -19,12 +19,13 @@
         </a>
         <p class="kartu-utama-desc">{{ item.data.description | default(item.content | ringkasan(120)) }}</p>
         <div class="kartu-utama-meta">
-            {% set authorData = item.data.penulis | cariPenulis(dataPenulis) %}
+            {% set authorData = item.data.penulis | cariPenulis(collections.penulis) %}
             {% if authorData %}
-                <span><i data-lucide="user" class="icon-xs"></i> <a href="/penulis/{{ authorData.slug }}/" style="color: inherit; text-decoration: none;">{{ authorData.nama }}</a></span>
+                <span><i data-lucide="user" class="icon-xs"></i> <a href="/penulis/{{ authorData.slug }}/" style="color: inherit; text-decoration: none;">{{ authorData.title }}</a></span>
             {% endif %}
             <span><i data-lucide="clock" class="icon-xs"></i> {{ item.content | waktuBaca }} mnt</span>
             <span><i data-lucide="calendar" class="icon-xs"></i> {{ item.date | tanggalBaca }}</span>
         </div>
     </div>
 </article>
+

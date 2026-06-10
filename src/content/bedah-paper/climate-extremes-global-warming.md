@@ -39,3 +39,4 @@ Bagaimana frekuensi hujan ekstrem, kekeringan, dan gelombang panas berubah di ba
 ## Apa Artinya untuk Indonesia?
 
 Indonesia harus memperkuat infrastruktur adaptasi untuk menghadapi cuaca ekstrem yang semakin sering. Sistem peringatan dini, infrastruktur drainase, dan asuransi pertanian menjadi prioritas.
+

@@ -12,7 +12,7 @@ patches and features.
 
 ## Grav, Plugins, Themes and Skeletons
 
-Grav is a large open source project — it's made up of over 100 repositories. When you initially consider contributing to Grav, you might be unsure about which of those 200 repositories implements the functionality you want to change or report a bug for.
+Grav is a large open source project - it's made up of over 100 repositories. When you initially consider contributing to Grav, you might be unsure about which of those 200 repositories implements the functionality you want to change or report a bug for.
 
 [https://github.com/getgrav/grav](https://github.com/getgrav/grav) is the main Grav repository. The core of Grav is provided by this repo.
 

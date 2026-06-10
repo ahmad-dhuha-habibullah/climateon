@@ -14,7 +14,7 @@ Sebagai praktisi yang bekerja dengan data iklim setiap hari, saya kerap frustras
 
 ## Masalah Saat Ini
 
-Data curah hujan harian dari stasiun BMKG — yang seharusnya menjadi barang publik — seringkali memerlukan prosedur birokrasi yang panjang untuk diakses. Data yang tersedia secara online sering terbatas dan tidak up-to-date.
+Data curah hujan harian dari stasiun BMKG - yang seharusnya menjadi barang publik - seringkali memerlukan prosedur birokrasi yang panjang untuk diakses. Data yang tersedia secara online sering terbatas dan tidak up-to-date.
 
 ## Perbandingan Internasional
 
@@ -28,4 +28,5 @@ Di negara-negara maju seperti AS, Inggris, dan Jepang, data meteorologi tersedia
 
 ## Visi ke Depan
 
-Indonesia membutuhkan platform data iklim terbuka yang modern, terintegrasi, dan mudah diakses — mirip dengan Copernicus Climate Data Store milik Uni Eropa. Ini bukan kemewahan, melainkan infrastruktur dasar untuk bangsa yang sangat bergantung pada informasi iklim.
+Indonesia membutuhkan platform data iklim terbuka yang modern, terintegrasi, dan mudah diakses - mirip dengan Copernicus Climate Data Store milik Uni Eropa. Ini bukan kemewahan, melainkan infrastruktur dasar untuk bangsa yang sangat bergantung pada informasi iklim.
+

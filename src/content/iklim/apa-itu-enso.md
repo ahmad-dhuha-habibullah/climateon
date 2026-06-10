@@ -9,7 +9,7 @@ image: "https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?auto=format
 penulis: "ahmad-dhuha-habibullah"
 featured: true
 ---
-El Niño-Southern Oscillation (ENSO) bukan sekadar istilah meteorologi — ia adalah pendorong utama variabilitas iklim yang mempengaruhi kehidupan ratusan juta orang di Indonesia.
+El Niño-Southern Oscillation (ENSO) bukan sekadar istilah meteorologi - ia adalah pendorong utama variabilitas iklim yang mempengaruhi kehidupan ratusan juta orang di Indonesia.
 
 ## Bagaimana ENSO Bekerja
 
@@ -19,7 +19,7 @@ Ketika El Niño terjadi, angin pasat melemah atau bahkan berbalik arah. Air hang
 
 ## Dampak di Indonesia
 
-Indonesia berada di sisi barat Samudera Pasifik — tepat di "zona aksi" ENSO. Selama El Niño kuat seperti 1997/98 dan 2015/16, Indonesia mengalami:
+Indonesia berada di sisi barat Samudera Pasifik - tepat di "zona aksi" ENSO. Selama El Niño kuat seperti 1997/98 dan 2015/16, Indonesia mengalami:
 
 - **Kekeringan parah** di Kalimantan, Sulawesi, dan Papua
 - **Kebakaran hutan** yang menghasilkan kabut asap lintas negara
@@ -33,3 +33,4 @@ Sebaliknya, La Niña membawa curah hujan berlebihan yang dapat memicu banjir dan
 Dengan memahami fase ENSO dan prakiraan perkembangannya, petani dapat menyesuaikan waktu tanam, pemerintah daerah dapat menyiapkan infrastruktur drainase, dan masyarakat pesisir dapat mengantisipasi perubahan pola gelombang.
 
 ClimateOn menyajikan pemantauan ENSO secara berkala melalui [Pusat Data](/pusat-data/enso/) kami.
+

@@ -9,7 +9,7 @@ tags:
   - el-nino
 date: 2026-05-18
 image: https://images.unsplash.com/photo-1504297050568-910d24c426d3?auto=format&fit=crop&w=800&q=80
-penulis: ADH
+penulis: ahmad-dhuha-habibullah
 ---
 
 Kekeringan merupakan bencana "lambat" yang dampaknya sering baru dirasakan setelah berminggu-minggu tanpa hujan. Wilayah Nusa Tenggara, Jawa bagian timur, dan Sulawesi Selatan menjadi area yang paling rentan.
@@ -25,3 +25,4 @@ Selama El Niño kuat, wilayah Indonesia timur bisa mengalami defisit hujan hingg
 ## Adaptasi Masyarakat Lokal
 
 Masyarakat di NTT dan NTB telah mengembangkan teknik penampungan air hujan dan rotasi tanaman yang disesuaikan dengan pola kekeringan musiman.
+

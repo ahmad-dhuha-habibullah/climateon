@@ -18,12 +18,13 @@ GraphCast, Pangu-Weather (Huawei), dan FourCastNet (NVIDIA) menggunakan arsitekt
 
 - **Kecepatan**: 1.000-10.000x lebih cepat dari model NWP tradisional
 - **Akurasi**: Sebanding atau lebih baik untuk prakiraan medium-range (3-10 hari)
-- **Efisiensi**: Tidak membutuhkan superkomputer — cukup GPU standar
+- **Efisiensi**: Tidak membutuhkan superkomputer - cukup GPU standar
 
 ## Keterbatasan
 
-Model AI masih kesulitan dengan kejadian ekstrem yang jarang terjadi, karena keterbatasan data training. Interpretasi fisik juga menjadi tantangan — model AI adalah "black box" yang sulit dijelaskan.
+Model AI masih kesulitan dengan kejadian ekstrem yang jarang terjadi, karena keterbatasan data training. Interpretasi fisik juga menjadi tantangan - model AI adalah "black box" yang sulit dijelaskan.
 
 ## Relevansi untuk Indonesia
 
 BMKG tengah mengeksplorasi penggunaan model AI untuk meningkatkan prakiraan cuaca harian dan prakiraan musiman. Kombinasi model tradisional dan AI menjadi pendekatan yang paling menjanjikan.
+

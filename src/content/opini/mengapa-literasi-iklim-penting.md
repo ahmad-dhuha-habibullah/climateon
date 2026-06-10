@@ -9,7 +9,7 @@ tags:
   - editorial
 date: 2026-06-09
 image: https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80
-penulis: ADH
+penulis: NAZ
 featured: true
 ---
 
@@ -29,4 +29,4 @@ Media iklim seperti ClimateOn hadir untuk mengisi kekosongan ini. Bukan dengan j
 
 ## Ajakan Bertindak
 
-Literasi iklim bukan kemewahan — ini kebutuhan dasar untuk bangsa kepulauan yang berdiri di garis depan perubahan iklim global.
+Literasi iklim bukan kemewahan - ini kebutuhan dasar untuk bangsa kepulauan yang berdiri di garis depan perubahan iklim global.

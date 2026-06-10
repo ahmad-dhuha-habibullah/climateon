@@ -34,3 +34,4 @@ Meski siklon jarang melintas langsung di wilayah Indonesia, pergeseran lintasan 
 ## Keterbatasan
 
 Dataset best-track di Belahan Bumi Selatan kurang homogen dibanding Belahan Bumi Utara, terutama sebelum era satelit modern.
+

@@ -1,4 +1,4 @@
-{# Hero Card — Split layout: text left, image/video right with fade gradient #}
+{# Hero Card - Split layout: text left, image/video right with fade gradient #}
 {# Expects: artikelPertama (article object) #}
 {% if artikelPertama %}
 <a href="{{ artikelPertama.url }}" class="kartu-hero">
@@ -17,7 +17,7 @@
     <div class="hero-bg-media hero-bg-fallback"></div>
     {% endif %}
 
-    {# Left-to-right gradient overlay — opaque on left, transparent on right #}
+    {# Left-to-right gradient overlay - opaque on left, transparent on right #}
     <div class="hero-gradient-overlay"></div>
 
     {# Text content pinned to the left #}
@@ -28,9 +28,9 @@
         <h2 class="kartu-hero-judul">{{ artikelPertama.data.title }}</h2>
         <p class="kartu-hero-desc">{{ artikelPertama.data.description | default(artikelPertama.content | ringkasan(180)) }}</p>
         <div class="kartu-hero-meta">
-            {% set authorData = artikelPertama.data.penulis | cariPenulis(dataPenulis) %}
+            {% set authorData = artikelPertama.data.penulis | cariPenulis(collections.penulis) %}
             {% if authorData %}
-                <span><i data-lucide="user" class="icon-xs"></i> <a href="/penulis/{{ authorData.slug }}/" style="color: inherit; text-decoration: none;">{{ authorData.nama }}</a></span>
+                <span><i data-lucide="user" class="icon-xs"></i> <a href="/penulis/{{ authorData.slug }}/" style="color: inherit; text-decoration: none;">{{ authorData.title }}</a></span>
             {% endif %}
             <span><i data-lucide="clock" class="icon-xs"></i> {{ artikelPertama.content | waktuBaca }} menit baca</span>
             <span><i data-lucide="calendar" class="icon-xs"></i> {{ artikelPertama.date | tanggalBaca }}</span>
@@ -40,3 +40,4 @@
 
 </a>
 {% endif %}
+

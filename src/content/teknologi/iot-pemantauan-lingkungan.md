@@ -8,7 +8,7 @@ date: 2026-05-24
 image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?auto=format&fit=crop&w=800&q=80"
 penulis: "ahmad-dhuha-habibullah"
 ---
-Automatic Weather Station (AWS) konvensional berharga ratusan juta rupiah. Sensor IoT menawarkan alternatif dengan biaya sepersepuluh — memungkinkan pemasangan di ratusan titik sekaligus.
+Automatic Weather Station (AWS) konvensional berharga ratusan juta rupiah. Sensor IoT menawarkan alternatif dengan biaya sepersepuluh - memungkinkan pemasangan di ratusan titik sekaligus.
 
 ## AWS Berbasis IoT
 
@@ -23,3 +23,4 @@ Stasiun cuaca otomatis berbasis IoT mengukur suhu, kelembapan, tekanan udara, cu
 ## Tantangan Data
 
 Volume data yang besar membutuhkan infrastruktur cloud computing dan algoritma quality control otomatis untuk memastikan akurasi.
+

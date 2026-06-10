@@ -1,51 +1,71 @@
 ---
-pagination:
-  data: dataPenulis.items
-  size: 1
-  alias: author
-permalink: "/penulis/{{ author.slug }}/"
 layout: layouts/base.njk
 eleventyComputed:
-  title: "{{ author.nama }} — Tim ClimateOn"
-  description: "{{ author.bio | truncate(120) }}"
+  title: "{{ title }} - Tim ClimateOn"
+  description: "{{ content | striptags | truncate(120) }}"
 ---
 
 <div class="profil-page">
     
     {# ═══ Hero Banner ═══ #}
-    <div class="profil-hero" {% if author.avatar %}style="--author-avatar: url('{{ author.avatar }}')"{% endif %}>
+    <div class="profil-hero" {% if avatar %}style="--author-avatar: url('{{ avatar }}')"{% endif %}>
         <div class="profil-hero-bg"></div>
         <div class="container profil-hero-content">
             <div class="profil-avatar-ring">
-                <img src="{{ author.avatar | default('/assets/images/authors/default.jpg') }}" 
-                     alt="{{ author.nama }}" 
+                <img src="{{ avatar | default('/assets/images/authors/default.jpg') }}" 
+                     alt="{{ title }}" 
                      class="profil-avatar-img" loading="lazy">
             </div>
             <div class="profil-hero-info">
-                <span class="profil-peran-badge">{{ author.peran }}</span>
-                <h1 class="profil-nama">{{ author.nama }}</h1>
-                {% if author.keahlian %}
-                <p class="profil-keahlian">{{ author.keahlian }}</p>
+                <span class="profil-peran-badge">{{ peran | default('Kontributor') }}</span>
+                <h1 class="profil-nama">{{ title }}</h1>
+                {% if keahlian %}
+                <p class="profil-keahlian">{{ keahlian }}</p>
                 {% endif %}
                 <div class="profil-sosial">
-                    {% if author.twitter %}
-                    <a href="{{ author.twitter | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn">
-                        <i data-lucide="twitter"></i> Twitter
+                    {% if instagram %}
+                    <a href="{{ instagram | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn" aria-label="Instagram">
+                        <i data-lucide="instagram"></i> Instagram
                     </a>
                     {% endif %}
-                    {% if author.linkedin %}
-                    <a href="{{ author.linkedin | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn">
+                    {% if linkedin %}
+                    <a href="{{ linkedin | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn" aria-label="LinkedIn">
                         <i data-lucide="linkedin"></i> LinkedIn
                     </a>
                     {% endif %}
-                    {% if author.github %}
-                    <a href="{{ author.github | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn">
+                    {% if threads %}
+                    <a href="{{ threads | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn" aria-label="Threads">
+                        <i data-lucide="at-sign"></i> Threads
+                    </a>
+                    {% endif %}
+                    {% if tiktok %}
+                    <a href="{{ tiktok | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn" aria-label="TikTok">
+                        <i data-lucide="music"></i> TikTok
+                    </a>
+                    {% endif %}
+                    {% if youtube %}
+                    <a href="{{ youtube | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn" aria-label="YouTube">
+                        <i data-lucide="youtube"></i> YouTube
+                    </a>
+                    {% endif %}
+                    {% if website %}
+                    <a href="{{ website | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn" aria-label="Website">
+                        <i data-lucide="globe"></i> Website
+                    </a>
+                    {% endif %}
+                    {% if github %}
+                    <a href="{{ github | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn" aria-label="GitHub">
                         <i data-lucide="github"></i> GitHub
                     </a>
                     {% endif %}
-                    {% if author.website %}
-                    <a href="{{ author.website | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn">
-                        <i data-lucide="globe"></i> Website
+                    {% if orcid %}
+                    <a href="{{ orcid | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn" aria-label="ORCID">
+                        <i data-lucide="book-open"></i> ORCID
+                    </a>
+                    {% endif %}
+                    {% if scholar %}
+                    <a href="{{ scholar | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn" aria-label="Google Scholar">
+                        <i data-lucide="graduation-cap"></i> Scholar
                     </a>
                     {% endif %}
                 </div>
@@ -54,22 +74,23 @@ eleventyComputed:
     </div>
 
     <div class="container profil-body">
+        {% include "components/breadcrumb.njk" %}
+        <br>
         <div class="profil-grid">
-
-            {# ═══ Left Sidebar ═══ #}
+            <!-- Sidebar Kiri -->
             <aside class="profil-sidebar">
                 
                 {# Bio #}
                 <div class="profil-card">
                     <h3><i data-lucide="user-circle" class="icon-sm"></i> Tentang</h3>
-                    <p class="profil-bio-text">{{ author.bio }}</p>
+                    <div class="profil-bio-text">{{ content | safe }}</div>
                 </div>
 
                 {# Education #}
-                {% if author.pendidikan %}
+                {% if pendidikan %}
                 <div class="profil-card">
                     <h3><i data-lucide="graduation-cap" class="icon-sm"></i> Pendidikan</h3>
-                    {% for edu in author.pendidikan %}
+                    {% for edu in pendidikan %}
                     <div class="profil-timeline-item">
                         <strong>{{ edu.gelar }}</strong>
                         <span class="profil-timeline-place">{{ edu.institusi }}</span>
@@ -80,12 +101,14 @@ eleventyComputed:
                 {% endif %}
 
                 {# Keahlian #}
-                {% if author.tags %}
+                {% if tags %}
                 <div class="profil-card">
                     <h3><i data-lucide="tag" class="icon-sm"></i> Bidang Keahlian</h3>
                     <div class="profil-tags">
-                        {% for tag in author.tags %}
+                        {% for tag in tags %}
+                        {% if tag != "penulis" %}
                         <span class="profil-tag">{{ tag }}</span>
+                        {% endif %}
                         {% endfor %}
                     </div>
                 </div>
@@ -93,16 +116,16 @@ eleventyComputed:
 
             </aside>
 
-            {# ═══ Main Content — Articles ═══ #}
+            {# ═══ Main Content - Articles ═══ #}
             <main class="profil-main">
                 <h2 class="profil-section-title">
                     <i data-lucide="pencil" class="icon-sm"></i>
-                    Artikel oleh {{ author.nama }}
+                    Artikel oleh {{ title }}
                 </h2>
                 
                 {% set hasArticles = false %}
                 {% for item in collections.semuaArtikel %}
-                    {% if item.data.penulis == author.slug %}
+                    {% if item.data.penulis == page.fileSlug %}
                         {% set hasArticles = true %}
                     {% endif %}
                 {% endfor %}
@@ -115,7 +138,7 @@ eleventyComputed:
                 {% else %}
                 <div class="profil-artikel-list">
                     {% for item in collections.semuaArtikel | sort(true, false, "date") %}
-                        {% if item.data.penulis == author.slug %}
+                        {% if item.data.penulis == page.fileSlug %}
                         <a href="{{ item.url }}" class="profil-artikel-card">
                             {% if item.data.image %}
                             <div class="profil-artikel-img" style="background-image: url('{{ item.data.image }}')"></div>

@@ -1,7 +1,7 @@
 ---
 layout: layouts/artikel.njk
 title: "Perubahan Iklim di Indonesia: Apa yang Sudah Terjadi dan Apa yang Akan Datang"
-description: "Dari kenaikan suhu rata-rata hingga pergeseran pola hujan — bukti perubahan iklim di Indonesia sudah tak terbantahkan."
+description: "Dari kenaikan suhu rata-rata hingga pergeseran pola hujan - bukti perubahan iklim di Indonesia sudah tak terbantahkan."
 category: "iklim"
 tags: ["perubahan-iklim", "pemanasan-global", "adaptasi"]
 date: 2026-05-28
@@ -26,3 +26,4 @@ Model iklim IPCC AR6 memproyeksikan bahwa pada 2050, Indonesia akan mengalami ke
 ## Sektor yang Paling Terdampak
 
 Pertanian, perikanan, sumber daya air, dan kesehatan masyarakat menjadi sektor yang paling rentan terhadap dampak perubahan iklim di Indonesia.
+

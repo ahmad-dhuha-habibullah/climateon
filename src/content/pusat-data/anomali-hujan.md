@@ -1,16 +1,18 @@
 ---
+title: Anomali Curah Hujan
+description: Pemantauan anomali curah hujan nasional berdasarkan data satelit dan stasiun pengamatan BMKG.
+image: /assets/images/uploads/Dramatic_Views_of_Hurricane_Florence_from_the_International_Space_Station_From_9_12_(42828603210)_(cropped) (1) (Medium).jpg
+embedUrl: https://ahmad-dhuha-habibullah.github.io/solar_tracker_simulator.html
+status: Atas Normal
+statusWarna: '#0ea5e9'
+statusKeterangan: Curah hujan bulan ini berada di atas normal di sebagian besar wilayah Sumatera, Kalimantan, dan Sulawesi. Jawa bagian timur dan Nusa Tenggara menunjukkan curah hujan mendekati normal.
 layout: layouts/pusat-data.njk
-title: "Anomali Curah Hujan"
-description: "Pemantauan anomali curah hujan nasional berdasarkan data satelit dan stasiun pengamatan BMKG."
-status: "Atas Normal"
-statusWarna: "#0ea5e9"
-statusKeterangan: "Curah hujan bulan ini berada di atas normal di sebagian besar wilayah Sumatera, Kalimantan, dan Sulawesi. Jawa bagian timur dan Nusa Tenggara menunjukkan curah hujan mendekati normal."
 permalink: /pusat-data/anomali-hujan/
 ---
 
 ## Pemantauan Curah Hujan
 
-Curah hujan adalah parameter iklim yang paling dirasakan dampaknya oleh masyarakat. Anomali curah hujan — selisih dari rata-rata normal — menentukan risiko banjir, kekeringan, dan gangguan sektor pertanian.
+Curah hujan adalah parameter iklim yang paling dirasakan dampaknya oleh masyarakat. Anomali curah hujan - selisih dari rata-rata normal - menentukan risiko banjir, kekeringan, dan gangguan sektor pertanian.
 
 ## Pola Musiman Indonesia
 

@@ -1,7 +1,7 @@
 ---
 layout: layouts/artikel.njk
 title: "Satelit Penginderaan Jauh: Mengamati Iklim dari Luar Angkasa"
-description: "Dari Himawari-9 hingga Sentinel-6 — bagaimana satelit membantu Indonesia memantau cuaca dan iklim."
+description: "Dari Himawari-9 hingga Sentinel-6 - bagaimana satelit membantu Indonesia memantau cuaca dan iklim."
 category: "teknologi"
 tags: ["satelit", "penginderaan-jauh", "pemantauan"]
 date: 2026-05-31
@@ -25,3 +25,4 @@ Sentinel-6/Jason-CS mengukur ketinggian permukaan laut dengan presisi milimeter,
 ## Masa Depan: Konstelasi Satelit Kecil
 
 Indonesia tengah mengembangkan kapabilitas satelit sendiri melalui program LAPAN/BRIN, termasuk rencana konstelasi satelit kecil untuk pemantauan maritim dan lingkungan.
+

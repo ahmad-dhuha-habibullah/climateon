@@ -8,7 +8,7 @@ date: 2026-05-26
 image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
 penulis: "ahmad-dhuha-habibullah"
 ---
-ENSO bukanlah fenomena yang statis — pola, frekuensi, dan intensitasnya berubah dari dekade ke dekade. Memahami evolusi ini kritis untuk meningkatkan prakiraan musiman.
+ENSO bukanlah fenomena yang statis - pola, frekuensi, dan intensitasnya berubah dari dekade ke dekade. Memahami evolusi ini kritis untuk meningkatkan prakiraan musiman.
 
 ## Pergeseran Pola
 
@@ -20,4 +20,5 @@ La Niña cenderung bertahan lebih lama (sering multi-tahun) dibanding El Niño. 
 
 ## Hubungan dengan Pemanasan Global
 
-Model iklim memproyeksikan bahwa pemanasan global dapat mengubah karakter ENSO — kemungkinan meningkatkan frekuensi El Niño ekstrem. Namun, ketidakpastian masih besar.
+Model iklim memproyeksikan bahwa pemanasan global dapat mengubah karakter ENSO - kemungkinan meningkatkan frekuensi El Niño ekstrem. Namun, ketidakpastian masih besar.
+

@@ -1,7 +1,7 @@
 ---
 layout: layouts/artikel.njk
 title: "Siklus Karbon dalam Sistem Iklim: Dari Hutan Hujan hingga Lautan Dalam"
-description: "Bagaimana karbon berpindah di antara atmosfer, lautan, dan daratan — dan mengapa keseimbangan ini kini terganggu."
+description: "Bagaimana karbon berpindah di antara atmosfer, lautan, dan daratan - dan mengapa keseimbangan ini kini terganggu."
 category: "iklim"
 tags: ["karbon", "siklus-karbon", "pemanasan-global"]
 date: 2026-05-22
@@ -12,7 +12,7 @@ Siklus karbon adalah proses alami perpindahan karbon antara atmosfer, biosfer, l
 
 ## Karbon di Atmosfer
 
-CO₂ di atmosfer bertindak sebagai selimut yang menahan panas. Konsentrasi CO₂ kini melebihi 420 ppm — tertinggi dalam 800.000 tahun terakhir berdasarkan data es inti Antartika.
+CO₂ di atmosfer bertindak sebagai selimut yang menahan panas. Konsentrasi CO₂ kini melebihi 420 ppm - tertinggi dalam 800.000 tahun terakhir berdasarkan data es inti Antartika.
 
 ## Peran Hutan Indonesia
 
@@ -20,4 +20,5 @@ Hutan tropis Indonesia menyimpan sekitar 3.5 gigaton karbon di atas permukaan ta
 
 ## Lautan sebagai Penyerap Karbon
 
-Lautan menyerap sekitar 25% emisi CO₂ manusia. Namun, penyerapan berlebihan menyebabkan pengasaman laut — ancaman serius bagi organisme berkapur seperti terumbu karang dan moluska.
+Lautan menyerap sekitar 25% emisi CO₂ manusia. Namun, penyerapan berlebihan menyebabkan pengasaman laut - ancaman serius bagi organisme berkapur seperti terumbu karang dan moluska.
+

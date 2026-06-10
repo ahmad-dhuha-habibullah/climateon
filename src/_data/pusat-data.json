@@ -1,48 +1,13 @@
-{ "items": [
-  {
-    "slug": "enso",
-    "judul": "Pemantau ENSO",
-    "deskripsi": "Pantau kondisi El Niño-Southern Oscillation terkini, termasuk indeks Niño 3.4, probabilitas fase, dan dampaknya terhadap iklim Indonesia.",
-    "status": "Netral",
-    "statusWarna": "#64748b",
-    "ikon": "thermometer-sun",
-    "url": "/pusat-data/enso/"
-  },
-  {
-    "slug": "gelombang-panas-laut",
-    "judul": "Gelombang Panas Laut",
-    "deskripsi": "Pemantauan marine heatwave di perairan Indonesia. Deteksi kejadian, intensitas, dan dampak terhadap ekosistem laut.",
-    "status": "Aktivitas Rendah",
-    "statusWarna": "#22c55e",
-    "ikon": "waves",
-    "url": "/pusat-data/gelombang-panas-laut/"
-  },
-  {
-    "slug": "siklon-tropis",
-    "judul": "Siklon Tropis",
-    "deskripsi": "Lacak aktivitas siklon tropis di sekitar wilayah Indonesia, termasuk lintasan historis dan prakiraan musiman.",
-    "status": "Tidak Ada Aktif",
-    "statusWarna": "#64748b",
-    "ikon": "cloud-lightning",
-    "url": "/pusat-data/siklon-tropis/"
-  },
-  {
-    "slug": "suhu-muka-laut",
-    "judul": "Suhu Muka Laut",
-    "deskripsi": "Anomali suhu permukaan laut (SST) di wilayah perairan Indonesia dan Samudera Hindia-Pasifik tropis.",
-    "status": "+0.4°C",
-    "statusWarna": "#ef4444",
-    "ikon": "droplets",
-    "url": "/pusat-data/suhu-muka-laut/"
-  },
-  {
-    "slug": "anomali-hujan",
-    "judul": "Anomali Curah Hujan",
-    "deskripsi": "Pemantauan anomali curah hujan nasional berdasarkan data satelit dan stasiun pengamatan BMKG.",
-    "status": "Atas Normal",
-    "statusWarna": "#0ea5e9",
-    "ikon": "cloud-rain",
-    "url": "/pusat-data/anomali-hujan/"
-  }
-] }
-
+{
+  "items": [
+    {
+      "slug": "enso",
+      "judul": "?",
+      "deskripsi": "?",
+      "status": "?",
+      "statusWarna": "#64748b",
+      "ikon": "bar-chart-2",
+      "url": "https://iklim.bmkg.go.id/id/enso/"
+    }
+  ]
+}

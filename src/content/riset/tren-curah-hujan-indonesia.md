@@ -22,8 +22,9 @@ Analisis tren linier menunjukkan beberapa pola:
 
 ## Implikasi
 
-Perubahan ini berdampak langsung pada sektor pertanian — kalender tanam yang selama ini mengikuti pola "pakem" musiman kini semakin tidak bisa diandalkan.
+Perubahan ini berdampak langsung pada sektor pertanian - kalender tanam yang selama ini mengikuti pola "pakem" musiman kini semakin tidak bisa diandalkan.
 
 ## Keterbatasan Data
 
 Distribusi stasiun pengamatan yang tidak merata dan ada yang terputus (missing data) menjadi tantangan dalam analisis tren. Data satelit (GPM/IMERG) mulai digunakan sebagai pelengkap.
+

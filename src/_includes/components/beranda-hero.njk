@@ -1,4 +1,4 @@
-{# Hero Khusus Beranda — Dapat diedit via CMS (beranda.json) #}
+{# Hero Khusus Beranda - Dapat diedit via CMS (beranda.json) #}
 <section class="beranda-hero-split">
     
     {# Media Panel di Kanan (Atau full width tapi fokus di kanan) #}
@@ -25,7 +25,11 @@
             <p class="beranda-desc">{{ beranda.deskripsi }}</p>
             <div class="beranda-actions">
                 {% if beranda.tombolUtama.teks %}
-                <a href="{{ beranda.tombolUtama.url }}" class="btn-primary">
+                {% set mainBtnUrl = beranda.tombolUtama.url %}
+                {% if 'Terbaru' in beranda.tombolUtama.teks %}
+                    {% set mainBtnUrl = (collections.semuaArtikel | first).url %}
+                {% endif %}
+                <a href="{{ mainBtnUrl }}" class="btn-primary">
                     {{ beranda.tombolUtama.teks }} <i data-lucide="arrow-right" class="icon-xs"></i>
                 </a>
                 {% endif %}
@@ -33,3 +37,4 @@
         </div>
     </div>
 </section>
+

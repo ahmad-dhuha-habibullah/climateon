@@ -20,11 +20,11 @@ layout: layouts/base.njk
 
             <div class="artikel-meta">
                 {% if penulis %}
-                    {% set authorData = penulis | cariPenulis(dataPenulis) %}
+                    {% set authorData = penulis | cariPenulis(collections.penulis) %}
                     {% if authorData %}
                     <span class="artikel-penulis" itemprop="author">
                         <i data-lucide="user" class="icon-sm"></i>
-                        <a href="/penulis/{{ authorData.slug }}/" style="color: inherit; text-decoration: none;">{{ authorData.nama }}</a>
+                        <a href="/penulis/{{ authorData.slug }}/" style="color: inherit; text-decoration: none;">{{ authorData.title }}</a>
                     </span>
                     {% else %}
                     <span class="artikel-penulis" itemprop="author">
@@ -101,35 +101,60 @@ layout: layouts/base.njk
 
             {# Author Bio #}
             {% if penulis %}
-                {% set authorData = penulis | cariPenulis(dataPenulis) %}
+                {% set authorData = penulis | cariPenulis(collections.penulis) %}
                 {% if authorData %}
                 <div class="penulis-bio-card">
                     <div class="penulis-bio-avatar">
-                        <img src="{{ authorData.avatar | default('/assets/images/authors/default.jpg') }}" alt="{{ authorData.nama }}" loading="lazy">
+                        <img src="{{ authorData.avatar | default('/assets/images/authors/default.jpg') }}" alt="{{ authorData.title }}" loading="lazy">
                     </div>
                     <div class="penulis-bio-info">
-                        <h4><a href="/penulis/{{ authorData.slug }}/" style="color: inherit; text-decoration: none;">{{ authorData.nama }}</a></h4>
+                        <h4><a href="/penulis/{{ authorData.slug }}/" style="color: inherit; text-decoration: none;">{{ authorData.title }}</a></h4>
                         <span class="penulis-peran">{{ authorData.peran }}</span>
                         <p>{{ authorData.bio }}</p>
                         <div class="profil-sosial profil-sosial-sm mt-3">
-                            {% if authorData.twitter %}
-                            <a href="{{ authorData.twitter | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn" title="Twitter/X">
-                                <i data-lucide="twitter"></i>
+                            {% if authorData.instagram %}
+                            <a href="{{ authorData.instagram | ensureUrl }}" target="_blank" rel="noopener" class="sosial-link" aria-label="Instagram">
+                                <i data-lucide="instagram" class="icon-sm"></i>
                             </a>
                             {% endif %}
                             {% if authorData.linkedin %}
-                            <a href="{{ authorData.linkedin | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn" title="LinkedIn">
-                                <i data-lucide="linkedin"></i>
+                            <a href="{{ authorData.linkedin | ensureUrl }}" target="_blank" rel="noopener" class="sosial-link" aria-label="LinkedIn">
+                                <i data-lucide="linkedin" class="icon-sm"></i>
                             </a>
                             {% endif %}
-                            {% if authorData.github %}
-                            <a href="{{ authorData.github | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn" title="GitHub">
-                                <i data-lucide="github"></i>
+                            {% if authorData.threads %}
+                            <a href="{{ authorData.threads | ensureUrl }}" target="_blank" rel="noopener" class="sosial-link" aria-label="Threads">
+                                <i data-lucide="at-sign" class="icon-sm"></i>
+                            </a>
+                            {% endif %}
+                            {% if authorData.tiktok %}
+                            <a href="{{ authorData.tiktok | ensureUrl }}" target="_blank" rel="noopener" class="sosial-link" aria-label="TikTok">
+                                <i data-lucide="music" class="icon-sm"></i>
+                            </a>
+                            {% endif %}
+                            {% if authorData.youtube %}
+                            <a href="{{ authorData.youtube | ensureUrl }}" target="_blank" rel="noopener" class="sosial-link" aria-label="YouTube">
+                                <i data-lucide="youtube" class="icon-sm"></i>
                             </a>
                             {% endif %}
                             {% if authorData.website %}
-                            <a href="{{ authorData.website | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn" title="Website">
-                                <i data-lucide="globe"></i>
+                            <a href="{{ authorData.website | ensureUrl }}" target="_blank" rel="noopener" class="sosial-link" aria-label="Website">
+                                <i data-lucide="globe" class="icon-sm"></i>
+                            </a>
+                            {% endif %}
+                            {% if authorData.github %}
+                            <a href="{{ authorData.github | ensureUrl }}" target="_blank" rel="noopener" class="sosial-link" aria-label="GitHub">
+                                <i data-lucide="github" class="icon-sm"></i>
+                            </a>
+                            {% endif %}
+                            {% if authorData.orcid %}
+                            <a href="{{ authorData.orcid | ensureUrl }}" target="_blank" rel="noopener" class="sosial-link" aria-label="ORCID">
+                                <i data-lucide="book-open" class="icon-sm"></i>
+                            </a>
+                            {% endif %}
+                            {% if authorData.scholar %}
+                            <a href="{{ authorData.scholar | ensureUrl }}" target="_blank" rel="noopener" class="sosial-link" aria-label="Google Scholar">
+                                <i data-lucide="graduation-cap" class="icon-sm"></i>
                             </a>
                             {% endif %}
                         </div>
@@ -161,3 +186,4 @@ layout: layouts/base.njk
     </div>
 
 </article>
+

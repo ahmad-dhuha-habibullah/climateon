@@ -17,7 +17,7 @@ Siklon tropis membutuhkan beberapa kondisi: suhu muka laut di atas 26.5°C, kele
 
 ## Mengapa Indonesia "Aman"?
 
-Indonesia terletak dekat dengan ekuator, di mana Gaya Coriolis sangat lemah. Tanpa Coriolis yang memadai, gangguan tropis sulit berkembang menjadi siklon matang. Namun, "aman" adalah kata relatif — dampak tidak langsung tetap nyata.
+Indonesia terletak dekat dengan ekuator, di mana Gaya Coriolis sangat lemah. Tanpa Coriolis yang memadai, gangguan tropis sulit berkembang menjadi siklon matang. Namun, "aman" adalah kata relatif - dampak tidak langsung tetap nyata.
 
 ## Dampak Tidak Langsung
 
@@ -26,3 +26,4 @@ Siklon Seroja (2021) menunjukkan bahwa dampak tidak langsung bisa sangat merusak
 ## Peran Monsun Asia-Australia
 
 Interaksi antara siklon tropis dan sistem monsun menciptakan pola cuaca kompleks yang sering menyebabkan hujan lebat di Indonesia.
+

@@ -9,7 +9,7 @@ tags:
   - net-zero
 date: 2026-06-03
 image: https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80
-penulis: ADH
+penulis: ahmad-dhuha-habibullah
 featured: true
 ---
 
@@ -29,3 +29,4 @@ Subsidi bahan bakar fosil yang masih besar, infrastruktur grid yang belum memada
 ## Jalan Menuju Net-Zero
 
 Indonesia berkomitmen mencapai net-zero emission pada 2060. Untuk mencapainya, pangsa energi terbarukan harus meningkat dari 12% saat ini menjadi 31% pada 2030.
+

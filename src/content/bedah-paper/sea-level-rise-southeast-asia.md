@@ -18,7 +18,7 @@ Studi ini menggabungkan data dari 148 stasiun pasang surut dan 30 tahun data alt
 
 ## Temuan Utama
 
-1. Rata-rata kenaikan muka laut di Asia Tenggara: **4.2 mm/tahun** — lebih tinggi dari rata-rata global (3.4 mm/tahun)
+1. Rata-rata kenaikan muka laut di Asia Tenggara: **4.2 mm/tahun** - lebih tinggi dari rata-rata global (3.4 mm/tahun)
 2. Pantai utara Jawa menunjukkan kenaikan relatif **6-8 mm/tahun** akibat kombinasi kenaikan muka laut dan penurunan tanah
 3. Percepatan signifikan terdeteksi sejak 2010
 4. Variabilitas dekadal sangat besar, terutama terkait ENSO
@@ -26,3 +26,4 @@ Studi ini menggabungkan data dari 148 stasiun pasang surut dan 30 tahun data alt
 ## Implikasi untuk Indonesia
 
 Dengan lebih dari 42 juta penduduk di wilayah pesisir, percepatan kenaikan muka laut ini mengancam pemukiman, infrastruktur, dan sumber mata pencaharian. Kota-kota seperti Jakarta, Semarang, dan Pekalongan memerlukan rencana adaptasi yang mendesak.
+
