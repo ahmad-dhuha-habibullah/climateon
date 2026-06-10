@@ -2,6 +2,7 @@ import React from 'react'
 import '../globals.css'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
+import Script from 'next/script'
 
 export const metadata = {
   title: 'Climateon.id - Memahami Iklim, Memahami Masa Depan',
@@ -20,7 +21,6 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet" />
-        <script src="https://unpkg.com/lucide@latest" defer></script>
       </head>
       <body>
         <Header />
@@ -28,13 +28,11 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <script dangerouslySetInnerHTML={{__html: `
-          window.onload = function() {
-            if (window.lucide) {
-              window.lucide.createIcons();
-            }
+        <Script src="https://unpkg.com/lucide@latest" strategy="lazyOnload" onLoad={() => {
+          if (window.lucide) {
+            window.lucide.createIcons();
           }
-        `}} />
+        }} />
       </body>
     </html>
   )

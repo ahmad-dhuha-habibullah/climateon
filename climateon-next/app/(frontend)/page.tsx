@@ -1,6 +1,41 @@
 import React from 'react'
+import { getPayload } from 'payload'
+import configPromise from '@payload-config'
 
-export default function HomePage() {
+export default async function HomePage() {
+  const payload = await getPayload({ config: configPromise })
+  
+  // Fetch latest posts per category
+  const { docs: iklimPosts } = await payload.find({
+    collection: 'posts',
+    where: {
+      'category.name': {
+        equals: 'Iklim Dijelaskan',
+      },
+    },
+    limit: 3,
+  })
+
+  const { docs: dataPosts } = await payload.find({
+    collection: 'posts',
+    where: {
+      'category.name': {
+        equals: 'Data Story',
+      },
+    },
+    limit: 3,
+  })
+
+  const { docs: bedahPosts } = await payload.find({
+    collection: 'posts',
+    where: {
+      'category.name': {
+        equals: 'Bedah Paper',
+      },
+    },
+    limit: 3,
+  })
+
   return (
     <>
       {/* Hero Section */}
@@ -23,14 +58,15 @@ export default function HomePage() {
                   <a href="/iklim-dijelaskan/" className="section-link">Lihat Semua</a>
               </div>
               <div className="grid-cards">
-                  {/* To be connected to Payload CMS Posts */}
-                  <div className="card">
-                      <div className="card-content">
-                          <span className="card-category">Iklim Dijelaskan</span>
-                          <h3 className="card-title"><a href="#">Memahami Perubahan Suhu Global</a></h3>
-                          <p className="card-desc">Bagaimana tren suhu bumi berubah dalam 100 tahun terakhir?</p>
-                      </div>
-                  </div>
+                  {iklimPosts.map(post => (
+                    <div className="card" key={post.id}>
+                        <div className="card-content">
+                            <span className="card-category">Iklim Dijelaskan</span>
+                            <h3 className="card-title"><a href={`/posts/${post.id}`}>{post.title}</a></h3>
+                            <p className="card-desc">{post.description}</p>
+                        </div>
+                    </div>
+                  ))}
               </div>
           </div>
       </section>
@@ -71,12 +107,15 @@ export default function HomePage() {
                   <a href="/data-story/" className="section-link">Lihat Semua</a>
               </div>
               <div className="grid-cards">
-                  <div className="card">
-                      <div className="card-content">
-                          <span className="card-category">Data Story</span>
-                          <h3 className="card-title"><a href="#">Dampak El Nino 2023</a></h3>
-                      </div>
-                  </div>
+                  {dataPosts.map(post => (
+                    <div className="card" key={post.id}>
+                        <div className="card-content">
+                            <span className="card-category">Data Story</span>
+                            <h3 className="card-title"><a href={`/posts/${post.id}`}>{post.title}</a></h3>
+                            <p className="card-desc">{post.description}</p>
+                        </div>
+                    </div>
+                  ))}
               </div>
           </div>
       </section>
@@ -89,16 +128,15 @@ export default function HomePage() {
                   <a href="/bedah-paper/" className="section-link">Lihat Semua</a>
               </div>
               <div className="grid-cards">
-                  <div className="card">
-                      <div className="card-content">
-                          <span className="badge badge-blue mb-4">Bedah Paper</span>
-                          <h3 className="card-title"><a href="#">Analisis Curah Hujan Ekstrem</a></h3>
-                          <p className="card-desc">Ulasan paper tentang peningkatan frekuensi hujan ekstrem.</p>
-                          <div className="card-meta">
-                              <span>Jurnal Klimatologi (2025)</span>
-                          </div>
-                      </div>
-                  </div>
+                  {bedahPosts.map(post => (
+                    <div className="card" key={post.id}>
+                        <div className="card-content">
+                            <span className="badge badge-blue mb-4">Bedah Paper</span>
+                            <h3 className="card-title"><a href={`/posts/${post.id}`}>{post.title}</a></h3>
+                            <p className="card-desc">{post.description}</p>
+                        </div>
+                    </div>
+                  ))}
               </div>
           </div>
       </section>
