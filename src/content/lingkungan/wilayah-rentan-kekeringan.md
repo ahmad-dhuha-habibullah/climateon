@@ -1,13 +1,17 @@
 ---
 layout: layouts/artikel.njk
-title: "Peta Kerentanan Kekeringan: Wilayah Mana Saja yang Paling Terdampak?"
-description: "Analisis wilayah rawan kekeringan di Indonesia dan bagaimana El Niño memperparah kondisi ini."
-category: "lingkungan"
-tags: ["kekeringan", "sumber-daya-air", "el-nino"]
+title: 'Peta Kerentanan Kekeringan: Wilayah Mana Saja yang Paling Terdampak?'
+description: Analisis wilayah rawan kekeringan di Indonesia dan bagaimana El Niño memperparah kondisi ini.
+category: lingkungan
+tags:
+  - kekeringan
+  - sumber-daya-air
+  - el-nino
 date: 2026-05-18
-image: "https://images.unsplash.com/photo-1504297050568-910d24c426d3?auto=format&fit=crop&w=800&q=80"
-penulis: "ahmad-dhuha-habibullah"
+image: https://images.unsplash.com/photo-1504297050568-910d24c426d3?auto=format&fit=crop&w=800&q=80
+penulis: ADH
 ---
+
 Kekeringan merupakan bencana "lambat" yang dampaknya sering baru dirasakan setelah berminggu-minggu tanpa hujan. Wilayah Nusa Tenggara, Jawa bagian timur, dan Sulawesi Selatan menjadi area yang paling rentan.
 
 ## Indikator Kekeringan

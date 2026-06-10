@@ -1,13 +1,17 @@
 ---
 layout: layouts/artikel.njk
-title: "Kualitas Udara Kota-kota Indonesia: Tantangan yang Semakin Berat"
-description: "Jakarta, Surabaya, dan kota besar lainnya menghadapi masalah polusi udara yang semakin serius."
-category: "lingkungan"
-tags: ["polusi-udara", "perkotaan", "kesehatan"]
+title: 'Kualitas Udara Kota-kota Indonesia: Tantangan yang Semakin Berat'
+description: Jakarta, Surabaya, dan kota besar lainnya menghadapi masalah polusi udara yang semakin serius.
+category: lingkungan
+tags:
+  - polusi-udara
+  - perkotaan
+  - kesehatan
 date: 2026-05-20
-image: "https://images.unsplash.com/photo-1532274402911-5a369e4c4bb5?auto=format&fit=crop&w=800&q=80"
-penulis: "ahmad-dhuha-habibullah"
+image: https://images.unsplash.com/photo-1532274402911-5a369e4c4bb5?auto=format&fit=crop&w=800&q=80
+penulis: ADH
 ---
+
 Kualitas udara di kota-kota besar Indonesia semakin memprihatinkan. Data IQAir menempatkan Jakarta sebagai salah satu kota dengan kualitas udara terburuk di Asia Tenggara.
 
 ## Sumber Polusi

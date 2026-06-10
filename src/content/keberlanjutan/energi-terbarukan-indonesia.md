@@ -1,14 +1,18 @@
 ---
 layout: layouts/artikel.njk
-title: "Potensi Energi Terbarukan Indonesia: Antara Ambisi dan Realita"
-description: "Indonesia memiliki potensi energi terbarukan yang luar biasa besar, namun pemanfaatannya masih jauh dari optimal."
-category: "keberlanjutan"
-tags: ["energi-terbarukan", "transisi-energi", "net-zero"]
+title: 'Potensi Energi Terbarukan Indonesia: Antara Ambisi dan Realita'
+description: Indonesia memiliki potensi energi terbarukan yang luar biasa besar, namun pemanfaatannya masih jauh dari optimal.
+category: keberlanjutan
+tags:
+  - energi-terbarukan
+  - transisi-energi
+  - net-zero
 date: 2026-06-03
-image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80"
-penulis: "ahmad-dhuha-habibullah"
+image: https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80
+penulis: ADH
 featured: true
 ---
+
 Indonesia duduk di atas "tambang emas" energi terbarukan: geothermal terbesar di dunia, radiasi matahari yang melimpah sepanjang tahun, dan potensi angin yang signifikan di koridor Nusantara.
 
 ## Potensi vs Pemanfaatan

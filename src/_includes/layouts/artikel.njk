@@ -4,6 +4,11 @@ layout: layouts/base.njk
 
 <article class="artikel" itemscope itemtype="https://schema.org/Article">
 
+    {# ═══ Breadcrumb ═══ #}
+    <div class="container">
+        {% include "components/breadcrumb.njk" %}
+    </div>
+
     {# ═══ Hero Banner ═══ #}
     <header class="artikel-hero" {% if image and not video %}style="background-image: url('{{ image }}')"{% endif %}>
         {% if video %}

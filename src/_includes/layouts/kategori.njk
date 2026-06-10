@@ -5,6 +5,8 @@ layout: layouts/base.njk
 {# ═══ Category Header ═══ #}
 <section class="kategori-header">
     <div class="container">
+        {% include "components/breadcrumb.njk" %}
+        <br>
         <h1>{{ title }}</h1>
         {% if description %}
         <p class="kategori-desc">{{ description }}</p>
@@ -26,7 +28,7 @@ layout: layouts/base.njk
 {% set artikelUnggulan = artikelKategori | featured | limit(1) %}
 {% set artikelPertama = artikelUnggulan[0] or artikelKategori[0] %}
 
-{% if artikelPertama %}
+{% if artikelPertama and pagination.pageNumber == 0 %}
 <section class="section">
     <div class="container">
         {% include "components/kartu-hero.njk" %}
@@ -42,14 +44,46 @@ layout: layouts/base.njk
             <span class="artikel-count">{{ artikelKategori.length }} artikel</span>
         </div>
 
-        {% if artikelKategori.length > 0 %}
-        <div class="grid-cards">
-            {% for item in artikelKategori %}
-                {% if item.url != artikelPertama.url %}
+        {% if pagination.items.length > 0 %}
+        <div class="grid-cards grid-4">
+            {% for item in pagination.items %}
+                {% if pagination.pageNumber != 0 or item.url != artikelPertama.url %}
                 {% include "components/kartu-standar.njk" %}
                 {% endif %}
             {% endfor %}
         </div>
+
+        {# Paginasi UI #}
+        {% if pagination.pages.length > 1 %}
+        <div class="pagination">
+            <nav aria-label="Navigasi Halaman">
+                <ol class="pagination-list">
+                    <li>
+                        {% if pagination.href.previous %}
+                        <a href="{{ pagination.href.previous }}" class="pagination-link" aria-label="Halaman Sebelumnya"><i data-lucide="chevron-left" class="icon-xs"></i> Prev</a>
+                        {% else %}
+                        <span class="pagination-link disabled"><i data-lucide="chevron-left" class="icon-xs"></i> Prev</span>
+                        {% endif %}
+                    </li>
+                    
+                    {% for pageEntry in pagination.pages %}
+                    <li>
+                        <a href="{{ pagination.hrefs[ loop.index0 ] }}" class="pagination-link {% if page.url == pagination.hrefs[ loop.index0 ] %}active{% endif %}" aria-current="{% if page.url == pagination.hrefs[ loop.index0 ] %}page{% endif %}">{{ loop.index }}</a>
+                    </li>
+                    {% endfor %}
+
+                    <li>
+                        {% if pagination.href.next %}
+                        <a href="{{ pagination.href.next }}" class="pagination-link" aria-label="Halaman Berikutnya">Next <i data-lucide="chevron-right" class="icon-xs"></i></a>
+                        {% else %}
+                        <span class="pagination-link disabled">Next <i data-lucide="chevron-right" class="icon-xs"></i></span>
+                        {% endif %}
+                    </li>
+                </ol>
+            </nav>
+        </div>
+        {% endif %}
+
         {% else %}
         <div class="empty-state">
             <i data-lucide="file-x" class="empty-icon"></i>

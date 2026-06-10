@@ -1,0 +1,26 @@
+{# Breadcrumbs Navigation #}
+<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+    <ol class="breadcrumb-list">
+        <li class="breadcrumb-item">
+            <a href="/" class="breadcrumb-link"><i data-lucide="home" class="icon-xs"></i> Beranda</a>
+        </li>
+
+        {% if category %}
+            {# Ini halaman artikel, ada kategori #}
+            <li class="breadcrumb-item separator"><i data-lucide="chevron-right" class="icon-xs"></i></li>
+            <li class="breadcrumb-item">
+                <a href="/{{ category | lower | replace(' ', '-') }}/" class="breadcrumb-link">{{ category | replace('-', ' ') | title }}</a>
+            </li>
+            <li class="breadcrumb-item separator"><i data-lucide="chevron-right" class="icon-xs"></i></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
+        {% elif collectionName %}
+            {# Ini halaman kategori (indeks) #}
+            <li class="breadcrumb-item separator"><i data-lucide="chevron-right" class="icon-xs"></i></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
+        {% else %}
+            {# Halaman lain (Tentang, Penulis, dll) #}
+            <li class="breadcrumb-item separator"><i data-lucide="chevron-right" class="icon-xs"></i></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
+        {% endif %}
+    </ol>
+</nav>

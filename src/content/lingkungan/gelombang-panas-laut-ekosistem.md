@@ -1,13 +1,17 @@
 ---
 layout: layouts/artikel.njk
-title: "Ketika Laut Demam: Dampak Gelombang Panas pada Ekosistem Laut Indonesia"
-description: "Pemutihan karang, migrasi ikan, dan gangguan rantai makanan — dampak gelombang panas laut yang sering tak terlihat."
-category: "lingkungan"
-tags: ["marine-heatwave", "terumbu-karang", "ekosistem-laut"]
+title: 'Ketika Laut Demam: Dampak Gelombang Panas pada Ekosistem Laut Indonesia'
+description: Pemutihan karang, migrasi ikan, dan gangguan rantai makanan — dampak gelombang panas laut yang sering tak terlihat.
+category: lingkungan
+tags:
+  - marine-heatwave
+  - terumbu-karang
+  - ekosistem-laut
 date: 2026-05-29
-image: "https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=800&q=80"
-penulis: "ahmad-dhuha-habibullah"
+image: https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=800&q=80
+penulis: ADH
 ---
+
 Segitiga Terumbu Karang — yang pusatnya berada di perairan Indonesia — menyimpan 76% spesies karang dunia. Namun, ekosistem yang luar biasa kaya ini kini terancam oleh gelombang panas laut.
 
 ## Pemutihan Karang Massal

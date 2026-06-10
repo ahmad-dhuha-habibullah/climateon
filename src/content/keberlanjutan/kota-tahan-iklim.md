@@ -1,13 +1,17 @@
 ---
 layout: layouts/artikel.njk
-title: "Kota Tahan Iklim: Bagaimana Perkotaan Indonesia Beradaptasi"
-description: "Konsep kota spons, infrastruktur hijau, dan perencanaan tahan bencana mulai diadopsi kota-kota Indonesia."
-category: "keberlanjutan"
-tags: ["adaptasi", "perkotaan", "infrastruktur-hijau"]
+title: 'Kota Tahan Iklim: Bagaimana Perkotaan Indonesia Beradaptasi'
+description: Konsep kota spons, infrastruktur hijau, dan perencanaan tahan bencana mulai diadopsi kota-kota Indonesia.
+category: keberlanjutan
+tags:
+  - adaptasi
+  - perkotaan
+  - infrastruktur-hijau
 date: 2026-05-15
-image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=80"
-penulis: "ahmad-dhuha-habibullah"
+image: https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=80
+penulis: ADH
 ---
+
 Dengan lebih dari 56% penduduk tinggal di perkotaan, membangun kota yang tahan terhadap dampak perubahan iklim menjadi prioritas Indonesia.
 
 ## Konsep Kota Spons

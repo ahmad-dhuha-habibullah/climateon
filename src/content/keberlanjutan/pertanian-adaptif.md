@@ -1,13 +1,17 @@
 ---
 layout: layouts/artikel.njk
-title: "Pertanian Cerdas Iklim: Menyesuaikan Cara Bertani dengan Cuaca yang Berubah"
-description: "Petani Indonesia mulai mengadopsi teknik pertanian yang menyesuaikan diri dengan variabilitas iklim yang semakin tinggi."
-category: "keberlanjutan"
-tags: ["pertanian", "adaptasi", "ketahanan-pangan"]
+title: 'Pertanian Cerdas Iklim: Menyesuaikan Cara Bertani dengan Cuaca yang Berubah'
+description: Petani Indonesia mulai mengadopsi teknik pertanian yang menyesuaikan diri dengan variabilitas iklim yang semakin tinggi.
+category: keberlanjutan
+tags:
+  - pertanian
+  - adaptasi
+  - ketahanan-pangan
 date: 2026-05-10
-image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=800&q=80"
-penulis: "ahmad-dhuha-habibullah"
+image: https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=800&q=80
+penulis: ADH
 ---
+
 Sektor pertanian Indonesia — yang menyerap 30% angkatan kerja — sangat rentan terhadap perubahan iklim. Pergeseran musim tanam, curah hujan yang tidak menentu, dan peningkatan hama menjadi tantangan utama.
 
 ## Climate-Smart Agriculture
