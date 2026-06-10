@@ -1,13 +1,17 @@
 ---
 layout: layouts/artikel.njk
-title: "Banjir Besar: Ketika Hujan Melebihi Kapasitas Drainase Alam dan Kota"
-description: "Banjir semakin sering melanda perkotaan Indonesia. Perubahan iklim dan tata ruang menjadi penyebab utama."
-category: "cuaca"
-tags: ["banjir", "cuaca-ekstrem", "perkotaan"]
+title: 'Banjir Besar: Ketika Hujan Melebihi Kapasitas Drainase Alam dan Kota'
+description: Banjir semakin sering melanda perkotaan Indonesia. Perubahan iklim dan tata ruang menjadi penyebab utama.
+category: cuaca
+tags:
+  - banjir
+  - cuaca-ekstrem
+  - perkotaan
 date: 2026-05-30
-image: "https://images.unsplash.com/photo-1547683905-f686c993aae5?auto=format&fit=crop&w=800&q=80"
-penulis: "ahmad-dhuha-habibullah"
+image: https://images.unsplash.com/photo-1547683905-f686c993aae5?auto=format&fit=crop&w=800&q=80
+penulis: NAZ
 ---
+
 Banjir adalah bencana hidrometeorologi yang paling sering terjadi di Indonesia. BNPB mencatat rata-rata 1.000 kejadian banjir per tahun dalam dekade terakhir.
 
 ## Penyebab Utama
