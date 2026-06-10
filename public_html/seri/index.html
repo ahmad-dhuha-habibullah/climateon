@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Series - Mr Dhuha</title>
+    <meta name="description" content="Platform informasi iklim Indonesia yang menyajikan penjelasan, analisis, visualisasi data, dan pemantauan kondisi iklim secara mudah dipahami.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/climateon_logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <div class="container header-container">
+            <!-- Logo -->
+            <a href="/" class="site-logo">
+                <img src="/climateon_logo.png" alt="Climateon.id Logo">
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="main-nav" id="main-nav">
+                <a href="/" class="">Beranda</a>
+                <a href="/iklim-dijelaskan/" class="">Memahami Iklim</a>
+                <a href="/climate-watch/" class="">Climate Watch</a>
+                <a href="/data-story/" class="">Data Story</a>
+                <a href="/bedah-paper/" class="">Bedah Paper</a>
+                <a href="/peristiwa-ekstrem/" class="">Peristiwa Ekstrem</a>
+                <a href="/solusi-adaptasi/" class="">Solusi & Adaptasi</a>
+                <a href="/eksplorasi/" class="">Eksplorasi</a>
+                <a href="/tentang/" class="">Tentang</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="app-root">
+        
+<div class="container mx-auto px-4 lg:px-8 py-12">
+    <div class="mb-12 text-center max-w-2xl mx-auto">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-text mb-4">Semua Series</h1>
+        <p class="text-lg text-textLight font-serif">Konten berurutan untuk memahami topik secara mendalam, dari dasar hingga mahir.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        
+    </div>
+</div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:1rem;">
+                        <img src="/climateon_logo.png" alt="Climateon Logo" style="height:32px;">
+                    </div>
+                    <p>Platform informasi iklim Indonesia yang menyajikan penjelasan, analisis, visualisasi data, dan pemantauan kondisi iklim secara mudah dipahami.</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Kategori</h4>
+                    <ul>
+                        <li><a href="/iklim-dijelaskan/">Memahami Iklim</a></li>
+                        <li><a href="/climate-watch/">Climate Watch</a></li>
+                        <li><a href="/data-story/">Data Story</a></li>
+                        <li><a href="/bedah-paper/">Bedah Paper</a></li>
+                        <li><a href="/peristiwa-ekstrem/">Peristiwa Ekstrem</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Tentang Kami</h4>
+                    <ul>
+                        <li><a href="/tentang/">Tentang Climateon.id</a></li>
+                        <li><a href="/tentang/">Kontak</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2026 Climateon.id - Memahami Iklim, Memahami Masa Depan.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile menu
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mainNav = document.getElementById('main-nav');
+        if (menuBtn && mainNav) {
+            menuBtn.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,122 +1,144 @@
 ---
 layout: layouts/base.njk
-title: Beranda - Mr Dhuha
+title: "Beranda - Climateon.id"
 ---
-{% from "components/macros.njk" import contentCard %}
 
 <!-- Hero Section -->
-<section class="bg-surface py-16 lg:py-24 border-b border-border relative overflow-hidden">
-    <!-- Background Image -->
-    <div class="absolute inset-0 z-0">
-        <img src="/assets/images/hero.jpg" alt="Background" class="w-full h-full object-cover dark:opacity-80">
-        <!-- Left-to-Right Gradient Overlay -->
-        <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/95 via-40% to-transparent"></div>
+<section class="hero">
+    <div class="container">
+        <h1>Memahami Iklim Indonesia Melalui Data</h1>
+        <p>Artikel, analisis, visualisasi, dan pemantauan iklim untuk membantu masyarakat memahami perubahan lingkungan yang terjadi di sekitar kita.</p>
+        <div class="hero-actions">
+            <a href="/iklim-dijelaskan/" class="btn btn-primary">Jelajahi Artikel</a>
+            <a href="/climate-watch/" class="btn btn-outline">Lihat Climate Watch</a>
+        </div>
     </div>
-    
-    <div class="container mx-auto px-4 lg:px-8 relative z-10">
-        <div class="max-w-3xl">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-text leading-tight mb-6 tracking-tight drop-shadow-sm">
-                Sains. Data. Teknologi.<br>Untuk <span class="text-primary">memahami</span> dunia.
-            </h1>
-            <p class="text-lg md:text-xl text-textLight mb-8 max-w-2xl font-serif">
-                Artikel, video, dan visualisasi yang menjelaskan fenomena alam, teknologi, dan dunia di sekitar kita dengan cara yang sederhana dan bermakna.
-            </p>
-            <div class="flex flex-wrap gap-4">
-                <a href="/artikel/" class="bg-primary hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center gap-2 shadow-lg">
-                    Artikel Terbaru <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                </a>
-                <a href="/video/" class="bg-surface border border-border hover:bg-gray-50 text-text font-semibold py-3 px-6 rounded-lg transition-colors flex items-center gap-2 shadow-lg">
-                    Tonton Video <i data-lucide="play-circle" class="w-4 h-4"></i>
-                </a>
+</section>
+
+<!-- Memahami Iklim -->
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Memahami Iklim</h2>
+            <a href="/iklim-dijelaskan/" class="section-link">Lihat Semua</a>
+        </div>
+        <div class="grid-cards">
+            {% for item in collections.iklim_dijelaskan %}
+                {% if loop.index0 < 6 %}
+                <div class="card">
+                    <img src="{{ item.data.image }}" alt="{{ item.data.title }}" class="card-img">
+                    <div class="card-content">
+                        <span class="card-category">{{ item.data.kategori }}</span>
+                        <h3 class="card-title"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
+                        <p class="card-desc">{{ item.data.description }}</p>
+                        <div class="card-meta">
+                            <span>{{ item.date | readableDate }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Climate Watch -->
+<section class="section" style="background-color: var(--color-surface);">
+    <div class="container">
+        <div class="section-title">
+            <h2>Climate Watch</h2>
+            <a href="/climate-watch/" class="section-link">Selengkapnya</a>
+        </div>
+        <div class="watch-grid">
+            <div class="watch-card">
+                <h3>ENSO</h3>
+                <div class="status" style="color: #64748b;">Netral</div>
+            </div>
+            <div class="watch-card">
+                <h3>IOD</h3>
+                <div class="status" style="color: #eab308;">Positif Lemah</div>
+            </div>
+            <div class="watch-card">
+                <h3>Anomali SST Indonesia</h3>
+                <div class="status" style="color: #ef4444;">+0.4°C</div>
+            </div>
+            <div class="watch-card">
+                <h3>Curah Hujan Nasional</h3>
+                <div class="status" style="color: #0ea5e9;">Atas Normal</div>
             </div>
         </div>
     </div>
 </section>
 
-<div class="container mx-auto px-4 lg:px-8 py-16 space-y-20">
-    
-    <!-- Latest Articles -->
-    <section>
-        <div class="flex justify-between items-end mb-8">
-            <h2 class="text-2xl font-bold text-text">Artikel Terbaru</h2>
-            <a href="/artikel/" class="text-sm font-semibold text-primary hover:text-orange-700 flex items-center gap-1">
-                Lihat semua artikel <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
+<!-- Data Story Pilihan -->
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Data Story Pilihan</h2>
+            <a href="/data-story/" class="section-link">Lihat Semua</a>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {% for item in collections.articles %}
-                {% if loop.index0 < 4 %}
-                    {{ contentCard(item) }}
-                {% endif %}
-            {% endfor %}
-        </div>
-    </section>
-
-    <!-- Latest Videos -->
-    <section>
-        <div class="flex justify-between items-end mb-8">
-            <h2 class="text-2xl font-bold text-text">Video Terbaru</h2>
-            <a href="/video/" class="text-sm font-semibold text-primary hover:text-orange-700 flex items-center gap-1">
-                Lihat semua video <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {% for item in collections.videos %}
-                {% if loop.index0 < 4 %}
-                    {{ contentCard(item, true) }}
-                {% endif %}
-            {% endfor %}
-        </div>
-    </section>
-
-    <!-- Explore Topics -->
-    <section>
-        <div class="flex justify-between items-end mb-8">
-            <h2 class="text-2xl font-bold text-text">Jelajahi Topik</h2>
-            <a href="/topik/" class="text-sm font-semibold text-primary hover:text-orange-700 flex items-center gap-1">
-                Lihat semua topik <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {% for topic in collections.topics %}
-                {% if loop.index0 < 6 %}
-                <a href="/topik/{{ topic | slugify }}/" class="group block relative aspect-square overflow-hidden rounded-xl bg-slate-900 border border-border hover:shadow-xl transition-all">
-                    <img src="/assets/topics/{{ topic | slugify }}.jpg" alt="{{ topic }}" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity group-hover:scale-105 duration-500" onerror="this.src='https://picsum.photos/seed/{{ topic }}/400/300'">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                    <div class="absolute inset-0 flex items-center justify-center p-4">
-                        <h3 class="text-white font-bold text-sm text-center group-hover:text-primary transition-colors tracking-wide uppercase">{{ topic }}</h3>
+        <div class="grid-cards">
+            {% for item in collections.data_story %}
+                {% if loop.index0 < 3 %}
+                <div class="card">
+                    <img src="{{ item.data.image }}" alt="{{ item.data.title }}" class="card-img">
+                    <div class="card-content">
+                        <span class="card-category">{{ item.data.kategori }}</span>
+                        <h3 class="card-title"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
                     </div>
-                </a>
+                </div>
                 {% endif %}
             {% endfor %}
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Featured Series -->
-    <section>
-        <div class="flex justify-between items-end mb-8">
-            <h2 class="text-2xl font-bold text-text">Seri Unggulan</h2>
-            <a href="/seri/" class="text-sm font-semibold text-primary hover:text-orange-700 flex items-center gap-1">
-                Lihat semua seri <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
+<!-- Bedah Paper Terbaru -->
+<section class="section" style="background-color: var(--color-surface);">
+    <div class="container">
+        <div class="section-title">
+            <h2>Bedah Paper Terbaru</h2>
+            <a href="/bedah-paper/" class="section-link">Lihat Semua</a>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {% for item in collections.series %}
-                {% if loop.index0 < 4 %}
-                <a href="{{ item.url }}" class="group block relative aspect-[16/9] md:aspect-[3/4] overflow-hidden rounded-xl bg-slate-900 border border-border hover:shadow-xl transition-shadow">
-                    {% if item.data.thumbnail %}
-                        <img src="{{ item.data.thumbnail | resolveAsset(item.url) }}" alt="{{ item.data.title }}" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity group-hover:scale-105 duration-500">
-                    {% endif %}
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
-                    <div class="absolute bottom-4 left-4 right-4">
-                        <h3 class="text-white font-bold text-lg mb-1 group-hover:text-primary transition-colors">{{ item.data.title }}</h3>
-                        <p class="text-gray-300 text-xs">{{ item.data.description | truncate(60) }}</p>
+        <div class="grid-cards">
+            {% for item in collections.bedah_paper %}
+                {% if loop.index0 < 3 %}
+                <div class="card">
+                    <div class="card-content">
+                        <span class="badge badge-blue mb-4">Bedah Paper</span>
+                        <h3 class="card-title"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
+                        <p class="card-desc">{{ item.data.description }}</p>
+                        <div class="card-meta">
+                            <span>{{ item.data.jurnal }} ({{ item.data.tahun }})</span>
+                        </div>
                     </div>
-                </a>
+                </div>
                 {% endif %}
             {% endfor %}
         </div>
-    </section>
+    </div>
+</section>
 
-
-</div>
+<!-- Peristiwa Ekstrem -->
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Peristiwa Ekstrem</h2>
+            <a href="/peristiwa-ekstrem/" class="section-link">Lihat Semua</a>
+        </div>
+        <div class="grid-cards">
+            {% for item in collections.peristiwa_ekstrem %}
+                {% if loop.index0 < 3 %}
+                <div class="card">
+                    <img src="{{ item.data.image }}" alt="{{ item.data.title }}" class="card-img">
+                    <div class="card-content">
+                        <span class="card-category">{{ item.data.kategori }}</span>
+                        <h3 class="card-title"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
+                        <p class="card-desc">{{ item.data.description }}</p>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>

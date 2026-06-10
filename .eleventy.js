@@ -4,15 +4,16 @@ module.exports = function(eleventyConfig) {
   // Passthrough copy for images and CSS
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
+  eleventyConfig.addPassthroughCopy("climateon_logo.png");
   
   // Colocate images in content directories
   eleventyConfig.addPassthroughCopy("src/content/**/*.{jpg,jpeg,png,gif,svg}");
 
   // Figure shortcode for images with captions
   eleventyConfig.addShortcode("figure", function(src, alt, caption) {
-    return `<figure class="my-8">
-      <img src="${src}" alt="${alt}" class="w-full rounded-xl shadow-md border border-border">
-      <figcaption class="text-center text-sm text-textLight mt-3 italic">${caption}</figcaption>
+    return `<figure class="content-figure">
+      <img src="${src}" alt="${alt}">
+      <figcaption>${caption}</figcaption>
     </figure>`;
   });
 
@@ -27,36 +28,41 @@ module.exports = function(eleventyConfig) {
   });
 
   // Custom filter for readable dates (e.g. "12 Juni 2024")
-  // Since PRD asks for Indonesian audience, we format dates in Indonesian.
-  // The mockup had relative dates, but static sites generate absolute dates better unless done client-side.
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: 'utc' }).setLocale('id').toFormat("dd MMMM yyyy");
   });
 
   // Create collections based on directories
-  eleventyConfig.addCollection("articles", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/content/articles/**/*.md").sort((a, b) => b.date - a.date);
+  eleventyConfig.addCollection("iklim_dijelaskan", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/content/iklim-dijelaskan/**/*.md").sort((a, b) => b.date - a.date);
   });
 
-  eleventyConfig.addCollection("videos", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/content/videos/**/*.md").sort((a, b) => b.date - a.date);
+  eleventyConfig.addCollection("bedah_paper", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/content/bedah-paper/**/*.md").sort((a, b) => b.date - a.date);
   });
 
-  eleventyConfig.addCollection("series", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/content/series/**/*.md").sort((a, b) => b.date - a.date);
+  eleventyConfig.addCollection("data_story", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/content/data-story/**/*.md").sort((a, b) => b.date - a.date);
   });
 
-  eleventyConfig.addCollection("explorations", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/content/explorations/**/*.md").sort((a, b) => b.date - a.date);
+  eleventyConfig.addCollection("peristiwa_ekstrem", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/content/peristiwa-ekstrem/**/*.md").sort((a, b) => b.date - a.date);
   });
 
-  // Extract unique topics from articles and videos
+  eleventyConfig.addCollection("solusi_adaptasi", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/content/solusi-adaptasi/**/*.md").sort((a, b) => b.date - a.date);
+  });
+
+  // Extract unique topics
   eleventyConfig.addCollection("topics", function(collectionApi) {
     let topicSet = new Set();
-    const items = collectionApi.getFilteredByGlob(["src/content/articles/**/*.md", "src/content/videos/**/*.md"]);
+    const items = collectionApi.getFilteredByGlob(["src/content/**/*.md"]);
     items.forEach(item => {
       if ('topic' in item.data) {
         topicSet.add(item.data.topic);
+      }
+      if ('kategori' in item.data) {
+        topicSet.add(item.data.kategori);
       }
     });
     return [...topicSet].sort();
