@@ -1,0 +1,43 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: collections.semuaTag
+  size: 1
+  alias: tag
+permalink: /tag/{{ tag | slug }}/
+eleventyComputed:
+  title: "Topik: {{ tag }}"
+---
+
+<section class="kategori-header">
+    <div class="container">
+        {% include "components/breadcrumb.njk" %}
+        <br>
+        <h1>Menelusuri: {{ tag }}</h1>
+        <p class="kategori-desc">Semua artikel yang berkaitan dengan topik {{ tag }}.</p>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        {% set artikelTag = collections[tag] %}
+        
+        {% if artikelTag and artikelTag.length > 0 %}
+        <div class="section-title">
+            <h2>Artikel Ditemukan</h2>
+            <span class="artikel-count">{{ artikelTag.length }} artikel</span>
+        </div>
+
+        <div class="grid-cards grid-4">
+            {% for item in artikelTag | reverse %}
+                {% include "components/kartu-standar.njk" %}
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="empty-state">
+            <i data-lucide="file-x" class="empty-icon"></i>
+            <p>Belum ada artikel untuk topik ini.</p>
+        </div>
+        {% endif %}
+    </div>
+</section>

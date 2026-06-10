@@ -9,55 +9,63 @@ layout: layouts/base.njk
         {% include "components/breadcrumb.njk" %}
     </div>
 
-    {# ═══ Hero Banner ═══ #}
-    <header class="artikel-hero" {% if image and not video %}style="background-image: url('{{ image }}')"{% endif %}>
-        {% if video %}
-        <video class="hero-video-bg" autoplay loop muted playsinline>
-            <source src="{{ video }}" type="video/webm">
-        </video>
-        {% endif %}
-        <div class="artikel-hero-overlay">
-            <div class="container artikel-hero-content">
-                {% if category %}
-                <a href="/{{ category }}/" class="artikel-kategori-badge">{{ category | replace("-", " ") | title }}</a>
-                {% endif %}
+    {# ═══ Article Header ═══ #}
+    <header class="artikel-header">
+        <div class="container">
+            {% if category %}
+            <a href="/{{ category }}/" class="artikel-kategori-badge">{{ category | replace("-", " ") | title }}</a>
+            {% endif %}
 
-                <h1 class="artikel-judul" itemprop="headline">{{ title }}</h1>
+            <h1 class="artikel-judul" itemprop="headline">{{ title }}</h1>
 
-                <div class="artikel-meta">
-                    {% if penulis %}
-                        {% set authorData = penulis | cariPenulis(dataPenulis) %}
-                        {% if authorData %}
-                        <span class="artikel-penulis" itemprop="author">
-                            <i data-lucide="user" class="icon-sm"></i>
-                            <a href="/penulis/{{ authorData.slug }}/" style="color: inherit; text-decoration: none;">{{ authorData.nama }}</a>
-                        </span>
-                        {% else %}
-                        <span class="artikel-penulis" itemprop="author">
-                            <i data-lucide="user" class="icon-sm"></i>
-                            Tim Redaksi ClimateOn
-                        </span>
-                        {% endif %}
+            <div class="artikel-meta">
+                {% if penulis %}
+                    {% set authorData = penulis | cariPenulis(dataPenulis) %}
+                    {% if authorData %}
+                    <span class="artikel-penulis" itemprop="author">
+                        <i data-lucide="user" class="icon-sm"></i>
+                        <a href="/penulis/{{ authorData.slug }}/" style="color: inherit; text-decoration: none;">{{ authorData.nama }}</a>
+                    </span>
                     {% else %}
                     <span class="artikel-penulis" itemprop="author">
                         <i data-lucide="user" class="icon-sm"></i>
                         Tim Redaksi ClimateOn
                     </span>
                     {% endif %}
+                {% else %}
+                <span class="artikel-penulis" itemprop="author">
+                    <i data-lucide="user" class="icon-sm"></i>
+                    Tim Redaksi ClimateOn
+                </span>
+                {% endif %}
 
-                    <span class="artikel-tanggal">
-                        <i data-lucide="calendar" class="icon-sm"></i>
-                        <time datetime="{{ date | htmlDateString }}" itemprop="datePublished">{{ date | tanggalBaca }}</time>
-                    </span>
+                <span class="artikel-tanggal">
+                    <i data-lucide="calendar" class="icon-sm"></i>
+                    <time datetime="{{ date | htmlDateString }}" itemprop="datePublished">{{ date | tanggalBaca }}</time>
+                </span>
 
-                    <span class="artikel-waktu-baca">
-                        <i data-lucide="clock" class="icon-sm"></i>
-                        {{ content | waktuBaca }} menit baca
-                    </span>
-                </div>
+                <span class="artikel-waktu-baca">
+                    <i data-lucide="clock" class="icon-sm"></i>
+                    {{ content | waktuBaca }} menit baca
+                </span>
             </div>
         </div>
     </header>
+
+    {# ═══ Main Image ═══ #}
+    {% if image or video %}
+    <div class="container">
+        <div class="artikel-gambar-utama">
+            {% if video %}
+            <video autoplay loop muted playsinline class="content-figure-media">
+                <source src="{{ video }}" type="video/webm">
+            </video>
+            {% elif image %}
+            <img src="{{ image }}" alt="{{ title }}" class="content-figure-media">
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
 
     {# ═══ Article Body ═══ #}
     <div class="container artikel-body-wrapper">
@@ -103,6 +111,28 @@ layout: layouts/base.njk
                         <h4><a href="/penulis/{{ authorData.slug }}/" style="color: inherit; text-decoration: none;">{{ authorData.nama }}</a></h4>
                         <span class="penulis-peran">{{ authorData.peran }}</span>
                         <p>{{ authorData.bio }}</p>
+                        <div class="profil-sosial profil-sosial-sm mt-3">
+                            {% if authorData.twitter %}
+                            <a href="{{ authorData.twitter }}" target="_blank" rel="noopener" class="profil-sosial-btn" title="Twitter/X">
+                                <i data-lucide="twitter"></i>
+                            </a>
+                            {% endif %}
+                            {% if authorData.linkedin %}
+                            <a href="{{ authorData.linkedin }}" target="_blank" rel="noopener" class="profil-sosial-btn" title="LinkedIn">
+                                <i data-lucide="linkedin"></i>
+                            </a>
+                            {% endif %}
+                            {% if authorData.github %}
+                            <a href="{{ authorData.github }}" target="_blank" rel="noopener" class="profil-sosial-btn" title="GitHub">
+                                <i data-lucide="github"></i>
+                            </a>
+                            {% endif %}
+                            {% if authorData.website %}
+                            <a href="{{ authorData.website }}" target="_blank" rel="noopener" class="profil-sosial-btn" title="Website">
+                                <i data-lucide="globe"></i>
+                            </a>
+                            {% endif %}
+                        </div>
                     </div>
                 </div>
                 {% endif %}

@@ -1,0 +1,86 @@
+---
+layout: layouts/base.njk
+permalink: /404.html
+title: "404 - Halaman Tenggelam"
+---
+
+<style>
+.not-found-section {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-3xl) var(--space-md);
+    background: linear-gradient(to bottom, var(--color-bg), #e0f2fe);
+}
+
+[data-theme="dark"] .not-found-section {
+    background: linear-gradient(to bottom, var(--color-bg), #082f49);
+}
+
+.not-found-content {
+    max-width: 600px;
+}
+
+.not-found-illustration {
+    font-size: 6rem;
+    margin-bottom: var(--space-lg);
+    animation: floating 3s ease-in-out infinite;
+    display: inline-block;
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.not-found-title {
+    font-size: 3rem;
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+}
+
+.not-found-desc {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-2xl);
+    line-height: 1.6;
+}
+
+.not-found-actions {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+}
+
+@media (max-width: 640px) {
+    .not-found-title {
+        font-size: 2rem;
+    }
+    .not-found-actions {
+        flex-direction: column;
+    }
+}
+</style>
+
+<section class="not-found-section">
+    <div class="container">
+        <div class="not-found-content mx-auto">
+            <div class="not-found-illustration">🌊🏔️</div>
+            <h1 class="not-found-title">Halaman Telah Tenggelam</h1>
+            <p class="not-found-desc">
+                Waduh! Sepertinya halaman yang Anda cari telah tenggelam oleh kenaikan muka air laut, atau tautannya sudah mencair seperti es di Kutub Utara.
+            </p>
+            <div class="not-found-actions">
+                <a href="/" class="btn btn-primary">
+                    <i data-lucide="home" class="icon-sm"></i> Kembali ke Daratan (Beranda)
+                </a>
+                <a href="/pusat-data/" class="btn btn-outline">
+                    <i data-lucide="bar-chart-2" class="icon-sm"></i> Pantau Pusat Data
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

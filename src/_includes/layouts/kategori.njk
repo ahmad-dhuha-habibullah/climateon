@@ -23,33 +23,19 @@ layout: layouts/base.njk
     </div>
 </section>
 
-{# ═══ Featured Article ═══ #}
-{% set artikelKategori = collections[collectionName] %}
-{% set artikelUnggulan = artikelKategori | featured | limit(1) %}
-{% set artikelPertama = artikelUnggulan[0] or artikelKategori[0] %}
-
-{% if artikelPertama and pagination.pageNumber == 0 %}
-<section class="section">
-    <div class="container">
-        {% include "components/kartu-hero.njk" %}
-    </div>
-</section>
-{% endif %}
 
 {# ═══ All Articles Grid ═══ #}
 <section class="section section-alt">
     <div class="container">
         <div class="section-title">
             <h2>Semua Artikel</h2>
-            <span class="artikel-count">{{ artikelKategori.length }} artikel</span>
+            <span class="artikel-count">{{ collections[collectionName].length }} artikel</span>
         </div>
 
         {% if pagination.items.length > 0 %}
         <div class="grid-cards grid-4">
             {% for item in pagination.items %}
-                {% if pagination.pageNumber != 0 or item.url != artikelPertama.url %}
                 {% include "components/kartu-standar.njk" %}
-                {% endif %}
             {% endfor %}
         </div>
 

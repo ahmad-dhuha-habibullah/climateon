@@ -254,7 +254,8 @@ h1, h2, h3, h4, h5, h6 {
   max-height: 85vh;
   border-bottom-left-radius: var(--radius-lg);
   border-bottom-right-radius: var(--radius-lg);
-  background: var(--color-surface);
+  background: var(--color-primary-dark);
+  color: white;
   z-index: 999;
   padding: 80px var(--space-lg) var(--space-lg);
   overflow-y: auto;
@@ -274,9 +275,9 @@ h1, h2, h3, h4, h5, h6 {
   gap: var(--space-sm);
   margin-bottom: var(--space-xl);
   padding-bottom: var(--space-md);
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   font-weight: 700;
-  color: var(--color-primary);
+  color: white;
 }
 
 .mobile-logo {
@@ -286,16 +287,16 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav-link {
   display: block;
   padding: 0.7rem 0;
-  color: var(--color-text);
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 500;
   font-size: 0.95rem;
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   transition: color var(--transition-fast);
 }
 
 .mobile-nav-link:hover,
 .mobile-nav-link.active {
-  color: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 @media (max-width: 900px) {
@@ -2345,10 +2346,112 @@ html, body {
   background: var(--color-bg);
 }
 
+/* 
+═══════════════════════════════════════
+   ARTICLE REDESIGN
+═══════════════════════════════════════ 
+*/
+.artikel-header {
+  padding: var(--space-2xl) 0 var(--space-xl);
+  text-align: left;
+}
+
+.artikel-header .artikel-judul {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  color: var(--color-text);
+  margin-bottom: var(--space-lg);
+  font-family: 'Merriweather', serif;
+}
+
+.artikel-header .artikel-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.artikel-header .artikel-penulis a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.artikel-gambar-utama {
+  margin-bottom: var(--space-3xl);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.content-figure-media {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: cover;
+  display: block;
+}
+
+.profil-sosial-sm {
+  gap: var(--space-sm);
+}
+
+.profil-sosial-sm .profil-sosial-btn {
+  padding: 0.4rem;
+  font-size: 0;
+}
+
+.profil-sosial-sm .profil-sosial-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 768px) {
+  .artikel-header .artikel-judul {
+    font-size: 2rem;
+  }
+}
+
 .nav-actions {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  .header-container {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+  }
+  .site-logo {
+    min-width: 0;
+  }
+  .site-logo img {
+    height: 32px;
+  }
+  .site-logo-text {
+    font-size: 1.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .btn-search {
+    padding: 0.4rem;
+  }
+  .hamburger-btn {
+    padding: 0.4rem;
+  }
+  .mobile-nav {
+    background-color: var(--color-primary-dark);
+    color: white;
+  }
 }
 
 .nav-right {

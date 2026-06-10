@@ -28,23 +28,23 @@ eleventyComputed:
                 <p class="profil-keahlian">{{ author.keahlian }}</p>
                 {% endif %}
                 <div class="profil-sosial">
-                    {% if author.sosial.twitter %}
-                    <a href="{{ author.sosial.twitter }}" target="_blank" rel="noopener" class="profil-sosial-btn">
+                    {% if author.twitter %}
+                    <a href="{{ author.twitter }}" target="_blank" rel="noopener" class="profil-sosial-btn">
                         <i data-lucide="twitter"></i> Twitter
                     </a>
                     {% endif %}
-                    {% if author.sosial.linkedin %}
-                    <a href="{{ author.sosial.linkedin }}" target="_blank" rel="noopener" class="profil-sosial-btn">
+                    {% if author.linkedin %}
+                    <a href="{{ author.linkedin }}" target="_blank" rel="noopener" class="profil-sosial-btn">
                         <i data-lucide="linkedin"></i> LinkedIn
                     </a>
                     {% endif %}
-                    {% if author.sosial.email %}
-                    <a href="mailto:{{ author.sosial.email }}" class="profil-sosial-btn">
-                        <i data-lucide="mail"></i> Email
+                    {% if author.github %}
+                    <a href="{{ author.github }}" target="_blank" rel="noopener" class="profil-sosial-btn">
+                        <i data-lucide="github"></i> GitHub
                     </a>
                     {% endif %}
-                    {% if author.sosial.website %}
-                    <a href="{{ author.sosial.website }}" target="_blank" rel="noopener" class="profil-sosial-btn">
+                    {% if author.website %}
+                    <a href="{{ author.website }}" target="_blank" rel="noopener" class="profil-sosial-btn">
                         <i data-lucide="globe"></i> Website
                     </a>
                     {% endif %}
