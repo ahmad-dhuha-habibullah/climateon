@@ -2191,3 +2191,37 @@ html, body {
     justify-content: center;
   }
 }
+
+/* 
+═══════════════════════════════════════
+   SEARCH BUTTON AND HERO FIXES
+═══════════════════════════════════════ 
+*/
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-search-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  border-radius: 50%;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.nav-search-btn:hover {
+  background-color: var(--color-border-light);
+  color: var(--color-primary);
+}
+
+.beranda-text-panel,
+.beranda-text-panel .beranda-judul,
+.beranda-text-panel .beranda-desc {
+  color: #ffffff !important;
+}
