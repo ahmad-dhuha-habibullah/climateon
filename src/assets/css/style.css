@@ -256,7 +256,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom-right-radius: var(--radius-lg);
   background: var(--color-surface);
   z-index: 999;
-  padding: var(--space-lg);
+  padding: 80px var(--space-lg) var(--space-lg);
   overflow-y: auto;
   overflow-x: hidden;
   transition: top var(--transition-base);
