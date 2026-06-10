@@ -1,0 +1,48 @@
+---
+layout: layouts/base.njk
+---
+
+{# ═══ Author Profile Page ═══ #}
+<section class="penulis-hero">
+    <div class="container">
+        <div class="penulis-profile">
+            <div class="penulis-avatar-lg">
+                <img src="{{ avatar | default('/assets/images/authors/default.jpg') }}" alt="{{ nama }}">
+            </div>
+            <div class="penulis-info">
+                <h1>{{ nama }}</h1>
+                <span class="penulis-peran-badge">{{ peran }}</span>
+                <p>{{ bio }}</p>
+                {% if sosial %}
+                <div class="penulis-sosial">
+                    {% if sosial.twitter %}
+                    <a href="{{ sosial.twitter }}" target="_blank" rel="noopener" aria-label="Twitter">
+                        <i data-lucide="twitter" class="icon-sm"></i>
+                    </a>
+                    {% endif %}
+                    {% if sosial.linkedin %}
+                    <a href="{{ sosial.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <i data-lucide="linkedin" class="icon-sm"></i>
+                    </a>
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+{# ═══ Articles by Author ═══ #}
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Artikel oleh {{ nama }}</h2>
+        </div>
+
+        <div class="grid-cards">
+            {% set authorArticles = collections.semuaArtikel | filterKategori(null) %}
+            {# Articles will be filtered by author slug in the page template #}
+            {{ content | safe }}
+        </div>
+    </div>
+</section>

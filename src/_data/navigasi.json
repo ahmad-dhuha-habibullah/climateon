@@ -1,0 +1,39 @@
+{
+  "utama": [
+    { "label": "Beranda", "url": "/" },
+    { "label": "Iklim", "url": "/iklim/" },
+    { "label": "Cuaca", "url": "/cuaca/" },
+    { "label": "Lingkungan", "url": "/lingkungan/" },
+    { "label": "Keberlanjutan", "url": "/keberlanjutan/" },
+    { "label": "Teknologi", "url": "/teknologi/" },
+    { "label": "Riset", "url": "/riset/" },
+    { "label": "Opini", "url": "/opini/" },
+    { "label": "Bedah Paper", "url": "/bedah-paper/" },
+    { "label": "Pusat Data", "url": "/pusat-data/" },
+    { "label": "Tentang", "url": "/tentang/" }
+  ],
+  "footer": {
+    "kategori": [
+      { "label": "Iklim", "url": "/iklim/" },
+      { "label": "Cuaca", "url": "/cuaca/" },
+      { "label": "Lingkungan", "url": "/lingkungan/" },
+      { "label": "Keberlanjutan", "url": "/keberlanjutan/" },
+      { "label": "Teknologi", "url": "/teknologi/" },
+      { "label": "Riset", "url": "/riset/" },
+      { "label": "Opini", "url": "/opini/" },
+      { "label": "Bedah Paper", "url": "/bedah-paper/" }
+    ],
+    "pusatData": [
+      { "label": "Pemantau ENSO", "url": "/pusat-data/enso/" },
+      { "label": "Gelombang Panas Laut", "url": "/pusat-data/gelombang-panas-laut/" },
+      { "label": "Siklon Tropis", "url": "/pusat-data/siklon-tropis/" },
+      { "label": "Suhu Muka Laut", "url": "/pusat-data/suhu-muka-laut/" },
+      { "label": "Anomali Hujan", "url": "/pusat-data/anomali-hujan/" }
+    ],
+    "tentang": [
+      { "label": "Tentang Kami", "url": "/tentang/" },
+      { "label": "Tim Penulis", "url": "/penulis/" },
+      { "label": "Kebijakan Privasi", "url": "#" }
+    ]
+  }
+}

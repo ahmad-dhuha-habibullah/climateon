@@ -1,0 +1,42 @@
+{# Hero Card — Split layout: text left, image/video right with fade gradient #}
+{# Expects: artikelPertama (article object) #}
+{% if artikelPertama %}
+<a href="{{ artikelPertama.url }}" class="kartu-hero">
+
+    {# Background: video or image fills the full card #}
+    {% if artikelPertama.data.video %}
+    <video class="hero-bg-media" autoplay loop muted playsinline>
+        <source src="{{ artikelPertama.data.video }}" type="video/webm">
+        {% if artikelPertama.data.image %}
+        <source src="{{ artikelPertama.data.image }}" type="image/jpeg">
+        {% endif %}
+    </video>
+    {% elif artikelPertama.data.image %}
+    <div class="hero-bg-media" style="background-image: url('{{ artikelPertama.data.image }}');"></div>
+    {% else %}
+    <div class="hero-bg-media hero-bg-fallback"></div>
+    {% endif %}
+
+    {# Left-to-right gradient overlay — opaque on left, transparent on right #}
+    <div class="hero-gradient-overlay"></div>
+
+    {# Text content pinned to the left #}
+    <div class="hero-text-panel">
+        {% if artikelPertama.data.category %}
+        <span class="kartu-hero-kategori">{{ artikelPertama.data.category | replace("-", " ") | title }}</span>
+        {% endif %}
+        <h2 class="kartu-hero-judul">{{ artikelPertama.data.title }}</h2>
+        <p class="kartu-hero-desc">{{ artikelPertama.data.description | default(artikelPertama.content | ringkasan(180)) }}</p>
+        <div class="kartu-hero-meta">
+            {% set authorData = artikelPertama.data.penulis | cariPenulis(dataPenulis) %}
+            {% if authorData %}
+                <span><i data-lucide="user" class="icon-xs"></i> <a href="/penulis/{{ authorData.slug }}/" style="color: inherit; text-decoration: none;">{{ authorData.nama }}</a></span>
+            {% endif %}
+            <span><i data-lucide="clock" class="icon-xs"></i> {{ artikelPertama.content | waktuBaca }} menit baca</span>
+            <span><i data-lucide="calendar" class="icon-xs"></i> {{ artikelPertama.date | tanggalBaca }}</span>
+        </div>
+        <span class="hero-baca-btn">Baca Selengkapnya <i data-lucide="arrow-right" class="icon-xs"></i></span>
+    </div>
+
+</a>
+{% endif %}

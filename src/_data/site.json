@@ -1,10 +1,13 @@
 {
-  "name": "Mr Dhuha",
-  "description": "Menjelaskan dunia dengan data.",
-  "url": "https://mrdhuha.example.com",
-  "author": "Mr Dhuha",
+  "name": "ClimateOn",
+  "tagline": "Membaca Iklim, Memahami Bumi",
+  "description": "Platform intelijen iklim Indonesia yang menyajikan analisis mendalam, cerita berbasis data, dan pemantauan kondisi iklim dalam format jurnalisme modern.",
+  "url": "https://climateon.id",
+  "language": "id",
+  "author": "ClimateOn Editorial",
   "brandColors": {
-    "primary": "#E05A11",
-    "secondary": "#1A3636"
+    "primary": "#0D4F4F",
+    "accent": "#10B981",
+    "dark": "#0A3939"
   }
 }

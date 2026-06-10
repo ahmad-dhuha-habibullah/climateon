@@ -1,0 +1,13 @@
+{# Kartu Ringkas — Compact sidebar card #}
+{# Expects: item (article object) #}
+<a href="{{ item.url }}" class="kartu-ringkas">
+    {% if item.data.image %}
+    <div class="kartu-ringkas-img">
+        <img src="{{ item.data.image }}" alt="{{ item.data.title }}" loading="lazy">
+    </div>
+    {% endif %}
+    <div class="kartu-ringkas-body">
+        <h4 class="kartu-ringkas-judul">{{ item.data.title }}</h4>
+        <span class="kartu-ringkas-meta">{{ item.date | tanggalBaca }}</span>
+    </div>
+</a>

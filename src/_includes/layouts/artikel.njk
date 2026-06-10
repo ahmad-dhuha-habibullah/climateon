@@ -1,0 +1,128 @@
+---
+layout: layouts/base.njk
+---
+
+<article class="artikel" itemscope itemtype="https://schema.org/Article">
+
+    {# ═══ Hero Banner ═══ #}
+    <header class="artikel-hero" {% if image and not video %}style="background-image: url('{{ image }}')"{% endif %}>
+        {% if video %}
+        <video class="hero-video-bg" autoplay loop muted playsinline>
+            <source src="{{ video }}" type="video/webm">
+        </video>
+        {% endif %}
+        <div class="artikel-hero-overlay">
+            <div class="container artikel-hero-content">
+                {% if category %}
+                <a href="/{{ category }}/" class="artikel-kategori-badge">{{ category | replace("-", " ") | title }}</a>
+                {% endif %}
+
+                <h1 class="artikel-judul" itemprop="headline">{{ title }}</h1>
+
+                <div class="artikel-meta">
+                    {% if penulis %}
+                        {% set authorData = penulis | cariPenulis(dataPenulis) %}
+                        {% if authorData %}
+                        <span class="artikel-penulis" itemprop="author">
+                            <i data-lucide="user" class="icon-sm"></i>
+                            <a href="/penulis/{{ authorData.slug }}/" style="color: inherit; text-decoration: none;">{{ authorData.nama }}</a>
+                        </span>
+                        {% else %}
+                        <span class="artikel-penulis" itemprop="author">
+                            <i data-lucide="user" class="icon-sm"></i>
+                            Tim Redaksi ClimateOn
+                        </span>
+                        {% endif %}
+                    {% else %}
+                    <span class="artikel-penulis" itemprop="author">
+                        <i data-lucide="user" class="icon-sm"></i>
+                        Tim Redaksi ClimateOn
+                    </span>
+                    {% endif %}
+
+                    <span class="artikel-tanggal">
+                        <i data-lucide="calendar" class="icon-sm"></i>
+                        <time datetime="{{ date | htmlDateString }}" itemprop="datePublished">{{ date | tanggalBaca }}</time>
+                    </span>
+
+                    <span class="artikel-waktu-baca">
+                        <i data-lucide="clock" class="icon-sm"></i>
+                        {{ content | waktuBaca }} menit baca
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {# ═══ Article Body ═══ #}
+    <div class="container artikel-body-wrapper">
+        <div class="artikel-body">
+
+            {# Paper Meta Box (untuk Bedah Paper) #}
+            {% if jurnal and tahun %}
+            <aside class="paper-meta-box">
+                <h3><i data-lucide="file-text" class="icon-sm"></i> Informasi Paper</h3>
+                <ul>
+                    {% if penulisPaper %}<li><strong>Penulis:</strong> {{ penulisPaper }}</li>{% endif %}
+                    <li><strong>Tahun:</strong> {{ tahun }}</li>
+                    <li><strong>Jurnal:</strong> {{ jurnal }}</li>
+                    {% if doi %}<li><strong>DOI:</strong> <a href="https://doi.org/{{ doi }}" target="_blank" rel="noopener">{{ doi }}</a></li>{% endif %}
+                </ul>
+            </aside>
+            {% endif %}
+
+            {# Content #}
+            <div class="artikel-konten" itemprop="articleBody">
+                {{ content | safe }}
+            </div>
+
+            {# Tags #}
+            {% if tags and tags.length %}
+            <div class="artikel-tags">
+                <i data-lucide="tag" class="icon-sm"></i>
+                {% for tag in tags %}
+                <a href="/tag/{{ tag | slug }}/" class="tag-pill">{{ tag }}</a>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            {# Author Bio #}
+            {% if penulis %}
+                {% set authorData = penulis | cariPenulis(dataPenulis) %}
+                {% if authorData %}
+                <div class="penulis-bio-card">
+                    <div class="penulis-bio-avatar">
+                        <img src="{{ authorData.avatar | default('/assets/images/authors/default.jpg') }}" alt="{{ authorData.nama }}" loading="lazy">
+                    </div>
+                    <div class="penulis-bio-info">
+                        <h4><a href="/penulis/{{ authorData.slug }}/" style="color: inherit; text-decoration: none;">{{ authorData.nama }}</a></h4>
+                        <span class="penulis-peran">{{ authorData.peran }}</span>
+                        <p>{{ authorData.bio }}</p>
+                    </div>
+                </div>
+                {% endif %}
+            {% endif %}
+        </div>
+
+        {# ═══ Sidebar ═══ #}
+        <aside class="artikel-sidebar">
+            <div class="sidebar-section">
+                <h4>Artikel Terkait</h4>
+                {% set relatedArticles = collections.semuaArtikel | filterKategori(category) | exclude(page.url) | limit(4) %}
+                {% for item in relatedArticles %}
+                <a href="{{ item.url }}" class="sidebar-card">
+                    <div class="sidebar-card-content">
+                        <h5>{{ item.data.title }}</h5>
+                        <span class="sidebar-card-date">{{ item.date | tanggalBaca }}</span>
+                    </div>
+                </a>
+                {% endfor %}
+
+                {% if relatedArticles.length == 0 %}
+                <p class="sidebar-empty">Belum ada artikel terkait.</p>
+                {% endif %}
+            </div>
+        </aside>
+    </div>
+
+</article>

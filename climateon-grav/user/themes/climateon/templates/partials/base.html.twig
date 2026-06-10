@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
+<head>
+{% block head %}
+    <meta charset="utf-8" />
+    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include 'partials/metadata.html.twig' ignore missing %}
+    <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
+    <link rel="canonical" href="{{ page.url(true, true) }}" />
+    
+    {% block stylesheets %}
+        {% do assets.addCss('theme://css/custom.css', 100) %}
+    {% endblock %}
+    
+    {{ assets.css()|raw }}
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+{% endblock head %}
+</head>
+<body id="top" class="{{ page.header.body_classes }}">
+    <header class="site-header">
+        <div class="container">
+            <a href="{{ base_url == '' ? '/' : base_url }}" class="logo">
+                <img src="{{ url('theme://images/logo.png') }}" alt="Climateon Logo" />
+            </a>
+            <nav class="main-nav">
+                <a href="{{ base_url }}/iklim-dijelaskan">Iklim Dijelaskan</a>
+                <a href="{{ base_url }}/data-story">Data Story</a>
+                <a href="{{ base_url }}/bedah-paper">Bedah Paper</a>
+                <a href="{{ base_url }}/climate-watch">Climate Watch</a>
+            </nav>
+            <div class="search-wrap">
+                {# SimpleSearch Plugin integration #}
+                {% include 'partials/simplesearch_searchbox.html.twig' ignore missing %}
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; {{ "now"|date("Y") }} Climateon. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    {% block javascripts %}
+        {{ assets.js()|raw }}
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                lucide.createIcons();
+            });
+        </script>
+    {% endblock %}
+</body>
+</html>

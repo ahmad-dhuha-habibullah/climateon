@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+title: "Tim Penulis — ClimateOn"
+description: "Kenali tim penulis dan kontributor di balik ClimateOn."
+permalink: /penulis/
+---
+
+<section class="kategori-header">
+    <div class="container">
+        <h1>Tim Penulis</h1>
+        <p class="kategori-desc">Para profesional di bidang iklim, meteorologi, dan komunikasi sains yang menggerakkan ClimateOn.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="penulis-grid">
+            {% for author in dataPenulis.items | default(dataPenulis) %}
+            <div class="penulis-card">
+                <div class="penulis-card-avatar">
+                    <img src="{{ author.avatar | default('/assets/images/authors/default.jpg') }}" alt="{{ author.nama }}" loading="lazy">
+                </div>
+                <div class="penulis-card-body">
+                    <h3>{{ author.nama }}</h3>
+                    <span class="penulis-peran-badge">{{ author.peran }}</span>
+                    <p>{{ author.bio }}</p>
+                    {% if author.sosial %}
+                    <div class="penulis-sosial">
+                        {% if author.sosial.twitter %}
+                        <a href="{{ author.sosial.twitter }}" target="_blank" rel="noopener"><i data-lucide="twitter" class="icon-sm"></i></a>
+                        {% endif %}
+                        {% if author.sosial.linkedin %}
+                        <a href="{{ author.sosial.linkedin }}" target="_blank" rel="noopener"><i data-lucide="linkedin" class="icon-sm"></i></a>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

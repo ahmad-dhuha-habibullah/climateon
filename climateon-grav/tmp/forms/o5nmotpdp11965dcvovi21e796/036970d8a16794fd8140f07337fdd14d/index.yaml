@@ -1,0 +1,31 @@
+form: flex-pages
+id: 'tmp://forms/session/036970d8a16794fd8140f07337fdd14d'
+unique_id: 036970d8a16794fd8140f07337fdd14d
+url: '/pages/bedah-paper/:add'
+user:
+  username: dhuha
+  email: Habibullahphys15@gmail.com
+timestamps:
+  created: 1781077207
+  updated: 1781077207
+data: null
+files: {  }
+object:
+  type: pages
+  key: bedah-paper
+  storage_key: ''
+  timestamp: 0
+  serialized:
+    __META: {  }
+    storage_key: ''
+    parent_key: ''
+    order: '06.'
+    folder: bedah-paper
+    template: blog
+    lang: ''
+    root: false
+    route: /
+    name: blog
+    header:
+      title: 'Bedah Paper'
+    frontmatter: "title: 'Bedah Paper'\n"

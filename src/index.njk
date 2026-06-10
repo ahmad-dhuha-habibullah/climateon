@@ -1,143 +1,122 @@
 ---
 layout: layouts/base.njk
-title: "Beranda - Climateon.id"
+title: "ClimateOn — Majalah Intelijen Iklim Indonesia"
+description: "Platform intelijen iklim Indonesia yang menyajikan analisis mendalam, cerita berbasis data, dan pemantauan kondisi iklim dalam format jurnalisme modern."
 ---
 
-<!-- Hero Section -->
-<section class="hero">
-    <div class="container">
-        <h1>Memahami Iklim Indonesia Melalui Data</h1>
-        <p>Artikel, analisis, visualisasi, dan pemantauan iklim untuk membantu masyarakat memahami perubahan lingkungan yang terjadi di sekitar kita.</p>
-        <div class="hero-actions">
-            <a href="/iklim-dijelaskan/" class="btn btn-primary">Jelajahi Artikel</a>
-            <a href="/climate-watch/" class="btn btn-outline">Lihat Climate Watch</a>
-        </div>
-    </div>
+{# ═══ HERO STORY ═══ #}
+{% set heroArticle = collections.unggulan[0] or collections.semuaArtikel[0] %}
+{% if heroArticle %}
+<section class="beranda-hero">
+        {% set artikelPertama = heroArticle %}
+        {% include "components/kartu-hero.njk" %}
 </section>
+{% endif %}
 
-<!-- Memahami Iklim -->
+{# ═══ ARTIKEL PILIHAN ═══ #}
+{% set featuredList = collections.unggulan | exclude(heroArticle.url) | limit(4) %}
+{% if featuredList.length == 0 %}
+    {% set featuredList = collections.semuaArtikel | exclude(heroArticle.url) | limit(4) %}
+{% endif %}
+
+{% if featuredList.length > 0 %}
 <section class="section">
     <div class="container">
         <div class="section-title">
-            <h2>Memahami Iklim</h2>
-            <a href="/iklim-dijelaskan/" class="section-link">Lihat Semua</a>
+            <h2>Pilihan Redaksi</h2>
         </div>
-        <div class="grid-cards">
-            {% for item in collections.iklim_dijelaskan %}
-                {% if loop.index0 < 6 %}
-                <div class="card">
-                    <img src="{{ item.data.image }}" alt="{{ item.data.title }}" class="card-img">
-                    <div class="card-content">
-                        <span class="card-category">{{ item.data.kategori }}</span>
-                        <h3 class="card-title"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
-                        <p class="card-desc">{{ item.data.description }}</p>
-                        <div class="card-meta">
-                            <span>{{ item.date | readableDate }}</span>
-                        </div>
-                    </div>
-                </div>
-                {% endif %}
+        <div class="grid-cards grid-4">
+            {% for item in featuredList %}
+                {% include "components/kartu-utama.njk" %}
             {% endfor %}
         </div>
     </div>
 </section>
+{% endif %}
 
-<!-- Climate Watch -->
-<section class="section" style="background-color: var(--color-surface);">
+{# ═══ ARTIKEL TERBARU ═══ #}
+{% set latestArticles = collections.semuaArtikel | exclude(heroArticle.url) | limit(6) %}
+{% if latestArticles.length > 0 %}
+<section class="section section-alt">
     <div class="container">
         <div class="section-title">
-            <h2>Climate Watch</h2>
-            <a href="/climate-watch/" class="section-link">Selengkapnya</a>
+            <h2>Terbaru</h2>
         </div>
-        <div class="watch-grid">
-            <div class="watch-card">
-                <h3>ENSO</h3>
-                <div class="status" style="color: #64748b;">Netral</div>
-            </div>
-            <div class="watch-card">
-                <h3>IOD</h3>
-                <div class="status" style="color: #eab308;">Positif Lemah</div>
-            </div>
-            <div class="watch-card">
-                <h3>Anomali SST Indonesia</h3>
-                <div class="status" style="color: #ef4444;">+0.4°C</div>
-            </div>
-            <div class="watch-card">
-                <h3>Curah Hujan Nasional</h3>
-                <div class="status" style="color: #0ea5e9;">Atas Normal</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Data Story Pilihan -->
-<section class="section">
-    <div class="container">
-        <div class="section-title">
-            <h2>Data Story Pilihan</h2>
-            <a href="/data-story/" class="section-link">Lihat Semua</a>
-        </div>
-        <div class="grid-cards">
-            {% for item in collections.data_story %}
-                {% if loop.index0 < 3 %}
-                <div class="card">
-                    <img src="{{ item.data.image }}" alt="{{ item.data.title }}" class="card-img">
-                    <div class="card-content">
-                        <span class="card-category">{{ item.data.kategori }}</span>
-                        <h3 class="card-title"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
-                    </div>
-                </div>
-                {% endif %}
+        <div class="grid-cards grid-3">
+            {% for item in latestArticles %}
+                {% include "components/kartu-standar.njk" %}
             {% endfor %}
         </div>
     </div>
 </section>
+{% endif %}
 
-<!-- Bedah Paper Terbaru -->
-<section class="section" style="background-color: var(--color-surface);">
+{# ═══ IKLIM ═══ #}
+{% set iklimItems = collections.iklim %}
+{% if iklimItems.length > 0 %}
+{% set sectionTitle = "Iklim" %}
+{% set sectionUrl = "/iklim/" %}
+{% set items = iklimItems %}
+{% include "components/seksi-kategori.njk" %}
+{% endif %}
+
+{# ═══ CUACA ═══ #}
+{% set cuacaItems = collections.cuaca %}
+{% if cuacaItems.length > 0 %}
+{% set sectionTitle = "Cuaca" %}
+{% set sectionUrl = "/cuaca/" %}
+{% set items = cuacaItems %}
+{% include "components/seksi-kategori.njk" %}
+{% endif %}
+
+{# ═══ LINGKUNGAN ═══ #}
+{% set lingkunganItems = collections.lingkungan %}
+{% if lingkunganItems.length > 0 %}
+{% set sectionTitle = "Lingkungan" %}
+{% set sectionUrl = "/lingkungan/" %}
+{% set items = lingkunganItems %}
+{% include "components/seksi-kategori.njk" %}
+{% endif %}
+
+{# ═══ KEBERLANJUTAN ═══ #}
+{% set keberlanjutanItems = collections.keberlanjutan %}
+{% if keberlanjutanItems.length > 0 %}
+{% set sectionTitle = "Keberlanjutan" %}
+{% set sectionUrl = "/keberlanjutan/" %}
+{% set items = keberlanjutanItems %}
+{% include "components/seksi-kategori.njk" %}
+{% endif %}
+
+{# ═══ RISET ═══ #}
+{% set risetItems = collections.riset %}
+{% if risetItems.length > 0 %}
+{% set sectionTitle = "Riset" %}
+{% set sectionUrl = "/riset/" %}
+{% set items = risetItems %}
+{% include "components/seksi-kategori.njk" %}
+{% endif %}
+
+{# ═══ BEDAH PAPER ═══ #}
+{% set bedahPaperItems = collections.bedah_paper %}
+{% if bedahPaperItems.length > 0 %}
+{% set sectionTitle = "Bedah Paper" %}
+{% set sectionUrl = "/bedah-paper/" %}
+{% set items = bedahPaperItems %}
+{% include "components/seksi-kategori.njk" %}
+{% endif %}
+
+{# ═══ PUSAT DATA ═══ #}
+<section class="section section-datahub">
     <div class="container">
         <div class="section-title">
-            <h2>Bedah Paper Terbaru</h2>
-            <a href="/bedah-paper/" class="section-link">Lihat Semua</a>
+            <h2>Pusat Data</h2>
+            <a href="/pusat-data/" class="section-link">
+                Selengkapnya <i data-lucide="arrow-right" class="icon-xs"></i>
+            </a>
         </div>
-        <div class="grid-cards">
-            {% for item in collections.bedah_paper %}
-                {% if loop.index0 < 3 %}
-                <div class="card">
-                    <div class="card-content">
-                        <span class="badge badge-blue mb-4">Bedah Paper</span>
-                        <h3 class="card-title"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
-                        <p class="card-desc">{{ item.data.description }}</p>
-                        <div class="card-meta">
-                            <span>{{ item.data.jurnal }} ({{ item.data.tahun }})</span>
-                        </div>
-                    </div>
-                </div>
-                {% endif %}
-            {% endfor %}
-        </div>
-    </div>
-</section>
-
-<!-- Peristiwa Ekstrem -->
-<section class="section">
-    <div class="container">
-        <div class="section-title">
-            <h2>Peristiwa Ekstrem</h2>
-            <a href="/peristiwa-ekstrem/" class="section-link">Lihat Semua</a>
-        </div>
-        <div class="grid-cards">
-            {% for item in collections.peristiwa_ekstrem %}
-                {% if loop.index0 < 3 %}
-                <div class="card">
-                    <img src="{{ item.data.image }}" alt="{{ item.data.title }}" class="card-img">
-                    <div class="card-content">
-                        <span class="card-category">{{ item.data.kategori }}</span>
-                        <h3 class="card-title"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
-                        <p class="card-desc">{{ item.data.description }}</p>
-                    </div>
-                </div>
-                {% endif %}
+        <div class="datahub-grid">
+            {% for monitor in pusat-data %}
+                {% include "components/kartu-data.njk" %}
             {% endfor %}
         </div>
     </div>

@@ -3,108 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title | default("Climateon.id - Memahami Iklim, Memahami Masa Depan") }}</title>
-    <meta name="description" content="{{ description | default('Platform informasi iklim Indonesia yang menyajikan penjelasan, analisis, visualisasi data, dan pemantauan kondisi iklim secara mudah dipahami.') }}">
-    
-    <!-- CSS -->
+    <title>{{ title | default(site.name + " — " + site.tagline) }}</title>
+    <meta name="description" content="{{ description | default(site.description) }}">
+
+    {# Open Graph #}
+    <meta property="og:title" content="{{ title | default(site.name) }}">
+    <meta property="og:description" content="{{ description | default(site.description) }}">
+    <meta property="og:type" content="{% if layout == 'layouts/artikel.njk' %}article{% else %}website{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    {% if image %}
+    <meta property="og:image" content="{{ image }}">
+    {% endif %}
+    <meta property="og:locale" content="id_ID">
+
+    {# Twitter Card #}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ title | default(site.name) }}">
+    <meta name="twitter:description" content="{{ description | default(site.description) }}">
+
+    {# Canonical #}
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+    {# Analytics #}
+    <script defer src="https://analytics.umami.is/script.js" data-website-id="f26526d7-6ba1-4d8b-846c-75c2d8c1910c"></script>
+
+    {# CSS #}
     <link rel="stylesheet" href="/assets/css/style.css">
-    
-    <!-- Favicon -->
+
+    {# Favicon #}
     <link rel="icon" type="image/png" href="/climateon_logo.png">
 
-    <!-- Fonts -->
+    {# Fonts #}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
-    
-    <!-- Lucide Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+    {# Icons & Scripts #}
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="/assets/js/search.js" defer></script>
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <header class="site-header">
+    {# ═══ Header ═══ #}
+    <header class="site-header" id="site-header">
         <div class="container header-container">
-            <!-- Logo -->
-            <a href="/" class="site-logo">
-                <img src="/climateon_logo.png" alt="Climateon.id Logo">
+            {# Logo #}
+            <a href="/" class="site-logo" aria-label="ClimateOn Beranda">
+                <img src="/climateon_logo.png" alt="ClimateOn">
+                <div class="logo-text">
+                    <span class="logo-name">ClimateOn</span>
+                    <span class="logo-tagline">{{ site.tagline }}</span>
+                </div>
             </a>
 
-            <!-- Desktop Nav -->
-            <nav class="main-nav" id="main-nav">
-                <a href="/" class="{% if page.url == '/' %}active{% endif %}">Beranda</a>
-                <a href="/iklim-dijelaskan/" class="{% if '/iklim-dijelaskan/' in page.url %}active{% endif %}">Memahami Iklim</a>
-                <a href="/climate-watch/" class="{% if '/climate-watch/' in page.url %}active{% endif %}">Climate Watch</a>
-                <a href="/data-story/" class="{% if '/data-story/' in page.url %}active{% endif %}">Data Story</a>
-                <a href="/bedah-paper/" class="{% if '/bedah-paper/' in page.url %}active{% endif %}">Bedah Paper</a>
-                <a href="/peristiwa-ekstrem/" class="{% if '/peristiwa-ekstrem/' in page.url %}active{% endif %}">Peristiwa Ekstrem</a>
-                <a href="/solusi-adaptasi/" class="{% if '/solusi-adaptasi/' in page.url %}active{% endif %}">Solusi & Adaptasi</a>
-                <a href="/eksplorasi/" class="{% if '/eksplorasi/' in page.url %}active{% endif %}">Eksplorasi</a>
-                <a href="/tentang/" class="{% if '/tentang/' in page.url %}active{% endif %}">Tentang</a>
+            {# Desktop Nav #}
+            <nav class="main-nav" id="main-nav" aria-label="Navigasi utama">
+                {% for item in navigasi.utama %}
+                    <a href="{{ item.url }}"
+                       class="nav-link {% if page.url == item.url or (item.url != '/' and page.url | startsWith(item.url)) %}active{% endif %}"
+                    >{{ item.label }}</a>
+                {% endfor %}
             </nav>
+            <div class="nav-right">
+                <button class="nav-search-btn" aria-label="Cari" onclick="openSearch()">
+                    <i data-lucide="search"></i>
+                </button>
+            </div>
 
-            <!-- Mobile Menu Toggle -->
-            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle menu">
-                <i data-lucide="menu"></i>
+            {# Mobile Toggle #}
+            <button class="menu-toggle" id="menu-toggle" aria-label="Buka menu navigasi" aria-expanded="false">
+                <i data-lucide="menu" class="icon-menu"></i>
+                <i data-lucide="x" class="icon-close"></i>
             </button>
         </div>
+
+        {# Mobile Nav Overlay #}
+        <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+        <nav class="mobile-nav" id="mobile-nav" aria-label="Navigasi mobile">
+            <div class="mobile-nav-header">
+                <img src="/climateon_logo.png" alt="ClimateOn" class="mobile-logo">
+                <span>ClimateOn</span>
+            </div>
+            {% for item in navigasi.utama %}
+                <a href="{{ item.url }}"
+                   class="mobile-nav-link {% if page.url == item.url or (item.url != '/' and page.url | startsWith(item.url)) %}active{% endif %}"
+                >{{ item.label }}</a>
+            {% endfor %}
+        </nav>
     </header>
 
-    <!-- Main Content Area -->
-    <main id="app-root">
+    {# Modal Pencarian #}
+    <div id="search-modal" class="search-modal" aria-hidden="true" role="dialog" aria-label="Pencarian">
+        <div class="search-modal-backdrop" onclick="closeSearch()"></div>
+        <div class="search-modal-content">
+            <div class="search-header">
+                <i data-lucide="search" class="search-icon"></i>
+                <input type="text" id="search-input" placeholder="Cari artikel, topik, atau kata kunci..." aria-label="Cari" autocomplete="off">
+                <button class="search-close" onclick="closeSearch()" aria-label="Tutup pencarian"><i data-lucide="x"></i></button>
+            </div>
+            <div id="search-results" class="search-results">
+                <div class="search-empty-state">Ketik sesuatu untuk mulai mencari...</div>
+            </div>
+            <div class="search-footer">Tekan <kbd>Esc</kbd> untuk tutup &bull; <kbd>Ctrl+K</kbd> untuk buka</div>
+        </div>
+    </div>
+
+    {# ═══ Main Content ═══ #}
+    <main id="konten-utama">
         {{ content | safe }}
     </main>
 
-    <!-- Footer -->
+    {# ═══ Newsletter CTA ═══ #}
+    {% if not hideNewsletter %}
+    {% include "components/newsletter.njk" %}
+    {% endif %}
+
+    {# ═══ Footer ═══ #}
     <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:1rem;">
-                        <img src="/climateon_logo.png" alt="Climateon Logo" style="height:32px;">
-                    </div>
-                    <p>Platform informasi iklim Indonesia yang menyajikan penjelasan, analisis, visualisasi data, dan pemantauan kondisi iklim secara mudah dipahami.</p>
-                </div>
-
-                <div class="footer-links">
-                    <h4>Kategori</h4>
-                    <ul>
-                        <li><a href="/iklim-dijelaskan/">Memahami Iklim</a></li>
-                        <li><a href="/climate-watch/">Climate Watch</a></li>
-                        <li><a href="/data-story/">Data Story</a></li>
-                        <li><a href="/bedah-paper/">Bedah Paper</a></li>
-                        <li><a href="/peristiwa-ekstrem/">Peristiwa Ekstrem</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-links">
-                    <h4>Tentang Kami</h4>
-                    <ul>
-                        <li><a href="/tentang/">Tentang Climateon.id</a></li>
-                        <li><a href="/tentang/">Kontak</a></li>
-                        <li><a href="#">Kebijakan Privasi</a></li>
-                    </ul>
-                </div>
+        <div class="container footer-1-row">
+            <div class="footer-brand">
+                <img src="/climateon_logo.png" alt="ClimateOn" class="footer-logo-img">
+                <p>&copy; {% tahun %} ClimateOn — {{ site.tagline }}.</p>
             </div>
-
-            <div class="footer-bottom">
-                &copy; 2026 Climateon.id - Memahami Iklim, Memahami Masa Depan.
+            <div class="footer-links-inline">
+                <a href="/tentang/">Tentang</a>
+                <a href="/penulis/">Tim Redaksi</a>
+                <a href="/pusat-data/">Pusat Data</a>
             </div>
         </div>
     </footer>
 
     <script>
+        // Initialize Lucide icons
         lucide.createIcons();
 
         // Mobile menu
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mainNav = document.getElementById('main-nav');
-        if (menuBtn && mainNav) {
-            menuBtn.addEventListener('click', () => {
-                mainNav.classList.toggle('active');
-            });
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+        const mobileOverlay = document.getElementById('mobile-nav-overlay');
+
+        function toggleMobileMenu() {
+            const isOpen = mobileNav.classList.contains('open');
+            mobileNav.classList.toggle('open');
+            mobileOverlay.classList.toggle('open');
+            menuToggle.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', !isOpen);
+            document.body.style.overflow = isOpen ? '' : 'hidden';
         }
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', toggleMobileMenu);
+        }
+        if (mobileOverlay) {
+            mobileOverlay.addEventListener('click', toggleMobileMenu);
+        }
+
+        // Header scroll effect
+        let lastScroll = 0;
+        const header = document.getElementById('site-header');
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 60) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Custom Nunjucks startsWith filter workaround
+        // (Handled server-side, this is just for clarity)
     </script>
 </body>
 </html>

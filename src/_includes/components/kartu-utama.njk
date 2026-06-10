@@ -1,0 +1,30 @@
+{# Kartu Utama — Featured card sedang #}
+{# Expects: item (article object) #}
+<article class="kartu-utama">
+    <a href="{{ item.url }}" class="kartu-utama-img-wrap">
+        {% if item.data.image %}
+        <img src="{{ item.data.image }}" alt="{{ item.data.title }}" loading="lazy" class="kartu-utama-img">
+        {% else %}
+        <div class="kartu-utama-img-placeholder">
+            <i data-lucide="image" class="placeholder-icon"></i>
+        </div>
+        {% endif %}
+        {% if item.data.category %}
+        <span class="kartu-utama-kategori">{{ item.data.category | replace("-", " ") | title }}</span>
+        {% endif %}
+    </a>
+    <div class="kartu-utama-body">
+        <a href="{{ item.url }}" class="kartu-utama-judul-link">
+            <h3 class="kartu-utama-judul">{{ item.data.title }}</h3>
+        </a>
+        <p class="kartu-utama-desc">{{ item.data.description | default(item.content | ringkasan(120)) }}</p>
+        <div class="kartu-utama-meta">
+            {% set authorData = item.data.penulis | cariPenulis(dataPenulis) %}
+            {% if authorData %}
+                <span><i data-lucide="user" class="icon-xs"></i> <a href="/penulis/{{ authorData.slug }}/" style="color: inherit; text-decoration: none;">{{ authorData.nama }}</a></span>
+            {% endif %}
+            <span><i data-lucide="clock" class="icon-xs"></i> {{ item.content | waktuBaca }} mnt</span>
+            <span><i data-lucide="calendar" class="icon-xs"></i> {{ item.date | tanggalBaca }}</span>
+        </div>
+    </div>
+</article>

@@ -1,0 +1,142 @@
+---
+pagination:
+  data: dataPenulis.items
+  size: 1
+  alias: author
+permalink: "/penulis/{{ author.slug }}/"
+layout: layouts/base.njk
+eleventyComputed:
+  title: "{{ author.nama }} — Tim ClimateOn"
+  description: "{{ author.bio | truncate(120) }}"
+---
+
+<div class="profil-page">
+    
+    {# ═══ Hero Banner ═══ #}
+    <div class="profil-hero" {% if author.avatar %}style="--author-avatar: url('{{ author.avatar }}')"{% endif %}>
+        <div class="profil-hero-bg"></div>
+        <div class="container profil-hero-content">
+            <div class="profil-avatar-ring">
+                <img src="{{ author.avatar | default('/assets/images/authors/default.jpg') }}" 
+                     alt="{{ author.nama }}" 
+                     class="profil-avatar-img" loading="lazy">
+            </div>
+            <div class="profil-hero-info">
+                <span class="profil-peran-badge">{{ author.peran }}</span>
+                <h1 class="profil-nama">{{ author.nama }}</h1>
+                {% if author.keahlian %}
+                <p class="profil-keahlian">{{ author.keahlian }}</p>
+                {% endif %}
+                <div class="profil-sosial">
+                    {% if author.sosial.twitter %}
+                    <a href="{{ author.sosial.twitter }}" target="_blank" rel="noopener" class="profil-sosial-btn">
+                        <i data-lucide="twitter"></i> Twitter
+                    </a>
+                    {% endif %}
+                    {% if author.sosial.linkedin %}
+                    <a href="{{ author.sosial.linkedin }}" target="_blank" rel="noopener" class="profil-sosial-btn">
+                        <i data-lucide="linkedin"></i> LinkedIn
+                    </a>
+                    {% endif %}
+                    {% if author.sosial.email %}
+                    <a href="mailto:{{ author.sosial.email }}" class="profil-sosial-btn">
+                        <i data-lucide="mail"></i> Email
+                    </a>
+                    {% endif %}
+                    {% if author.sosial.website %}
+                    <a href="{{ author.sosial.website }}" target="_blank" rel="noopener" class="profil-sosial-btn">
+                        <i data-lucide="globe"></i> Website
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container profil-body">
+        <div class="profil-grid">
+
+            {# ═══ Left Sidebar ═══ #}
+            <aside class="profil-sidebar">
+                
+                {# Bio #}
+                <div class="profil-card">
+                    <h3><i data-lucide="user-circle" class="icon-sm"></i> Tentang</h3>
+                    <p class="profil-bio-text">{{ author.bio }}</p>
+                </div>
+
+                {# Education #}
+                {% if author.pendidikan %}
+                <div class="profil-card">
+                    <h3><i data-lucide="graduation-cap" class="icon-sm"></i> Pendidikan</h3>
+                    {% for edu in author.pendidikan %}
+                    <div class="profil-timeline-item">
+                        <strong>{{ edu.gelar }}</strong>
+                        <span class="profil-timeline-place">{{ edu.institusi }}</span>
+                        <span class="profil-timeline-year">{{ edu.tahun }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {# Keahlian #}
+                {% if author.tags %}
+                <div class="profil-card">
+                    <h3><i data-lucide="tag" class="icon-sm"></i> Bidang Keahlian</h3>
+                    <div class="profil-tags">
+                        {% for tag in author.tags %}
+                        <span class="profil-tag">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+            </aside>
+
+            {# ═══ Main Content — Articles ═══ #}
+            <main class="profil-main">
+                <h2 class="profil-section-title">
+                    <i data-lucide="pencil" class="icon-sm"></i>
+                    Artikel oleh {{ author.nama }}
+                </h2>
+                
+                {% set hasArticles = false %}
+                {% for item in collections.semuaArtikel %}
+                    {% if item.data.penulis == author.slug %}
+                        {% set hasArticles = true %}
+                    {% endif %}
+                {% endfor %}
+
+                {% if not hasArticles %}
+                <div class="profil-empty">
+                    <i data-lucide="file-x"></i>
+                    <p>Belum ada artikel yang diterbitkan.</p>
+                </div>
+                {% else %}
+                <div class="profil-artikel-list">
+                    {% for item in collections.semuaArtikel | sort(true, false, "date") %}
+                        {% if item.data.penulis == author.slug %}
+                        <a href="{{ item.url }}" class="profil-artikel-card">
+                            {% if item.data.image %}
+                            <div class="profil-artikel-img" style="background-image: url('{{ item.data.image }}')"></div>
+                            {% endif %}
+                            <div class="profil-artikel-body">
+                                {% if item.data.category %}
+                                <span class="profil-artikel-kategori">{{ item.data.category | replace("-", " ") | title }}</span>
+                                {% endif %}
+                                <h4 class="profil-artikel-judul">{{ item.data.title }}</h4>
+                                <p class="profil-artikel-desc">{{ item.data.description | default("") | truncate(120) }}</p>
+                                <div class="profil-artikel-meta">
+                                    <span><i data-lucide="calendar" class="icon-xs"></i> {{ item.date | tanggalBaca }}</span>
+                                    <span><i data-lucide="clock" class="icon-xs"></i> {{ item.content | waktuBaca }} menit baca</span>
+                                </div>
+                            </div>
+                        </a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </main>
+        </div>
+    </div>
+</div>

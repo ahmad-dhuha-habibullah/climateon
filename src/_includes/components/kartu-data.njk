@@ -1,0 +1,17 @@
+{# Kartu Data — Data Hub monitor card #}
+{# Expects: monitor (object from pusat-data.json) #}
+<a href="{{ monitor.url }}" class="kartu-data">
+    <div class="kartu-data-icon">
+        <i data-lucide="{{ monitor.ikon }}" class="kartu-data-lucide"></i>
+    </div>
+    <div class="kartu-data-body">
+        <h3 class="kartu-data-judul">{{ monitor.judul }}</h3>
+        <p class="kartu-data-desc">{{ monitor.deskripsi | ringkasan(80) }}</p>
+    </div>
+    <div class="kartu-data-status" style="color: {{ monitor.statusWarna }}">
+        {{ monitor.status }}
+    </div>
+    <div class="kartu-data-arrow">
+        <i data-lucide="arrow-right" class="icon-sm"></i>
+    </div>
+</a>

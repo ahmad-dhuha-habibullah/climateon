@@ -1,0 +1,4 @@
+1781077522
+O:39:"Grav\Common\Flex\Types\Pages\PageObject":4:{s:4:"type";s:5:"pages";s:3:"key";s:13:"climate-watch";s:8:"elements";a:4:{s:4:"root";b:0;s:6:"header";a:3:{s:5:"title";s:13:"Climate Watch";s:10:"iframe_url";s:49:"https://climatereanalyzer.org/wx/DailySummary/#t2";s:11:"description";s:42:"Pantau data iklim global secara real-time.";}s:11:"frontmatter";s:144:"title: 'Climate Watch'
+iframe_url: 'https://climatereanalyzer.org/wx/DailySummary/#t2'
+description: 'Pantau data iklim global secara real-time.'";s:8:"markdown";s:0:"";}s:7:"storage";a:6:{s:3:"key";s:13:"climate-watch";s:11:"storage_key";s:16:"05.climate-watch";s:8:"template";s:6:"iframe";s:17:"storage_timestamp";i:1781075829;s:8:"markdown";a:1:{s:0:"";a:1:{s:6:"iframe";i:1781075829;}}s:8:"checksum";s:32:"5c35d8ecd7d0e4b2dc47d2440e1b7909";}}

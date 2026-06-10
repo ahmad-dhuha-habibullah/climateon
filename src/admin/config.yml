@@ -1,0 +1,180 @@
+backend:
+  name: github
+  repo: ahmad-dhuha-habibullah/climateon
+  branch: main
+
+media_folder: "src/assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+locale: "id"
+
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
+collections:
+  - name: "iklim"
+    label: "Iklim"
+    folder: "src/content/iklim"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/artikel.njk" }
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Deskripsi", name: "description", widget: "text" }
+      - { label: "Kategori", name: "category", widget: "hidden", default: "iklim" }
+      - { label: "Tag", name: "tags", widget: "list", allow_add: true }
+      - { label: "Tanggal", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Gambar Utama", name: "image", widget: "image", required: false }
+      - { label: "Video Hero (WebM/MP4)", name: "video", widget: "file", required: false }
+      - { label: "Penulis", name: "penulis", widget: "relation", collection: "penulis", file: "penulis", value_field: "items.*.slug", search_fields: ["items.*.nama"], display_fields: ["items.*.nama"], required: false }
+      - { label: "Artikel Unggulan", name: "featured", widget: "boolean", default: false }
+      - { label: "Konten", name: "body", widget: "markdown" }
+
+  - name: "cuaca"
+    label: "Cuaca"
+    folder: "src/content/cuaca"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/artikel.njk" }
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Deskripsi", name: "description", widget: "text" }
+      - { label: "Kategori", name: "category", widget: "hidden", default: "cuaca" }
+      - { label: "Tag", name: "tags", widget: "list", allow_add: true }
+      - { label: "Tanggal", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Gambar Utama", name: "image", widget: "image", required: false }
+      - { label: "Video Hero (WebM/MP4)", name: "video", widget: "file", required: false }
+      - { label: "Penulis", name: "penulis", widget: "relation", collection: "penulis", file: "penulis", value_field: "items.*.slug", search_fields: ["items.*.nama"], display_fields: ["items.*.nama"], required: false }
+      - { label: "Artikel Unggulan", name: "featured", widget: "boolean", default: false }
+      - { label: "Konten", name: "body", widget: "markdown" }
+
+  - name: "lingkungan"
+    label: "Lingkungan"
+    folder: "src/content/lingkungan"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/artikel.njk" }
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Deskripsi", name: "description", widget: "text" }
+      - { label: "Kategori", name: "category", widget: "hidden", default: "lingkungan" }
+      - { label: "Tag", name: "tags", widget: "list", allow_add: true }
+      - { label: "Tanggal", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Gambar Utama", name: "image", widget: "image", required: false }
+      - { label: "Video Hero (WebM/MP4)", name: "video", widget: "file", required: false }
+      - { label: "Penulis", name: "penulis", widget: "relation", collection: "penulis", file: "penulis", value_field: "items.*.slug", search_fields: ["items.*.nama"], display_fields: ["items.*.nama"], required: false }
+      - { label: "Artikel Unggulan", name: "featured", widget: "boolean", default: false }
+      - { label: "Konten", name: "body", widget: "markdown" }
+
+  - name: "keberlanjutan"
+    label: "Keberlanjutan"
+    folder: "src/content/keberlanjutan"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/artikel.njk" }
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Deskripsi", name: "description", widget: "text" }
+      - { label: "Kategori", name: "category", widget: "hidden", default: "keberlanjutan" }
+      - { label: "Tag", name: "tags", widget: "list", allow_add: true }
+      - { label: "Tanggal", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Gambar Utama", name: "image", widget: "image", required: false }
+      - { label: "Video Hero (WebM/MP4)", name: "video", widget: "file", required: false }
+      - { label: "Penulis", name: "penulis", widget: "relation", collection: "penulis", file: "penulis", value_field: "items.*.slug", search_fields: ["items.*.nama"], display_fields: ["items.*.nama"], required: false }
+      - { label: "Artikel Unggulan", name: "featured", widget: "boolean", default: false }
+      - { label: "Konten", name: "body", widget: "markdown" }
+
+  - name: "teknologi"
+    label: "Teknologi"
+    folder: "src/content/teknologi"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/artikel.njk" }
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Deskripsi", name: "description", widget: "text" }
+      - { label: "Kategori", name: "category", widget: "hidden", default: "teknologi" }
+      - { label: "Tag", name: "tags", widget: "list", allow_add: true }
+      - { label: "Tanggal", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Gambar Utama", name: "image", widget: "image", required: false }
+      - { label: "Video Hero (WebM/MP4)", name: "video", widget: "file", required: false }
+      - { label: "Penulis", name: "penulis", widget: "relation", collection: "penulis", file: "penulis", value_field: "items.*.slug", search_fields: ["items.*.nama"], display_fields: ["items.*.nama"], required: false }
+      - { label: "Artikel Unggulan", name: "featured", widget: "boolean", default: false }
+      - { label: "Konten", name: "body", widget: "markdown" }
+
+  - name: "riset"
+    label: "Riset"
+    folder: "src/content/riset"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/artikel.njk" }
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Deskripsi", name: "description", widget: "text" }
+      - { label: "Kategori", name: "category", widget: "hidden", default: "riset" }
+      - { label: "Tag", name: "tags", widget: "list", allow_add: true }
+      - { label: "Tanggal", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Gambar Utama", name: "image", widget: "image", required: false }
+      - { label: "Video Hero (WebM/MP4)", name: "video", widget: "file", required: false }
+      - { label: "Penulis", name: "penulis", widget: "relation", collection: "penulis", file: "penulis", value_field: "items.*.slug", search_fields: ["items.*.nama"], display_fields: ["items.*.nama"], required: false }
+      - { label: "Artikel Unggulan", name: "featured", widget: "boolean", default: false }
+      - { label: "Konten", name: "body", widget: "markdown" }
+
+  - name: "opini"
+    label: "Opini"
+    folder: "src/content/opini"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/artikel.njk" }
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Deskripsi", name: "description", widget: "text" }
+      - { label: "Kategori", name: "category", widget: "hidden", default: "opini" }
+      - { label: "Tag", name: "tags", widget: "list", allow_add: true }
+      - { label: "Tanggal", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Gambar Utama", name: "image", widget: "image", required: false }
+      - { label: "Video Hero (WebM/MP4)", name: "video", widget: "file", required: false }
+      - { label: "Penulis", name: "penulis", widget: "relation", collection: "penulis", file: "penulis", value_field: "items.*.slug", search_fields: ["items.*.nama"], display_fields: ["items.*.nama"], required: false }
+      - { label: "Artikel Unggulan", name: "featured", widget: "boolean", default: false }
+      - { label: "Konten", name: "body", widget: "markdown" }
+
+  - name: "bedah-paper"
+    label: "Bedah Paper"
+    folder: "src/content/bedah-paper"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/artikel.njk" }
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Deskripsi", name: "description", widget: "text" }
+      - { label: "Kategori", name: "category", widget: "hidden", default: "bedah-paper" }
+      - { label: "Tag", name: "tags", widget: "list", allow_add: true }
+      - { label: "Tanggal", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Gambar Utama", name: "image", widget: "image", required: false }
+      - { label: "Video Hero (WebM/MP4)", name: "video", widget: "file", required: false }
+      - { label: "Penulis CMS", name: "penulis", widget: "relation", collection: "penulis", file: "penulis", value_field: "items.*.slug", search_fields: ["items.*.nama"], display_fields: ["items.*.nama"], required: false }
+      - { label: "Penulis Paper", name: "penulisPaper", widget: "string", required: false }
+      - { label: "Tahun Publikasi", name: "tahun", widget: "number", required: false }
+      - { label: "Jurnal", name: "jurnal", widget: "string", required: false }
+      - { label: "DOI", name: "doi", widget: "string", required: false }
+      - { label: "Artikel Unggulan", name: "featured", widget: "boolean", default: false }
+      - { label: "Konten", name: "body", widget: "markdown" }
+
+  - name: "penulis"
+    label: "Penulis"
+    create: false
+    files:
+      - label: "Data Penulis"
+        name: "penulis"
+        file: "src/_data/dataPenulis.json"
+        fields:
+          - label: "Penulis"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Slug", name: "slug", widget: "string" }
+              - { label: "Nama", name: "nama", widget: "string" }
+              - { label: "Peran", name: "peran", widget: "string" }
+              - { label: "Bio", name: "bio", widget: "text" }
+              - { label: "Avatar", name: "avatar", widget: "image", required: false }

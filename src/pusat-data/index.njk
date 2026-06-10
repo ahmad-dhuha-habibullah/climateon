@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+title: "Pusat Data — ClimateOn"
+description: "Pemantauan kondisi iklim Indonesia secara berkala. ENSO, gelombang panas laut, siklon tropis, suhu muka laut, dan anomali curah hujan."
+permalink: /pusat-data/
+---
+
+<section class="kategori-header datahub-landing-header">
+    <div class="container">
+        <h1>Pusat Data</h1>
+        <p class="kategori-desc">Pemantauan kondisi iklim Indonesia secara berkala berdasarkan data satelit, stasiun pengamatan, dan model iklim.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="datahub-landing-grid">
+            {% for monitor in pusat-data %}
+            <a href="{{ monitor.url }}" class="datahub-landing-card">
+                <div class="datahub-landing-icon">
+                    <i data-lucide="{{ monitor.ikon }}"></i>
+                </div>
+                <div class="datahub-landing-body">
+                    <h2>{{ monitor.judul }}</h2>
+                    <p>{{ monitor.deskripsi }}</p>
+                    <div class="datahub-landing-status">
+                        <span class="status-dot" style="background-color: {{ monitor.statusWarna }}"></span>
+                        <span style="color: {{ monitor.statusWarna }}">{{ monitor.status }}</span>
+                    </div>
+                </div>
+                <div class="datahub-landing-arrow">
+                    <i data-lucide="arrow-right"></i>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</section>

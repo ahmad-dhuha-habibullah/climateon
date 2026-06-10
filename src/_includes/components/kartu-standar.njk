@@ -1,0 +1,29 @@
+{# Kartu Standar — Standard article card #}
+{# Expects: item (article object) #}
+<article class="kartu-standar">
+    <a href="{{ item.url }}" class="kartu-standar-img-wrap">
+        {% if item.data.image %}
+        <img src="{{ item.data.image }}" alt="{{ item.data.title }}" loading="lazy" class="kartu-standar-img">
+        {% else %}
+        <div class="kartu-standar-img-placeholder">
+            <i data-lucide="image" class="placeholder-icon"></i>
+        </div>
+        {% endif %}
+    </a>
+    <div class="kartu-standar-body">
+        {% if item.data.category %}
+        <a href="/{{ item.data.category }}/" class="kartu-standar-kategori">{{ item.data.category | replace("-", " ") | title }}</a>
+        {% endif %}
+        <a href="{{ item.url }}">
+            <h3 class="kartu-standar-judul">{{ item.data.title }}</h3>
+        </a>
+        <p class="kartu-standar-desc">{{ item.data.description | default(item.content | ringkasan(100)) }}</p>
+        <div class="kartu-meta">
+            {% set authorData = item.data.penulis | cariPenulis(dataPenulis) %}
+            {% if authorData %}
+                <span><i data-lucide="user" class="icon-xs"></i> <a href="/penulis/{{ authorData.slug }}/" style="color: inherit; text-decoration: none;">{{ authorData.nama }}</a></span>
+            {% endif %}
+            <span><i data-lucide="calendar" class="icon-xs"></i> {{ item.date | tanggalBaca }}</span>
+        </div>
+    </div>
+</article>

@@ -1,0 +1,10 @@
+1781077522
+O:39:"Grav\Common\Flex\Types\Pages\PageObject":4:{s:4:"type";s:5:"pages";s:3:"key";s:16:"iklim-dijelaskan";s:8:"elements";a:4:{s:4:"root";b:0;s:6:"header";a:2:{s:5:"title";s:16:"Iklim Dijelaskan";s:7:"content";a:4:{s:5:"items";s:14:"@self.children";s:5:"order";a:2:{s:2:"by";s:4:"date";s:3:"dir";s:4:"desc";}s:5:"limit";i:10;s:10:"pagination";b:1;}}s:11:"frontmatter";s:143:"title: 'Iklim Dijelaskan'
+content:
+    items: '@self.children'
+    order:
+        by: date
+        dir: desc
+    limit: 10
+    pagination: true";s:8:"markdown";s:83:"Artikel eksplanatori untuk membantu Anda memahami fenomena iklim secara sederhana.
+";}s:7:"storage";a:6:{s:3:"key";s:16:"iklim-dijelaskan";s:11:"storage_key";s:19:"02.iklim-dijelaskan";s:8:"template";s:4:"blog";s:17:"storage_timestamp";i:1781075818;s:8:"markdown";a:1:{s:0:"";a:1:{s:4:"blog";i:1781075818;}}s:8:"checksum";s:32:"6d6dc730ea523470b4eba6e63b8a6de5";}}

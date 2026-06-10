@@ -1,14 +1,14 @@
 {
-  "name": "climateon-web",
-  "version": "1.0.0",
-  "description": "Climateon.id",
-  "main": "index.js",
+  "name": "climateon-magazine",
+  "version": "2.0.0",
+  "description": "ClimateOn — Majalah Intelijen Iklim Indonesia",
   "scripts": {
+    "start": "npx @11ty/eleventy --serve --watch",
     "build": "npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve"
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["climate", "magazine", "indonesia", "eleventy"],
+  "author": "Ahmad Dhuha Habibullah",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {

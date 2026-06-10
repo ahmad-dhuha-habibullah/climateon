@@ -1,0 +1,46 @@
+---
+layout: layouts/base.njk
+---
+
+{# ═══ Data Hub Monitor Page ═══ #}
+<section class="datahub-hero">
+    <div class="container">
+        <div class="datahub-breadcrumb">
+            <a href="/pusat-data/">Pusat Data</a>
+            <i data-lucide="chevron-right" class="icon-xs"></i>
+            <span>{{ title }}</span>
+        </div>
+        <h1>{{ title }}</h1>
+        <p class="datahub-desc">{{ description }}</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        {# Status Card #}
+        <div class="datahub-status-card">
+            <div class="datahub-status-header">
+                <h2>Status Terkini</h2>
+                <span class="datahub-updated">Diperbarui: Juni 2026</span>
+            </div>
+            <div class="datahub-status-body">
+                <div class="datahub-indicator" style="color: {{ statusWarna | default('#64748b') }}">
+                    {{ status | default('—') }}
+                </div>
+                <p>{{ statusKeterangan | default('Data sedang dimuat. Pemantauan dilakukan secara berkala berdasarkan data satelit dan stasiun pengamatan.') }}</p>
+            </div>
+        </div>
+
+        {# Content #}
+        <div class="datahub-content">
+            {{ content | safe }}
+        </div>
+
+        {# Placeholder Visualization #}
+        <div class="datahub-viz-placeholder">
+            <i data-lucide="bar-chart-3" class="datahub-viz-icon"></i>
+            <p>Visualisasi interaktif sedang dalam pengembangan</p>
+            <span>Data akan tersedia melalui integrasi API BMKG dan sumber data ilmiah lainnya</span>
+        </div>
+    </div>
+</section>
