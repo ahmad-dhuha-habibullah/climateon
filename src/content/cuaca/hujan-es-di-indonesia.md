@@ -1,13 +1,17 @@
 ---
 layout: layouts/artikel.njk
-title: "Fenomena Hujan Es di Indonesia: Langka tapi Nyata"
-description: "Meski beriklim tropis, hujan es sesekali terjadi di Indonesia. Bagaimana ini bisa terjadi?"
-category: "cuaca"
-tags: ["hujan-es", "cuaca-ekstrem", "meteorologi"]
+title: 'Fenomena Hujan Es di Indonesia: Langka tapi Nyata'
+description: Meski beriklim tropis, hujan es sesekali terjadi di Indonesia. Bagaimana ini bisa terjadi?
+category: cuaca
+tags:
+  - hujan-es
+  - cuaca-ekstrem
+  - meteorologi
 date: 2026-05-25
-image: "https://images.unsplash.com/photo-1612528443702-f6741f70a049?auto=format&fit=crop&w=800&q=80"
-penulis: "ahmad-dhuha-habibullah"
+image: https://images.unsplash.com/photo-1612528443702-f6741f70a049?auto=format&fit=crop&w=800&q=80
+penulis: NAZ
 ---
+
 Hujan es di negara tropis terdengar kontradiktif, namun fenomena ini justru terkait erat dengan konveksi kuat yang umum terjadi di wilayah tropis.
 
 ## Mekanisme Pembentukan
