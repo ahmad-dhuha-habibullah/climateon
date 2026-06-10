@@ -1,4 +1,4 @@
-[
+{ "items": [
   {
     "slug": "enso",
     "judul": "Pemantau ENSO",
@@ -44,4 +44,5 @@
     "ikon": "cloud-rain",
     "url": "/pusat-data/anomali-hujan/"
   }
-]
+] }
+

@@ -221,3 +221,19 @@ collections:
               - { label: "URL", name: "url", widget: "string" }
           - { label: "Gambar Background", name: "image", widget: "image", required: false }
           - { label: "Video Background (WebM/MP4)", name: "video", widget: "file", required: false }
+
+      - label: "Daftar Pusat Data"
+        name: "pusat-data-index"
+        file: "src/_data/pusat-data.json"
+        fields:
+          - label: "Daftar Pemantauan"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Slug", name: "slug", widget: "string" }
+              - { label: "Judul", name: "judul", widget: "string" }
+              - { label: "Deskripsi", name: "deskripsi", widget: "text" }
+              - { label: "Status Terkini", name: "status", widget: "string" }
+              - { label: "Warna Status", name: "statusWarna", widget: "color", default: "#64748b" }
+              - { label: "Ikon (Lucide)", name: "ikon", widget: "string", default: "bar-chart-2" }
+              - { label: "URL Tujuan", name: "url", widget: "string" }

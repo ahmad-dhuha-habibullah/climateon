@@ -17,7 +17,7 @@ permalink: /pusat-data/
 <section class="section">
     <div class="container">
         <div class="datahub-landing-grid">
-            {% for monitor in pusat-data %}
+            {% for monitor in pusat-data.items %}
             <a href="{{ monitor.url }}" class="datahub-landing-card">
                 <div class="datahub-landing-icon">
                     <i data-lucide="{{ monitor.ikon }}"></i>
