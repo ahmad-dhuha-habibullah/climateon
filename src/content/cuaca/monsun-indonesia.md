@@ -1,13 +1,17 @@
 ---
 layout: layouts/artikel.njk
-title: "Mengenal Angin Monsun: Pengatur Musim di Indonesia"
-description: "Sistem monsun Asia-Australia menentukan kapan hujan turun dan kapan kemarau tiba di berbagai wilayah Indonesia."
-category: "cuaca"
-tags: ["monsun", "musim", "iklim-indonesia"]
+title: 'Mengenal Angin Monsun: Pengatur Musim di Indonesia'
+description: Sistem monsun Asia-Australia menentukan kapan hujan turun dan kapan kemarau tiba di berbagai wilayah Indonesia.
+category: cuaca
+tags:
+  - monsun
+  - musim
+  - iklim-indonesia
 date: 2026-06-02
-image: "https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?auto=format&fit=crop&w=800&q=80"
-penulis: "ahmad-dhuha-habibullah"
+image: https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?auto=format&fit=crop&w=800&q=80
+penulis: NAZ
 ---
+
 Angin monsun — yang secara harfiah berarti "musim" dalam bahasa Arab — adalah sistem sirkulasi atmosfer yang menentukan pola musim di Indonesia.
 
 ## Monsun Barat (Oktober–Maret)
