@@ -1,7 +1,4 @@
----
-layout: layouts/base.njk
-title: "Beranda - Climateon.id"
----
+{{!< default}}
 
 <!-- Hero Section -->
 <section class="hero">
@@ -9,8 +6,8 @@ title: "Beranda - Climateon.id"
         <h1>Memahami Iklim Indonesia Melalui Data</h1>
         <p>Artikel, analisis, visualisasi, dan pemantauan iklim untuk membantu masyarakat memahami perubahan lingkungan yang terjadi di sekitar kita.</p>
         <div class="hero-actions">
-            <a href="/iklim-dijelaskan/" class="btn btn-primary">Jelajahi Artikel</a>
-            <a href="/climate-watch/" class="btn btn-outline">Lihat Climate Watch</a>
+            <a href="/tag/iklim-dijelaskan/" class="btn btn-primary">Jelajahi Artikel</a>
+            <a href="/tag/climate-watch/" class="btn btn-outline">Lihat Climate Watch</a>
         </div>
     </div>
 </section>
@@ -20,24 +17,28 @@ title: "Beranda - Climateon.id"
     <div class="container">
         <div class="section-title">
             <h2>Memahami Iklim</h2>
-            <a href="/iklim-dijelaskan/" class="section-link">Lihat Semua</a>
+            <a href="/tag/iklim-dijelaskan/" class="section-link">Lihat Semua</a>
         </div>
         <div class="grid-cards">
-            {% for item in collections.iklim_dijelaskan %}
-                {% if loop.index0 < 6 %}
+            {{#get "posts" filter="tag:iklim-dijelaskan" limit="6" include="tags"}}
+                {{#foreach posts}}
                 <div class="card">
-                    <img src="{{ item.data.image }}" alt="{{ item.data.title }}" class="card-img">
+                    {{#if feature_image}}
+                    <img src="{{img_url feature_image size="m"}}" alt="{{title}}" class="card-img">
+                    {{/if}}
                     <div class="card-content">
-                        <span class="card-category">{{ item.data.kategori }}</span>
-                        <h3 class="card-title"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
-                        <p class="card-desc">{{ item.data.description }}</p>
+                        {{#if primary_tag}}
+                        <span class="card-category">{{primary_tag.name}}</span>
+                        {{/if}}
+                        <h3 class="card-title"><a href="{{url}}">{{title}}</a></h3>
+                        <p class="card-desc">{{excerpt words="20"}}</p>
                         <div class="card-meta">
-                            <span>{{ item.date | readableDate }}</span>
+                            <span>{{date format="DD MMM YYYY"}}</span>
                         </div>
                     </div>
                 </div>
-                {% endif %}
-            {% endfor %}
+                {{/foreach}}
+            {{/get}}
         </div>
     </div>
 </section>
@@ -47,7 +48,7 @@ title: "Beranda - Climateon.id"
     <div class="container">
         <div class="section-title">
             <h2>Climate Watch</h2>
-            <a href="/climate-watch/" class="section-link">Selengkapnya</a>
+            <a href="/tag/climate-watch/" class="section-link">Selengkapnya</a>
         </div>
         <div class="watch-grid">
             <div class="watch-card">
@@ -75,20 +76,24 @@ title: "Beranda - Climateon.id"
     <div class="container">
         <div class="section-title">
             <h2>Data Story Pilihan</h2>
-            <a href="/data-story/" class="section-link">Lihat Semua</a>
+            <a href="/tag/data-story/" class="section-link">Lihat Semua</a>
         </div>
         <div class="grid-cards">
-            {% for item in collections.data_story %}
-                {% if loop.index0 < 3 %}
+            {{#get "posts" filter="tag:data-story" limit="3" include="tags"}}
+                {{#foreach posts}}
                 <div class="card">
-                    <img src="{{ item.data.image }}" alt="{{ item.data.title }}" class="card-img">
+                    {{#if feature_image}}
+                    <img src="{{img_url feature_image size="m"}}" alt="{{title}}" class="card-img">
+                    {{/if}}
                     <div class="card-content">
-                        <span class="card-category">{{ item.data.kategori }}</span>
-                        <h3 class="card-title"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
+                        {{#if primary_tag}}
+                        <span class="card-category">{{primary_tag.name}}</span>
+                        {{/if}}
+                        <h3 class="card-title"><a href="{{url}}">{{title}}</a></h3>
                     </div>
                 </div>
-                {% endif %}
-            {% endfor %}
+                {{/foreach}}
+            {{/get}}
         </div>
     </div>
 </section>
@@ -98,23 +103,23 @@ title: "Beranda - Climateon.id"
     <div class="container">
         <div class="section-title">
             <h2>Bedah Paper Terbaru</h2>
-            <a href="/bedah-paper/" class="section-link">Lihat Semua</a>
+            <a href="/tag/bedah-paper/" class="section-link">Lihat Semua</a>
         </div>
         <div class="grid-cards">
-            {% for item in collections.bedah_paper %}
-                {% if loop.index0 < 3 %}
+            {{#get "posts" filter="tag:bedah-paper" limit="3" include="tags"}}
+                {{#foreach posts}}
                 <div class="card">
                     <div class="card-content">
                         <span class="badge badge-blue mb-4">Bedah Paper</span>
-                        <h3 class="card-title"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
-                        <p class="card-desc">{{ item.data.description }}</p>
+                        <h3 class="card-title"><a href="{{url}}">{{title}}</a></h3>
+                        <p class="card-desc">{{excerpt words="20"}}</p>
                         <div class="card-meta">
-                            <span>{{ item.data.jurnal }} ({{ item.data.tahun }})</span>
+                            <span>{{date format="DD MMM YYYY"}}</span>
                         </div>
                     </div>
                 </div>
-                {% endif %}
-            {% endfor %}
+                {{/foreach}}
+            {{/get}}
         </div>
     </div>
 </section>
@@ -124,21 +129,25 @@ title: "Beranda - Climateon.id"
     <div class="container">
         <div class="section-title">
             <h2>Peristiwa Ekstrem</h2>
-            <a href="/peristiwa-ekstrem/" class="section-link">Lihat Semua</a>
+            <a href="/tag/peristiwa-ekstrem/" class="section-link">Lihat Semua</a>
         </div>
         <div class="grid-cards">
-            {% for item in collections.peristiwa_ekstrem %}
-                {% if loop.index0 < 3 %}
+            {{#get "posts" filter="tag:peristiwa-ekstrem" limit="3" include="tags"}}
+                {{#foreach posts}}
                 <div class="card">
-                    <img src="{{ item.data.image }}" alt="{{ item.data.title }}" class="card-img">
+                    {{#if feature_image}}
+                    <img src="{{img_url feature_image size="m"}}" alt="{{title}}" class="card-img">
+                    {{/if}}
                     <div class="card-content">
-                        <span class="card-category">{{ item.data.kategori }}</span>
-                        <h3 class="card-title"><a href="{{ item.url }}">{{ item.data.title }}</a></h3>
-                        <p class="card-desc">{{ item.data.description }}</p>
+                        {{#if primary_tag}}
+                        <span class="card-category">{{primary_tag.name}}</span>
+                        {{/if}}
+                        <h3 class="card-title"><a href="{{url}}">{{title}}</a></h3>
+                        <p class="card-desc">{{excerpt words="20"}}</p>
                     </div>
                 </div>
-                {% endif %}
-            {% endfor %}
+                {{/foreach}}
+            {{/get}}
         </div>
     </div>
 </section>

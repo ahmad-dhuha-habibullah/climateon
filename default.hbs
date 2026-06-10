@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{meta_title}}</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{asset "css/style.css"}}">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{{asset "images/climateon_logo.png"}}">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    {{ghost_head}}
+</head>
+
+<body class="{{body_class}}">
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <div class="container header-container">
+            <!-- Logo -->
+            <a href="{{@site.url}}" class="site-logo">
+                {{#if @site.logo}}
+                    <img src="{{@site.logo}}" alt="{{@site.title}} Logo">
+                {{else}}
+                    <img src="{{asset "images/climateon_logo.png"}}" alt="{{@site.title}} Logo">
+                {{/if}}
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="main-nav" id="main-nav">
+                {{navigation}}
+            </nav>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle menu">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="app-root">
+        {{{body}}}
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:1rem;">
+                        {{#if @site.logo}}
+                            <img src="{{@site.logo}}" alt="{{@site.title}} Logo" style="height:32px;">
+                        {{else}}
+                            <img src="{{asset "images/climateon_logo.png"}}" alt="{{@site.title}} Logo" style="height:32px;">
+                        {{/if}}
+                    </div>
+                    <p>{{@site.description}}</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Kategori</h4>
+                    <ul>
+                        <li><a href="{{@site.url}}/tag/memahami-iklim/">Memahami Iklim</a></li>
+                        <li><a href="{{@site.url}}/tag/climate-watch/">Climate Watch</a></li>
+                        <li><a href="{{@site.url}}/tag/data-story/">Data Story</a></li>
+                        <li><a href="{{@site.url}}/tag/bedah-paper/">Bedah Paper</a></li>
+                        <li><a href="{{@site.url}}/tag/peristiwa-ekstrem/">Peristiwa Ekstrem</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Tentang Kami</h4>
+                    <ul>
+                        <li><a href="{{@site.url}}/tentang/">Tentang Climateon.id</a></li>
+                        <li><a href="{{@site.url}}/kontak/">Kontak</a></li>
+                        <li><a href="{{@site.url}}/kebijakan-privasi/">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; {{date format="YYYY"}} {{@site.title}} - Memahami Iklim, Memahami Masa Depan.
+            </div>
+        </div>
+    </footer>
+
+    {{ghost_foot}}
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile menu
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mainNav = document.getElementById('main-nav');
+        if (menuBtn && mainNav) {
+            menuBtn.addEventListener('click', () => {
+                mainNav.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>

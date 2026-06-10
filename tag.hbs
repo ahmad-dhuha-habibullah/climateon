@@ -1,0 +1,35 @@
+{{!< default}}
+
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            {{#tag}}
+            <h2>{{name}}</h2>
+            {{#if description}}
+                <p>{{description}}</p>
+            {{/if}}
+            {{/tag}}
+        </div>
+        <div class="grid-cards">
+            {{#foreach posts}}
+                <div class="card">
+                    {{#if feature_image}}
+                    <img src="{{img_url feature_image size="m"}}" alt="{{title}}" class="card-img">
+                    {{/if}}
+                    <div class="card-content">
+                        {{#if primary_tag}}
+                        <span class="card-category">{{primary_tag.name}}</span>
+                        {{/if}}
+                        <h3 class="card-title"><a href="{{url}}">{{title}}</a></h3>
+                        <p class="card-desc">{{excerpt words="20"}}</p>
+                        <div class="card-meta">
+                            <span>{{date format="DD MMM YYYY"}}</span>
+                        </div>
+                    </div>
+                </div>
+            {{/foreach}}
+        </div>
+        
+        {{pagination}}
+    </div>
+</section>
