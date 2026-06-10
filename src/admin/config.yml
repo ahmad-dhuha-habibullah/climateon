@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: ahmad-dhuha-habibullah/climateon
-  branch: main
+  branch: 11ty-sveltia
 
 media_folder: "src/assets/images/uploads"
 public_folder: "/assets/images/uploads"
