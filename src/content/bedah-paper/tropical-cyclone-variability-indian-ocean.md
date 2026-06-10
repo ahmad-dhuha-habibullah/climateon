@@ -1,17 +1,21 @@
 ---
 layout: layouts/artikel.njk
-title: "Bedah Paper: Variabilitas Siklon Tropis di Samudera Hindia Timur"
-description: "Analisis 40 tahun data siklon tropis mengungkap tren peningkatan intensitas di cekungan dekat Indonesia."
-category: "bedah-paper"
-tags: ["siklon-tropis", "samudera-hindia", "bedah-paper"]
+title: 'Bedah Paper: Variabilitas Siklon Tropis di Samudera Hindia Timur'
+description: Analisis 40 tahun data siklon tropis mengungkap tren peningkatan intensitas di cekungan dekat Indonesia.
+category: bedah-paper
+tags:
+  - siklon-tropis
+  - samudera-hindia
+  - bedah-paper
 date: 2026-05-09
-image: "https://images.unsplash.com/photo-1527482797697-8795b05a13fe?auto=format&fit=crop&w=800&q=80"
-penulis: "ahmad-dhuha-habibullah"
-penulisPaper: "Wahidiyat & Hendon"
+image: https://images.unsplash.com/photo-1527482797697-8795b05a13fe?auto=format&fit=crop&w=800&q=80
+penulis: NAZ
+penulisPaper: Wahidiyat & Hendon
 tahun: 2023
-jurnal: "Monthly Weather Review"
-doi: "10.1175/MWR-D-23-0123"
+jurnal: Monthly Weather Review
+doi: 10.1175/MWR-D-23-0123
 ---
+
 ## Ringkasan Singkat
 
 Paper ini menganalisis variabilitas aktivitas siklon tropis di Samudera Hindia Tenggara (cekungan terdekat dengan Indonesia) selama 1980–2022.
