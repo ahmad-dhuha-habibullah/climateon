@@ -29,22 +29,22 @@ eleventyComputed:
                 {% endif %}
                 <div class="profil-sosial">
                     {% if author.twitter %}
-                    <a href="{{ author.twitter }}" target="_blank" rel="noopener" class="profil-sosial-btn">
+                    <a href="{{ author.twitter | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn">
                         <i data-lucide="twitter"></i> Twitter
                     </a>
                     {% endif %}
                     {% if author.linkedin %}
-                    <a href="{{ author.linkedin }}" target="_blank" rel="noopener" class="profil-sosial-btn">
+                    <a href="{{ author.linkedin | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn">
                         <i data-lucide="linkedin"></i> LinkedIn
                     </a>
                     {% endif %}
                     {% if author.github %}
-                    <a href="{{ author.github }}" target="_blank" rel="noopener" class="profil-sosial-btn">
+                    <a href="{{ author.github | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn">
                         <i data-lucide="github"></i> GitHub
                     </a>
                     {% endif %}
                     {% if author.website %}
-                    <a href="{{ author.website }}" target="_blank" rel="noopener" class="profil-sosial-btn">
+                    <a href="{{ author.website | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn">
                         <i data-lucide="globe"></i> Website
                     </a>
                     {% endif %}

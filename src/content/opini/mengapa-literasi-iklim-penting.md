@@ -1,15 +1,17 @@
 ---
 layout: layouts/artikel.njk
-title: "Mengapa Literasi Iklim Harus Menjadi Prioritas Pendidikan Nasional"
-description: "Indonesia adalah negara paling rentan terhadap perubahan iklim, tetapi literasi iklim masyarakatnya masih sangat rendah."
-category: "opini"
-tags: ["literasi-iklim", "pendidikan", "editorial"]
+title: Mengapa Literasi Iklim Harus Menjadi Prioritas Pendidikan Nasional
+description: Indonesia adalah negara paling rentan terhadap perubahan iklim, tetapi literasi iklim masyarakatnya masih sangat rendah.
+category: opini
+tags:
+  - literasi-iklim
+  - pendidikan
+  - editorial
 date: 2026-06-09
-image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80"
-penulis: "ahmad-dhuha-habibullah"
+image: https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80
+penulis: ADH
 featured: true
 ---
-*Oleh Ahmad Dhuha Habibullah, Pemimpin Redaksi ClimateOn*
 
 Berapa banyak warga Indonesia yang bisa menjelaskan perbedaan antara cuaca dan iklim? Berapa yang memahami mengapa El Niño membawa kekeringan? Berapa yang mengerti hubungan antara emisi karbon dan banjir yang semakin sering?
 

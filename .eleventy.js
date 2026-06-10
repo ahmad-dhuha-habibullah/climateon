@@ -106,6 +106,17 @@ module.exports = function(eleventyConfig) {
     return str.toString().startsWith(prefix);
   });
 
+  // Ensure URL has http/https protocol
+  eleventyConfig.addFilter("ensureUrl", (url) => {
+    if (!url) return "";
+    const str = url.toString().trim();
+    if (str.startsWith("http://") || str.startsWith("https://") || str.startsWith("mailto:")) {
+      return str;
+    }
+    // If it's something like "user@example.com", we might prepend mailto:, but let's assume URLs for now
+    return "https://" + str;
+  });
+
   // ─── Collections ───
 
   // Semua artikel (gabungan semua kategori)

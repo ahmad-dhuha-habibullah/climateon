@@ -1,0 +1,5 @@
+{
+  "layout": "layouts/pusat-data.njk",
+  "tags": "pusatData",
+  "permalink": "pusat-data/{{ title | slug }}/index.html"
+}

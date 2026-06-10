@@ -113,22 +113,22 @@ layout: layouts/base.njk
                         <p>{{ authorData.bio }}</p>
                         <div class="profil-sosial profil-sosial-sm mt-3">
                             {% if authorData.twitter %}
-                            <a href="{{ authorData.twitter }}" target="_blank" rel="noopener" class="profil-sosial-btn" title="Twitter/X">
+                            <a href="{{ authorData.twitter | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn" title="Twitter/X">
                                 <i data-lucide="twitter"></i>
                             </a>
                             {% endif %}
                             {% if authorData.linkedin %}
-                            <a href="{{ authorData.linkedin }}" target="_blank" rel="noopener" class="profil-sosial-btn" title="LinkedIn">
+                            <a href="{{ authorData.linkedin | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn" title="LinkedIn">
                                 <i data-lucide="linkedin"></i>
                             </a>
                             {% endif %}
                             {% if authorData.github %}
-                            <a href="{{ authorData.github }}" target="_blank" rel="noopener" class="profil-sosial-btn" title="GitHub">
+                            <a href="{{ authorData.github | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn" title="GitHub">
                                 <i data-lucide="github"></i>
                             </a>
                             {% endif %}
                             {% if authorData.website %}
-                            <a href="{{ authorData.website }}" target="_blank" rel="noopener" class="profil-sosial-btn" title="Website">
+                            <a href="{{ authorData.website | ensureUrl }}" target="_blank" rel="noopener" class="profil-sosial-btn" title="Website">
                                 <i data-lucide="globe"></i>
                             </a>
                             {% endif %}

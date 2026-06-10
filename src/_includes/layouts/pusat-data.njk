@@ -36,11 +36,17 @@ layout: layouts/base.njk
             {{ content | safe }}
         </div>
 
-        {# Placeholder Visualization #}
+        {# Visualization / Embed #}
+        {% if embedUrl %}
+        <div class="datahub-viz-container" style="margin-top: var(--space-xl); border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+            <iframe src="{{ embedUrl }}" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+        </div>
+        {% else %}
         <div class="datahub-viz-placeholder">
             <i data-lucide="bar-chart-3" class="datahub-viz-icon"></i>
             <p>Visualisasi interaktif sedang dalam pengembangan</p>
             <span>Data akan tersedia melalui integrasi API BMKG dan sumber data ilmiah lainnya</span>
         </div>
+        {% endif %}
     </div>
 </section>

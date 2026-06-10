@@ -75,7 +75,6 @@
                 {# Mobile Toggle #}
                 <button class="menu-toggle" id="menu-toggle" aria-label="Buka menu navigasi" aria-expanded="false">
                     <i data-lucide="menu" class="icon-menu"></i>
-                    <i data-lucide="x" class="icon-close"></i>
                 </button>
             </div>
         </div>
@@ -87,11 +86,16 @@
                 <img src="/climateon_logo.png" alt="ClimateOn" class="mobile-logo">
                 <span>ClimateOn</span>
             </div>
-            {% for item in navigasi.utama %}
-                <a href="{{ item.url }}"
-                   class="mobile-nav-link {% if page.url == item.url or (item.url != '/' and page.url | startsWith(item.url)) %}active{% endif %}"
-                >{{ item.label }}</a>
-            {% endfor %}
+            <div class="mobile-nav-links-wrapper">
+                {% for item in navigasi.utama %}
+                    <a href="{{ item.url }}"
+                       class="mobile-nav-link {% if page.url == item.url or (item.url != '/' and page.url | startsWith(item.url)) %}active{% endif %}"
+                    >{{ item.label }}</a>
+                {% endfor %}
+            </div>
+            <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Tutup menu navigasi">
+                <i data-lucide="x"></i>
+            </button>
         </nav>
     </header>
 
@@ -145,13 +149,16 @@
             const isOpen = mobileNav.classList.contains('open');
             mobileNav.classList.toggle('open');
             mobileOverlay.classList.toggle('open');
-            menuToggle.classList.toggle('open');
             menuToggle.setAttribute('aria-expanded', !isOpen);
             document.body.style.overflow = isOpen ? '' : 'hidden';
         }
 
         if (menuToggle) {
             menuToggle.addEventListener('click', toggleMobileMenu);
+        }
+        const mobileCloseBtn = document.getElementById('mobile-nav-close');
+        if (mobileCloseBtn) {
+            mobileCloseBtn.addEventListener('click', toggleMobileMenu);
         }
         if (mobileOverlay) {
             mobileOverlay.addEventListener('click', toggleMobileMenu);

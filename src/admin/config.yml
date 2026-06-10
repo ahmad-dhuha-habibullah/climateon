@@ -13,6 +13,20 @@ slug:
   clean_accents: true
 
 collections:
+  - name: "pusat-data"
+    label: "Pusat Data"
+    folder: "src/content/pusat-data"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Deskripsi", name: "description", widget: "text" }
+      - { label: "Status Terkini", name: "status", widget: "string" }
+      - { label: "Warna Status", name: "statusWarna", widget: "color", required: false, default: "#0ea5e9" }
+      - { label: "Keterangan Status", name: "statusKeterangan", widget: "text" }
+      - { label: "Embed URL", name: "embedUrl", widget: "string", required: false, hint: "URL embed untuk visualisasi" }
+      - { label: "Konten", name: "body", widget: "markdown" }
+
   - name: "iklim"
     label: "Iklim"
     folder: "src/content/iklim"
