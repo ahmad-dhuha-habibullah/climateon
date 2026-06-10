@@ -1,0 +1,40 @@
+{# Hero Khusus Beranda — Dapat diedit via CMS (beranda.json) #}
+<section class="beranda-hero-split">
+    
+    {# Media Panel di Kanan (Atau full width tapi fokus di kanan) #}
+    {% if beranda.video %}
+    <video class="beranda-bg-media" autoplay loop muted playsinline>
+        <source src="{{ beranda.video }}" type="video/webm">
+        {% if beranda.image %}
+        <source src="{{ beranda.image }}" type="image/jpeg">
+        {% endif %}
+    </video>
+    {% elif beranda.image %}
+    <div class="beranda-bg-media" style="background-image: url('{{ beranda.image }}');"></div>
+    {% else %}
+    <div class="beranda-bg-media hero-bg-fallback"></div>
+    {% endif %}
+
+    {# Gradient Overlay #}
+    <div class="beranda-gradient-overlay"></div>
+
+    {# Konten Teks di Kiri #}
+    <div class="container beranda-hero-content">
+        <div class="beranda-text-panel">
+            <h1 class="beranda-judul">{{ beranda.judul }}</h1>
+            <p class="beranda-desc">{{ beranda.deskripsi }}</p>
+            <div class="beranda-actions">
+                {% if beranda.tombolUtama.teks %}
+                <a href="{{ beranda.tombolUtama.url }}" class="btn-primary">
+                    {{ beranda.tombolUtama.teks }} <i data-lucide="arrow-right" class="icon-xs"></i>
+                </a>
+                {% endif %}
+                {% if beranda.tombolSekunder.teks %}
+                <a href="{{ beranda.tombolSekunder.url }}" class="btn-outline">
+                    {{ beranda.tombolSekunder.teks }} <i data-lucide="play-circle" class="icon-xs"></i>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

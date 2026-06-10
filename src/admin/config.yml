@@ -178,3 +178,28 @@ collections:
               - { label: "Peran", name: "peran", widget: "string" }
               - { label: "Bio", name: "bio", widget: "text" }
               - { label: "Avatar", name: "avatar", widget: "image", required: false }
+
+  - name: "pengaturan"
+    label: "Pengaturan"
+    create: false
+    files:
+      - label: "Hero Beranda"
+        name: "beranda"
+        file: "src/_data/beranda.json"
+        fields:
+          - { label: "Judul", name: "judul", widget: "string" }
+          - { label: "Deskripsi", name: "deskripsi", widget: "text" }
+          - label: "Tombol Utama"
+            name: "tombolUtama"
+            widget: "object"
+            fields:
+              - { label: "Teks", name: "teks", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+          - label: "Tombol Sekunder"
+            name: "tombolSekunder"
+            widget: "object"
+            fields:
+              - { label: "Teks", name: "teks", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+          - { label: "Gambar Background", name: "image", widget: "image", required: false }
+          - { label: "Video Background (WebM/MP4)", name: "video", widget: "file", required: false }

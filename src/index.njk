@@ -4,14 +4,9 @@ title: "ClimateOn — Majalah Intelijen Iklim Indonesia"
 description: "Platform intelijen iklim Indonesia yang menyajikan analisis mendalam, cerita berbasis data, dan pemantauan kondisi iklim dalam format jurnalisme modern."
 ---
 
-{# ═══ HERO STORY ═══ #}
-{% set heroArticle = collections.unggulan[0] or collections.semuaArtikel[0] %}
-{% if heroArticle %}
-<section class="beranda-hero">
-        {% set artikelPertama = heroArticle %}
-        {% include "components/kartu-hero.njk" %}
-</section>
-{% endif %}
+{# ═══ HERO BERANDA ═══ #}
+{% include "components/beranda-hero.njk" %}
+
 
 {# ═══ ARTIKEL PILIHAN ═══ #}
 {% set featuredList = collections.unggulan | exclude(heroArticle.url) | limit(4) %}

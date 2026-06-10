@@ -1,0 +1,14 @@
+{
+  "judul": "Sains. Data. Teknologi. Untuk memahami dunia.",
+  "deskripsi": "Artikel, video, dan visualisasi yang menjelaskan fenomena alam, teknologi, dan dunia di sekitar kita dengan cara yang sederhana dan bermakna.",
+  "tombolUtama": {
+    "teks": "Artikel Terbaru",
+    "url": "#"
+  },
+  "tombolSekunder": {
+    "teks": "Tonton Video",
+    "url": "#"
+  },
+  "image": "https://images.unsplash.com/photo-1598514982205-f36b96d1e8dd?q=80&w=2070&auto=format&fit=crop",
+  "video": ""
+}
